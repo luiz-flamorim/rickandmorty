@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colour01: rgb(155, 255, 179);
+    --colour02: rgb(235, 235, 235);
+    --colour03: #fff
+}
+
+.svg-container {
+    background-color: var(--colour02);
+}
+
+.bubble {
+    fill: var(--colour03);
+    transition: all .05s ease-in-out;
+}
+
+.bubble:hover {
+    fill: var(--colour01);
+    stroke: var(--colour01);
+    stroke-width: 5px;
+}
