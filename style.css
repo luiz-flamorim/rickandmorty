@@ -7,7 +7,61 @@
 :root {
     --colour01: rgb(155, 255, 179);
     --colour02: rgb(235, 235, 235);
-    --colour03: #fff
+    --colour03: #fff;
+    --Alien: rgb(27, 159, 47);
+    --Human: rgb(17, 167, 157);
+    --Humanoid: rgb(110, 199, 193);
+    --unknown: rgb(17, 97, 167);
+    --Poopybutthole: rgb(136, 185, 223);
+    --Mythological-Creature: rgb(167, 145, 17);
+    --Animal: rgb(80, 167, 17);
+    --Robot: rgb(167, 100, 17);
+    --Cronenberg: rgb(80, 17, 167);
+    --Disease: rgb(125, 17, 167);
+    --Planet: rgb(167, 17, 75);
+}
+
+/* DIV */
+#grid-container{
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+
+/* text */
+.main-title{
+    text-transform: uppercase;
+    font-family: 'Jost', sans-serif;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    font-size: 4rem;
+    font-weight: 600;
+    text-align:center;
+    color: var(--main-red);
+    align-self:flex-start;
+}
+
+/* Elements */
+
+.modal{
+    display: flex;
+    position:relative;
+    background-color: rgba(255,255,255,0.1);
+    -webkit-backdrop-filter: blur(10px);
+    width:60%;
+    height:45%;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 5%;
 }
 
 .svg-container {
@@ -15,7 +69,6 @@
 }
 
 .bubble {
-    fill: var(--colour03);
     transition: all .05s ease-in-out;
 }
 
@@ -23,4 +76,51 @@
     fill: var(--colour01);
     stroke: var(--colour01);
     stroke-width: 5px;
+}
+
+/* species */
+
+.Human {
+    fill: var(--Humanoid);
+}
+
+.Alien {
+    fill: var(--Alien);
+}
+
+
+.Humanoid {
+    fill: var(--Humanoid)
+}
+
+.unknown {
+    fill: var(--unknown)
+}
+
+.Poopybutthole {
+    fill: var(--Poopybutthole)
+}
+
+.Mythological-Creature {
+    fill: var(--Mythological-Creature)
+}
+
+.Animal {
+    fill: var(--Animal)
+}
+
+.Robot {
+    fill: var(--Robot)
+}
+
+.Cronenberg {
+    fill: var(--Cronenberg)
+}
+
+.Disease {
+    fill: var(--Disease)
+}
+
+.Planet {
+    fill: var(--Planet)
 }
