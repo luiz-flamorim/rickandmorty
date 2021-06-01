@@ -1,4 +1,4 @@
-let size = 800
+let size = 2000
 
 let margin = {
   top: size / 20,
@@ -13,18 +13,21 @@ let height = size - margin.top - margin.bottom;
 let data = d3.json('/characters.json')
   .then(data => arcDiagram(data))
 
-
-
+let adjustDiv = d3.select("#grid-chart")
+  .style("width", "800px")
+  .style("height", "800px");
 
 function arcDiagram(data) {
-  // console.log(data)
+  console.log(data)
 
   let links = []
   let locationsList = new Set()
   let charactersList = []
 
   data.forEach(item => {
-    charactersList.push(item.name)
+    if(!charactersList.includes(item.name)){
+      charactersList.push(item.name)
+    } 
     locationsList.add(item.location.name)
     let link = {
       id: item.originalId,
@@ -53,14 +56,10 @@ function arcDiagram(data) {
     .attr('class', 'svg-container')
     .attr("preserveAspectRatio", "xMinYMin meet")
     .attr("viewBox", `0 0 ${width} ${height}`)
-    .classed('svg-content-responsive', true)
     .append("g")
+    .classed('svg-content-responsive', true)
 
-  let g = svg.append('g')
-    .attr('class', 'group')
-    .attr('transform', `translate(${margin.left}, ${margin.top})`)
-
-  let names = g.selectAll('text')
+  let names = svg.selectAll('text')
     .data(charactersAndLocationList)
 
   let nameText = names.join('text')
@@ -71,7 +70,7 @@ function arcDiagram(data) {
     .style("alignment-baseline", 'central')
     .style("text-anchor", 'left')
 
-  let arcLinksPaths = g.selectAll('path')
+  let arcLinksPaths = svg.selectAll('path')
     .data(links, d => d.id);
 
   arcLinksPaths.join(

@@ -42,6 +42,12 @@
     align-self:flex-start;
 }
 
+.archItem{
+    font-family: 'Jost', sans-serif;
+    font-size: 0.4rem;
+    font-weight: 100;
+}
+
 /* Elements */
 
 .modal{
