@@ -42,7 +42,12 @@
     align-self:flex-start;
 }
 
+.archItem-hidden{
+opacity: 0;
+}
+
 .archItem{
+    opacity: 1;
     font-family: 'Jost', sans-serif;
     font-size: 0.4rem;
     font-weight: 100;

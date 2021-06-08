@@ -1,4 +1,4 @@
-let size = 2000
+let size = 4000
 let margin = {
   top: size / 20,
   bottom: size / 20,
@@ -11,8 +11,8 @@ let maxRadius = x - margin.left
 let height = 2 * maxRadius + (margin.bottom + margin.top)
 
 let adjustDiv = d3.select("#grid-chart")
-  .style("width", "1000")
-  .style("height", "2000");
+  .style("width", "2000")
+// .style("height", "9000");
 
 let data = d3.json('/characters.json')
   .then(data => arcDiagram(data))
@@ -35,7 +35,7 @@ function arcDiagram(data) {
     if (!charactersList.has(item.originalId)) {
       let charId = item.originalId
       let name = item.name
-      let charObject ={
+      let charObject = {
         id: charId,
         name: name,
         type: 'character'
@@ -46,13 +46,13 @@ function arcDiagram(data) {
 
     if (!locationsList.has(item.location.name)) {
       locationsList.set(location, id)
-      let locObject ={
+      let locObject = {
         id: id,
         name: location,
         type: 'location'
       }
       nodes.push(locObject)
-      count ++
+      count++
     } else {
       id = locationsList.get(location)
     }
@@ -70,12 +70,12 @@ function arcDiagram(data) {
   }
   for (let [key, value] of locationsList) {
     caractersAndLocationsList.push(value)
-  }  
+  }
 
   let y = d3.scaleBand()
     .domain(caractersAndLocationsList)
     .range([0, height - (margin.top + margin.bottom)])
-    .padding(2)
+    .padding(0.9)
 
   let svg = d3.select('#grid-chart')
     .append('svg')
@@ -92,12 +92,24 @@ function arcDiagram(data) {
     .data(nodes)
 
   let nameText = names.join('text')
-    .attr('x', x)
+    .attr('x', x + 100)
     .attr('y', d => y(d.id))
     .text(d => d.name)
     .attr('class', 'archItem')
+    .classed('archItem-hidden', 'true')
     .style("alignment-baseline", 'central')
     .style("text-anchor", 'left')
+
+    
+
+  let rectangles = names.join('rect')
+    .style("fill", "black")
+    .attr('x', x)
+    .attr("width", 30)
+    .attr('y', d => y(d.id))
+    .attr("height", 5)
+    .on('mouseover', mouseOver)
+    .on('mouseout', mouseOut)
 
   let arcLinksPaths = container.selectAll('path')
     .data(links, d => d.id);
@@ -107,11 +119,42 @@ function arcDiagram(data) {
       .style("opacity", 0)
       .attr("stroke", '#000')
       .call(e => e.attr('d', getArc)
-        .style('opacity', .1)
+        .style('opacity', .3)
       ),
     )
     .style("fill", "none")
     .attr("stroke-width", 1);
+
+  function mouseOver() {
+
+    let rect = d3.select(this)
+      .transition()
+      .duration(500)
+
+    rect.attr('x', x + x / 60)
+      .attr('y', d => y(d.id) - 10)
+      .style("fill", "red")
+      .attr("width", 100)
+      .attr("height", 40)
+      .style('z-index', '2')
+
+      nameText.classed('archItem-hidden', 'false')
+
+
+  }
+
+  function mouseOut() {
+
+    let rect = d3.select(this)
+      .transition()
+      .duration(300)
+
+    rect.attr('x', x)
+      .attr('y', d => y(d.id))
+      .attr("width", 30)
+      .attr("height", 3)
+      .style("fill", "black")
+  }
 
   function getArc(d) {
     let start = y(d.source)
@@ -122,7 +165,6 @@ function arcDiagram(data) {
   }
 
 }
-
 
 function drawGrid(data) {
 
