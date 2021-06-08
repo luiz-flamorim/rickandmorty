@@ -1,55 +1,81 @@
 let size = 2000
-
 let margin = {
   top: size / 20,
   bottom: size / 20,
   left: size / 20,
   right: size / 20
 };
-
 let width = size - margin.left - margin.right;
-let height = size - margin.top - margin.bottom;
+let x = width * 0.8
+let maxRadius = x - margin.left
+let height = 2 * maxRadius + (margin.bottom + margin.top)
+
+let adjustDiv = d3.select("#grid-chart")
+  .style("width", "1000")
+  .style("height", "2000");
 
 let data = d3.json('/characters.json')
   .then(data => arcDiagram(data))
 
-let adjustDiv = d3.select("#grid-chart")
-  .style("width", "800px")
-  .style("height", "800px");
-
 function arcDiagram(data) {
-  console.log(data)
+  // console.log(data)
 
   let links = []
-  let locationsList = new Set()
-  let charactersList = []
+  let locationsList = new Map()
+  let charactersList = new Map()
+  let caractersAndLocationsList = []
+  let count = data.length + 10
+  let nodes = []
 
   data.forEach(item => {
-    if(!charactersList.includes(item.name)){
-      charactersList.push(item.name)
-    } 
-    locationsList.add(item.location.name)
+
+    let id = count
+    let location = item.location.name
+
+    if (!charactersList.has(item.originalId)) {
+      let charId = item.originalId
+      let name = item.name
+      let charObject ={
+        id: charId,
+        name: name,
+        type: 'character'
+      }
+      nodes.push(charObject)
+      charactersList.set(charId, name)
+    }
+
+    if (!locationsList.has(item.location.name)) {
+      locationsList.set(location, id)
+      let locObject ={
+        id: id,
+        name: location,
+        type: 'location'
+      }
+      nodes.push(locObject)
+      count ++
+    } else {
+      id = locationsList.get(location)
+    }
+
     let link = {
-      id: item.originalId,
-      source: item.name,
-      target: item.location.name
+      source: item.originalId,
+      target: id
     }
     links.push(link)
+
   })
 
-  locationsList = Array.from(locationsList)
-  locationsList.sort()
-  charactersList.sort()
-
-  let charactersAndLocationList = charactersList.concat(locationsList)
-  let listLenght = charactersAndLocationList.length
-
-  let x = width * 0.8
+  for (let [key, value] of charactersList) {
+    caractersAndLocationsList.push(key)
+  }
+  for (let [key, value] of locationsList) {
+    caractersAndLocationsList.push(value)
+  }  
 
   let y = d3.scaleBand()
-    .domain(charactersAndLocationList)
-    .range([0, listLenght * 7])
-    .padding(0.9)
+    .domain(caractersAndLocationsList)
+    .range([0, height - (margin.top + margin.bottom)])
+    .padding(2)
 
   let svg = d3.select('#grid-chart')
     .append('svg')
@@ -59,18 +85,21 @@ function arcDiagram(data) {
     .append("g")
     .classed('svg-content-responsive', true)
 
-  let names = svg.selectAll('text')
-    .data(charactersAndLocationList)
+  let container = svg.append('g')
+    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  let names = container.selectAll('text')
+    .data(nodes)
 
   let nameText = names.join('text')
     .attr('x', x)
-    .attr('y', d => y(d))
-    .text(d => d)
+    .attr('y', d => y(d.id))
+    .text(d => d.name)
     .attr('class', 'archItem')
     .style("alignment-baseline", 'central')
     .style("text-anchor", 'left')
 
-  let arcLinksPaths = svg.selectAll('path')
+  let arcLinksPaths = container.selectAll('path')
     .data(links, d => d.id);
 
   arcLinksPaths.join(
