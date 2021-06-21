@@ -44,6 +44,7 @@ function arcDiagram(data) {
   arcLinksPaths.join(
       enter => enter.append("path")
       .attr("class", 'arc')
+      .attr("id", d => `${d.source}-${d.target}`)
       .call(e => e.attr('d', getArc)
         .attr("class", 'arc')
         .style("opacity", 0.2)
@@ -64,16 +65,25 @@ function arcDiagram(data) {
   }
 
   function arcHover(event, d) {
+
     let arc = d3.select(this)
     .style("opacity", 1)
     .style("stroke-width", 3)
-    // console.log(this)
+
+    let source = parseInt((this.getAttribute('id').split('-')[0]))
+    let target = parseInt((this.getAttribute('id').split('-')[1]))
+    // console.log(source, target)
+
       // .append("title")
       // .text(d => {
       //   d.source
       // })
-      let sourceText = d3.selectAll(d.id)
-      console.log(arc, sourceText)
+
+      //look into the Circles = dark lyrics
+      let sourceText = d3.selectAll('#4')
+      // .select(source)
+      .style('fill','red')
+    
       
   }
   function arcOut(event, d) {
