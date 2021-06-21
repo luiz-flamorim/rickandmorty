@@ -1,41 +1,32 @@
-let size = 2000
-let margin = {
-  top: size / 20,
-  bottom: size / 20,
-  left: size / 20,
-  right: size / 20
-};
-let width = size - margin.left - margin.right;
-let x = width * 0.85
-let maxRadius = x - margin.left
-let height = 2.3 * maxRadius + (margin.bottom + margin.top)
+let margin = 20
+let width = 1500 - (margin * 2);
+let x = width * 0.7
+let maxRadius = x - margin
+let height = 2.3 * maxRadius + (margin * 2)
 
 let adjustDiv = d3.select("#grid-chart")
-  .style("width", "2000")
+  .style("width", 3000)
 
 let data = d3.json('/dataForArcs.json')
   .then(data => arcDiagram(data))
 
 function arcDiagram(data) {
 
-  // console.log(data)
-
-  //draw the chart
   let y = d3.scaleBand()
     .domain(data.caractersAndLocationsList)
-    .range([0, height - (margin.top + margin.bottom)])
+    .range([0, height - (margin * 2)])
     .padding(0.9)
 
   let svg = d3.select('#grid-chart')
     .append('svg')
-    .attr('class', 'svg-container')
+    .attr('class', 'arc-container')
     .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("viewBox", `0 0 ${width*1.1} ${height}`)
     .append("g")
     .classed('svg-content-responsive', true)
 
   let container = svg.append('g')
-    .attr("transform", `translate(${margin.left},${margin.top})`);
+    .attr("transform", `translate(${margin},${margin})`);
 
   let names = container.selectAll('text')
     .data(data.nodes)
@@ -44,21 +35,22 @@ function arcDiagram(data) {
     .attr('x', x + 5)
     .attr('y', d => y(d.id))
     .text(d => d.name)
-    .attr('class', 'archItem')
-    .classed('archItem-hidden', 'true')
-    .style("alignment-baseline", 'central')
-    .style("text-anchor", 'left')
+    .attr('class', 'arc-text')
+    .attr('id', d => d.id)
 
   let arcLinksPaths = container.selectAll('path')
     .data(data.links);
 
   arcLinksPaths.join(
       enter => enter.append("path")
-      .style("opacity", 0)
-      .attr("stroke", '#000')
+      .attr("class", 'arc')
       .call(e => e.attr('d', getArc)
-        .style('opacity', .3)
-      ),
+        .attr("class", 'arc')
+        .style("opacity", 0.2)
+        .style("stroke-width", 0.5)
+        .on('mouseover', arcHover)
+        .on('mouseout', arcOut)
+      )
     )
     .style("fill", "none")
     .attr("stroke-width", 1);
@@ -71,9 +63,29 @@ function arcDiagram(data) {
       .join(' ');
   }
 
+  function arcHover(event, d) {
+    let arc = d3.select(this)
+    .style("opacity", 1)
+    .style("stroke-width", 3)
+    // console.log(this)
+      // .append("title")
+      // .text(d => {
+      //   d.source
+      // })
+      let sourceText = d3.selectAll(d.id)
+      console.log(arc, sourceText)
+      
+  }
+  function arcOut(event, d) {
+    d3.select(this)
+    .style("opacity", 0.2)
+    .style("stroke-width", 0.5)
+
+  }
 }
 
-function drawGrid(data) {
+
+function girdDiagram(data) {
 
   let numberOfCharacters = data.length
 
@@ -89,11 +101,11 @@ function drawGrid(data) {
   let numRows = numCols
 
   let y = d3.scaleBand()
-    .range([margin.top, height - margin.bottom])
+    .range([margin, height - margin])
     .domain(d3.range(numRows))
 
   let x = d3.scaleBand()
-    .range([margin.left, width - margin.right])
+    .range([margin, width - margin])
     .domain(d3.range(numCols))
 
   let container = svg.append("g")

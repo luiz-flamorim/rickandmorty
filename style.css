@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
 }
 
 :root {
@@ -22,9 +23,9 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom right, 
-    rgb(0, 6, 21), 
-    rgb(0, 21, 80));
+    background-image: linear-gradient(to bottom right,
+            rgb(0, 6, 21),
+            rgb(0, 21, 80));
 
 }
 
@@ -50,25 +51,42 @@ hr {
     margin-top: 5rem;
     margin-bottom: 5rem;
     color: var(--colour03);
-    font-family: 'Jost', sans-serif;
     font-size: 4rem;
     font-weight: 100;
     text-align: center;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-.archItem-hidden {
-    opacity: 0;
+
+
+/* Arc Diagram */
+
+.arc-container {
+    margin: 0;
+    /* background-color: rgba(255, 255, 255, 0.1); */
 }
 
-.archItem {
-    opacity: 1;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.4rem;
+.arc {
+    stroke: rgb(255, 255, 255);
+    fill: none;
+}
+
+.arc-text {
+    opacity: 0.3;
+    font-size: 0.3rem;
     font-weight: 100;
+    fill:#fff;
+    cursor: pointer;
+
+}
+.arc-text:hover {
+    opacity: 1;
+    font-size: 1rem;
 }
 
-/* Elements */
+
+
+/* Grid diagram */
 
 .modal {
     display: flex;
