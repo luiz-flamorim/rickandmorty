@@ -1,4 +1,4 @@
-let size = 4000
+let size = 2000
 let margin = {
   top: size / 20,
   bottom: size / 20,
@@ -6,74 +6,23 @@ let margin = {
   right: size / 20
 };
 let width = size - margin.left - margin.right;
-let x = width * 0.8
+let x = width * 0.85
 let maxRadius = x - margin.left
-let height = 2 * maxRadius + (margin.bottom + margin.top)
+let height = 2.3 * maxRadius + (margin.bottom + margin.top)
 
 let adjustDiv = d3.select("#grid-chart")
   .style("width", "2000")
-// .style("height", "9000");
 
-let data = d3.json('/characters.json')
+let data = d3.json('/dataForArcs.json')
   .then(data => arcDiagram(data))
 
 function arcDiagram(data) {
+
   // console.log(data)
 
-  let links = []
-  let locationsList = new Map()
-  let charactersList = new Map()
-  let caractersAndLocationsList = []
-  let count = data.length + 10
-  let nodes = []
-
-  data.forEach(item => {
-
-    let id = count
-    let location = item.location.name
-
-    if (!charactersList.has(item.originalId)) {
-      let charId = item.originalId
-      let name = item.name
-      let charObject = {
-        id: charId,
-        name: name,
-        type: 'character'
-      }
-      nodes.push(charObject)
-      charactersList.set(charId, name)
-    }
-
-    if (!locationsList.has(item.location.name)) {
-      locationsList.set(location, id)
-      let locObject = {
-        id: id,
-        name: location,
-        type: 'location'
-      }
-      nodes.push(locObject)
-      count++
-    } else {
-      id = locationsList.get(location)
-    }
-
-    let link = {
-      source: item.originalId,
-      target: id
-    }
-    links.push(link)
-
-  })
-
-  for (let [key, value] of charactersList) {
-    caractersAndLocationsList.push(key)
-  }
-  for (let [key, value] of locationsList) {
-    caractersAndLocationsList.push(value)
-  }
-
+  //draw the chart
   let y = d3.scaleBand()
-    .domain(caractersAndLocationsList)
+    .domain(data.caractersAndLocationsList)
     .range([0, height - (margin.top + margin.bottom)])
     .padding(0.9)
 
@@ -89,10 +38,10 @@ function arcDiagram(data) {
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
   let names = container.selectAll('text')
-    .data(nodes)
+    .data(data.nodes)
 
   let nameText = names.join('text')
-    .attr('x', x + 100)
+    .attr('x', x + 5)
     .attr('y', d => y(d.id))
     .text(d => d.name)
     .attr('class', 'archItem')
@@ -100,19 +49,8 @@ function arcDiagram(data) {
     .style("alignment-baseline", 'central')
     .style("text-anchor", 'left')
 
-    
-
-  let rectangles = names.join('rect')
-    .style("fill", "black")
-    .attr('x', x)
-    .attr("width", 30)
-    .attr('y', d => y(d.id))
-    .attr("height", 5)
-    .on('mouseover', mouseOver)
-    .on('mouseout', mouseOut)
-
   let arcLinksPaths = container.selectAll('path')
-    .data(links, d => d.id);
+    .data(data.links);
 
   arcLinksPaths.join(
       enter => enter.append("path")
@@ -124,37 +62,6 @@ function arcDiagram(data) {
     )
     .style("fill", "none")
     .attr("stroke-width", 1);
-
-  function mouseOver() {
-
-    let rect = d3.select(this)
-      .transition()
-      .duration(500)
-
-    rect.attr('x', x + x / 60)
-      .attr('y', d => y(d.id) - 10)
-      .style("fill", "red")
-      .attr("width", 100)
-      .attr("height", 40)
-      .style('z-index', '2')
-
-      nameText.classed('archItem-hidden', 'false')
-
-
-  }
-
-  function mouseOut() {
-
-    let rect = d3.select(this)
-      .transition()
-      .duration(300)
-
-    rect.attr('x', x)
-      .attr('y', d => y(d.id))
-      .attr("width", 30)
-      .attr("height", 3)
-      .style("fill", "black")
-  }
 
   function getArc(d) {
     let start = y(d.source)
@@ -198,7 +105,7 @@ function drawGrid(data) {
     .append("circle")
     .attr("id", d => `${d.originalId}`)
     .attr('cx', d => x(d.id % numCols))
-    .attr('cy', d => y(Math.floor(d.id / numCols)))
+    .attr('cy', d => y(Math.floor(d.id / numCols))) //possibly I need to fix the 'id' to 'id - 1'
     .attr('r', numCols / 3)
     .attr('class', d => d.species)
     .classed('bubble', true)
