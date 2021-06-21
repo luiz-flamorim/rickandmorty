@@ -7,7 +7,7 @@ let height = 2.3 * maxRadius + (margin * 2)
 let adjustDiv = d3.select("#grid-chart")
   .style("width", 3000)
 
-let data = d3.json('/dataForArcs.json')
+let data = d3.json('./dataForArcs.json')
   .then(data => arcDiagram(data))
 
 function arcDiagram(data) {
