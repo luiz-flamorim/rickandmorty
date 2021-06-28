@@ -46,7 +46,7 @@ async function fetchData(url) {
                     return dataMap
                 })
         }
-        
+
         //pre-processing the original data for the arc diagram
         let links = []
         let locationsList = new Map()
@@ -57,19 +57,26 @@ async function fetchData(url) {
 
         originalData.forEach(item => {
 
-            let id = count
             let location = item.location.name
 
             if (!charactersList.has(item.id)) {
-                let charId = item.id
-                let name = item.name
+                // let charId = item.id
+                // let name = item.name
                 let charObject = {
-                    id: charId,
-                    name: name,
-                    type: 'character'
+                    id: item.id,
+                    name: item.name,
+                    category: 'character',
+                    species: item.species,
+                    type: item.type,
+                    gender: item.gender,
+                    origin: item.origin,
+                    location: item.location,
+                    image: item.image,
+                    episode: item.episode,
+                    url: item.url
                 }
                 nodes.push(charObject)
-                charactersList.set(charId, name)
+                charactersList.set(item.id, item.name)
             }
 
             if (!locationsList.has(item.location.name)) {
@@ -77,7 +84,7 @@ async function fetchData(url) {
                 let locObject = {
                     id: id,
                     name: location,
-                    type: 'location'
+                    category: 'location',
                 }
                 nodes.push(locObject)
                 count++
