@@ -1,18 +1,18 @@
 let margin = 20
-let width = 3000 - (margin * 2);
+let width = 1500 - (margin * 2);
 let x = width * 0.7
 let maxRadius = x - margin
 let height = 2.3 * maxRadius + (margin * 2)
 
 let adjustDiv = d3.select("#grid-chart")
-  .style("width", 6000)
+  .style("width", 3000)
 
 let data = d3.json('./dataForArcs.json')
   .then(data => drawCharts(data))
 
 function drawCharts(data) {
-  arcDiagram(data)
-  girdDiagram(data.nodes)
+  // arcDiagram(data)
+  // girdDiagram(data.nodes)
   networkGraph(data)
 }
 
@@ -79,19 +79,9 @@ function arcDiagram(data) {
 
     let source = parseInt((this.getAttribute('id').split('-')[0]))
     let target = parseInt((this.getAttribute('id').split('-')[1]))
-    // console.log(source, target)
 
-    // .append("title")
-    // .text(d => {
-    //   d.source
-    // })
-
-    //look into the Circles = dark lyrics
     let sourceText = d3.selectAll('#4')
-      // .select(source)
       .style('fill', 'red')
-
-
   }
 
   function arcOut(event, d) {
@@ -101,7 +91,6 @@ function arcDiagram(data) {
 
   }
 }
-
 
 function girdDiagram(data) {
 
@@ -145,30 +134,22 @@ function girdDiagram(data) {
 }
 
 function networkGraph(data) {
-
-  let radius = 8
-  let height = 1000
-  let width = 1000
-  let padding = 5
-
-  // let svg = d3.select("#network-diagram")
-  //   .attr("width", width)
-  //   .attr("height", height)
-  //   .style("background-color", svgBackgroundColor),
-  //   nodes = data.nodes,
-  //   links = data.links
-  // // clusters = graph.clusters;  // need to build this array
-
-  // const container = svg.append("g");
+  margin = 20
+  width = 2000 - 2 * margin
+  height = 2000 - 2 * margin
 
   let svg = d3.select('#network-diagram')
     .append('svg')
     .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("viewBox", `0 0 ${width + 2 * margin} ${height + 2 * margin}`)
     .append("g")
     .classed('svg-content-responsive', true)
 
   let nodes = data.nodes
+  nodes.forEach(node => {
+    node.radius = node.category == 'location' ? 20 : 10
+  })
+
   let links = data.links
   let planets = []
   let planetData = data.nodes.filter(d => d.category == 'location')
@@ -178,29 +159,25 @@ function networkGraph(data) {
     planets.push(d[0])
   })
 
-
-
-// let colours = d3.scaleSequential(t => d3.hsl(t * 360, 1, 0.5).toString())
-//   .domain(planets)
-
-  let colours = d3.scaleOrdinal()
+  let planetNumber = d3.scaleOrdinal()
     .domain(planets)
-    .range(["#f72585","#b5179e","#7209b7","#560bad","#480ca8","#3a0ca3","#3f37c9","#4361ee","#4895ef","#4cc9f0","#f72585","#b5179e","#7209b7","#560bad","#480ca8","#3a0ca3","#3f37c9","#4361ee","#4895ef","#4cc9f0","#f72585","#b5179e","#7209b7","#560bad","#480ca8","#3a0ca3","#3f37c9","#4361ee","#4895ef","#4cc9f0","#f72585","#b5179e","#7209b7","#560bad","#480ca8","#3a0ca3","#3f37c9","#4361ee","#4895ef","#4cc9f0","#f72585","#b5179e","#7209b7","#560bad","#480ca8","#3a0ca3","#3f37c9","#4361ee","#4895ef","#4cc9f0","#f72585","#b5179e","#7209b7","#560bad","#480ca8","#3a0ca3","#3f37c9","#4361ee","#4895ef","#4cc9f0","#f72585","#b5179e","#7209b7","#560bad","#480ca8","#3a0ca3","#3f37c9","#4361ee","#4895ef","#4cc9f0","#f72585","#b5179e","#7209b7","#560bad","#480ca8","#3a0ca3","#3f37c9","#4361ee","#4895ef","#4cc9f0","#f72585","#b5179e","#7209b7","#560bad","#480ca8","#3a0ca3","#3f37c9","#4361ee","#4895ef","#4cc9f0","#f72585","#b5179e","#7209b7","#560bad","#480ca8","#3a0ca3","#3f37c9","#4361ee","#4895ef","#4cc9f0"])
-  // let colours = d3.scaleLinear()
-  //   .domain(d3.range(planets.length))
-  //   .range(["red", "green", "blue"])
-  //   .interpolate(d3.interpolateRgb.gamma(2.2))
-  //   (0.5)
+    .range(d3.range(planets.length))
 
+  let colours = d3.scaleSequential()
+    .domain([0, planets.length - 1])
+    .interpolator(d3.interpolateRainbow)
 
   let container = svg.append('g')
     .attr("transform", `translate(${margin},${margin})`)
 
   const simulation = d3.forceSimulation(nodes)
 
-    .force("link", d3.forceLink(links).id(d => d.id))
-    .force("charge", d3.forceManyBody().strength(20))
-    .force('collide', d3.forceCollide(d => 22))
+    .force("link", d3.forceLink(links)
+      .id(d => d.id)
+      .distance(90))
+    .force("charge", d3.forceManyBody()
+      .strength(-10))
+    .force('collide', d3.forceCollide(d => d.radius))
     .force('center', d3.forceCenter()
       .x(width / 2)
       .y(height / 2))
@@ -219,69 +196,46 @@ function networkGraph(data) {
     .data(nodes)
     .join("g");
 
-
-  //  console.log(colours(4))
-
   const circles = node.append("circle")
-    // .attr("stroke", 'white')
-    // .attr("stroke-width", 1.5)
-    .attr("r", 5)
-    .attr("radius", 5)
+    .attr("r", d => d.radius)
+    .attr("radius", d => d.radius)
     .attr('fill', d => {
-      console.log(d)
-      // return d.category == 'location' ? colours(planets.indexOf(d.name)) : colors(planets.indexOf(d.origin.name))
-      return d.category == 'location' ? colours(d.name) : colours(d.origin.name)
-
+      return d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name))
     })
-    // .attr('fill', d => d.category == 'location' ? colours(planets.indexOf(d.name)) : colors(planets.indexOf(d.origin.name)))
     .attr('x', Math.random() * width)
     .attr('y', Math.random() * height)
-
-  // const text = node.append("text")
-  //   .text(d => d.name)
-  //   .attr("fill", svgBackgroundColor)
-  //   .style("opacity", 0)
-  //   .attr("text-anchor", "middle")
-  //   .attr("dy", 5)
-  //   .attr("font-size", d => isNaN(d.name) == true ?  "1.1em" : "0.8em")
-  //   .attr("font-family", "helvetica")
-  //   .attr("font-weight", "bold")
+    .call(d3.drag()
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended))
 
   function ticked() {
-
     link
       .attr("x1", d => d.source.x)
       .attr("y1", d => d.source.y)
       .attr("x2", d => d.target.x)
       .attr("y2", d => d.target.y);
 
-    circles
-      .attr("cx", d => d.x)
-      .attr("cy", d => d.y);
-
-    // text
-    //   .attr("x", d => Math.max(d.radius, Math.min(width - d.radius, d.x)))
-    //   .attr("y", d => Math.max(d.radius, Math.min(height - d.radius, d.y)));
-
+    circlest
+      .attr("cx", d => Math.max(d.radius, Math.min(width - (2 * d.radius), d.x)))
+      .attr("cy", d => Math.max(d.radius, Math.min(height - (2 * d.radius), d.y)));
   }
 
-  // function hideNumbers(){
-  //   text.style("opacity", 0);
-  //   let button = d3.select("button#hideNumbers");
-  //   button.attr("id", "showNumbers");
-  //   button.on("click", showNumbers);
-  //   button.html("Show Labels");
-  // }
+  function dragstarted(event, d) {
+    simulation.alphaTarget(1).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
 
-  // function showNumbers(){
-  //   text.style("opacity", 1);
-  //   let button = d3.select("button#showNumbers");
-  //   button.attr("id", "hideNumbers");
-  //   button.on("click", hideNumbers);
-  //   button.html("Hide Labels");
-  // }
+  function dragged(event, d) {
+    simulation.alphaTarget(0)
+    d.fx = event.x;
+    d.fy = event.y;
+  }
 
-
-  // d3.select("button#showNumbers").on("click", showNumbers);
+  function dragended(event, d) {
+    d.fx = null;
+    d.fy = null;
+  }
 
 }
