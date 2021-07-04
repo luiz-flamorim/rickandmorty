@@ -216,7 +216,7 @@ function networkGraph(data) {
       .attr("x2", d => d.target.x)
       .attr("y2", d => d.target.y);
 
-    circlest
+    circles
       .attr("cx", d => Math.max(d.radius, Math.min(width - (2 * d.radius), d.x)))
       .attr("cy", d => Math.max(d.radius, Math.min(height - (2 * d.radius), d.y)));
   }
