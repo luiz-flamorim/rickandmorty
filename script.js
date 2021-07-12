@@ -174,9 +174,9 @@ function networkGraph(data) {
 
     .force("link", d3.forceLink(links)
       .id(d => d.id)
-      .distance(90))
+      .distance(80))
     .force("charge", d3.forceManyBody()
-      .strength(-10))
+      .strength(-7))
     .force('collide', d3.forceCollide(d => d.radius))
     .force('center', d3.forceCenter()
       .x(width / 2)
@@ -185,11 +185,13 @@ function networkGraph(data) {
 
   const link = container.append("g")
     .attr("fill", "none")
-    .attr("stroke-width", 0.3)
+    .attr("stroke-width", 1)
     .selectAll("line")
-    .data(links)
+    .data(links, console.log(links))
     .join("line")
-    .attr("stroke", 'white')
+    .attr('stroke', d => {
+      return d.source.category == 'location' ? colours(planetNumber(d.source.name)) : colours(planetNumber(d.source.location.name))
+    })
 
   const node = container.append("g")
     .selectAll("g")
@@ -202,6 +204,9 @@ function networkGraph(data) {
     .attr('fill', d => {
       return d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name))
     })
+    // .attr('opacity', d => {
+    //   return d.category == 'location' ? 1 : 0.5
+    // })
     .attr('x', Math.random() * width)
     .attr('y', Math.random() * height)
     .call(d3.drag()
