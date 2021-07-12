@@ -11,8 +11,8 @@ let data = d3.json('./dataForArcs.json')
   .then(data => drawCharts(data))
 
 function drawCharts(data) {
-  // arcDiagram(data)
-  // girdDiagram(data.nodes)
+  arcDiagram(data)
+  girdDiagram(data.nodes)
   networkGraph(data)
 }
 
@@ -170,13 +170,16 @@ function networkGraph(data) {
   let container = svg.append('g')
     .attr("transform", `translate(${margin},${margin})`)
 
-  const simulation = d3.forceSimulation(nodes)
+  let p5Noise = new p5()
+  //using P5.js for the Perlim Noise method
 
+  const simulation = d3.forceSimulation(nodes)
     .force("link", d3.forceLink(links)
       .id(d => d.id)
-      .distance(80))
-    .force("charge", d3.forceManyBody()
-      .strength(-7))
+      .distance((d, i) => 200 * (p5Noise.noise(i))))
+    .force("charge", d3.forceManyBody().strength(-100))
+    .force("x", d3.forceX())
+    .force("y", d3.forceY())
     .force('collide', d3.forceCollide(d => d.radius))
     .force('center', d3.forceCenter()
       .x(width / 2)
@@ -187,7 +190,7 @@ function networkGraph(data) {
     .attr("fill", "none")
     .attr("stroke-width", 1)
     .selectAll("line")
-    .data(links, console.log(links))
+    .data(links)
     .join("line")
     .attr('stroke', d => {
       return d.source.category == 'location' ? colours(planetNumber(d.source.name)) : colours(planetNumber(d.source.location.name))
@@ -204,15 +207,13 @@ function networkGraph(data) {
     .attr('fill', d => {
       return d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name))
     })
-    // .attr('opacity', d => {
-    //   return d.category == 'location' ? 1 : 0.5
-    // })
     .attr('x', Math.random() * width)
     .attr('y', Math.random() * height)
     .call(d3.drag()
       .on("start", dragstarted)
       .on("drag", dragged)
       .on("end", dragended))
+
 
   function ticked() {
     link
@@ -242,5 +243,8 @@ function networkGraph(data) {
     d.fx = null;
     d.fy = null;
   }
+
+
+
 
 }
