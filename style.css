@@ -24,7 +24,7 @@
 
 body {
     background-image: linear-gradient(to bottom right,
-            rgb(0, 6, 21),
+            rgb(0, 1, 3),
             rgb(0, 21, 80));
 
 }
@@ -81,7 +81,7 @@ hr {
 }
 .arc-text:hover {
     opacity: 1;
-    font-size: 1rem;
+    font-size: 0.6rem;
 }
 
 
