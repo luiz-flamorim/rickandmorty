@@ -5,7 +5,7 @@
     font-family: 'Jost', sans-serif;
 }
 
-:root {
+/* :root {
     --colour01: rgb(155, 255, 179);
     --colour02: rgb(235, 235, 235);
     --colour03: #fff;
@@ -20,7 +20,7 @@
     --Cronenberg: rgb(80, 17, 167);
     --Disease: rgb(125, 17, 167);
     --Planet: rgb(167, 17, 75);
-}
+} */
 
 body {
     background-image: linear-gradient(to bottom right,
@@ -39,7 +39,7 @@ hr {
 
 /* containers */
 #container {
-    width: 60%;
+    width: 90%;
     display: block;
     margin: auto;
 }
@@ -60,18 +60,22 @@ hr {
 
 
 /* Arc Diagram */
-
 .arc-container {
     margin: 0;
-    /* background-color: rgba(255, 255, 255, 0.1); */
 }
 
+.planet-label,
+.character-label,
 .arc {
+    cursor: pointer;
+}
+
+/* .arc {
     stroke: rgb(255, 255, 255);
     fill: none;
-}
+} */
 
-.arc-text {
+/* .arc-text {
     opacity: 0.3;
     font-size: 0.3rem;
     font-weight: 100;
@@ -82,12 +86,11 @@ hr {
 .arc-text:hover {
     opacity: 1;
     font-size: 0.6rem;
-}
+} */
 
 
 
 /* Grid diagram */
-
 .modal {
     display: flex;
     position: relative;
@@ -119,7 +122,7 @@ hr {
     stroke-width: 5px;
 }
 
-/* species */
+/* species
 
 .Human {
     fill: var(--Humanoid);
@@ -164,4 +167,4 @@ hr {
 
 .Planet {
     fill: var(--Planet)
-}
+} */

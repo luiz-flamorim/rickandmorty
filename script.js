@@ -5,14 +5,16 @@ function drawCharts(data) {
   //QUESTION: if I turn the network and arc on together, I need to specify source.id and target.id on the arc
   // if I turn the arc on, I just need the source and target.
 
+  //if I switch the order of the network diagram and the arc, the data.links changes from an object to an array.
+  console.log(data)
+
   networkGraph(data)
   arcDiagram(data)
-  // girdDiagram(data.nodes)
+  // gridDiagram(data.nodes)
 }
 
 function arcDiagram(data) {
 
-  console.log(data)
   // setup: dimensions and margins of the graph
   let margin = {
       top: 20,
@@ -21,7 +23,7 @@ function arcDiagram(data) {
       left: 30
     },
     width = 1500 - margin.left - margin.right,
-    height = 900 - margin.top - margin.bottom;
+    height = 1000 - margin.top - margin.bottom;
   let y = height - margin.bottom
 
   //selector
@@ -71,21 +73,26 @@ function arcDiagram(data) {
     .style("fill", "white")
 
   // add labels
-  let names = container.selectAll('text')
+  let labels = container.selectAll('text')
     .data(data.nodes)
     .join('text')
     .text(d => d.name)
-    .attr('class', 'arc-text')
-    .attr('text-anchor', 'end')
+    // .attr('class', 'arc-text')
+    .attr('class', d => d.category == 'location' ? 'planet-label' : 'character-label')
     .attr('id', d => d.id)
+    .attr('text-anchor', 'end')
+    .attr('alignment-baseline', 'middle')
     .attr("transform", (d, i) => {
-      return `translate(${x(d.id)},${height - (margin.bottom * 10) + 5}) rotate(-90)`
+      return `translate(${x(d.id)},${height - (margin.bottom * 15) + 5}) rotate(-90)`
     })
     .attr('x', 0)
     .attr('y', 0)
+    .attr('font-size', 2)
+    .attr('opacity', 1)
     .style("fill", d => {
       return d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name))
     })
+
 
   // Add the arc links
   let arcLinksPaths = container.selectAll('path')
@@ -108,94 +115,127 @@ function arcDiagram(data) {
     let start = x(d.source.id)
     let end = x(d.target.id)
     let middle = (end - start) / 2
-    return ['M', start, height - (margin.bottom * 10), //starting point (x,y point alues)
+    return ['M', start, height - (margin.bottom * 15), //starting point (x,y point alues)
         'A', // A = elliptical arc
         (start - end) / 2, ',', // Next 2 lines are the coordinates of the inflexion point. Height of this point is proportional with start - end distance
         (start - end) / 2, 0, 0, ',',
-        start < end ? 1 : 0, end, ',', height - (margin.bottom * 10)
+        start < end ? 1 : 0, end, ',', height - (margin.bottom * 15)
       ] // arc on top; if end is before start, putting 0 here turn the arc upside down.
       .join(' ');
   }
 
-  // // Add the highlighting functionality
+  // Add the highlighting functionality to arcs
   arcLinksPaths.on('mouseover', function (d) {
-    let idFinder = d3.select(this)
-    let characterId = idFinder._groups[0][0].id.split('-')[0]
-    let planetId = idFinder._groups[0][0].id.split('-')[1]
-    // id = id.toString()
-    
-    let selected = d3.select(`#${characterId}`)
-    
-    //highlight the arc
-    d3.select(this)
-      .style('stroke', 'white')
-      .style('opacity', 1)
-      .style("stroke-width", 3)
+      let idFinder = d3.select(this)
+      let characterId = idFinder._groups[0][0].id.split('-')[0]
+      let planetId = idFinder._groups[0][0].id.split('-')[1]
 
-  })
+      //highlight the character
+      d3.select(`#${CSS.escape(characterId)}`)
+        .style('fill', 'white')
+        .attr('font-size', 12)
+
+      //highlight the Planet
+      d3.select(`#${CSS.escape(planetId)}`)
+        .style('fill', 'white')
+        .attr('font-size', 12)
+
+      //highlight the arc
+      d3.select(this)
+        .style('stroke', 'white')
+        .style('opacity', 1)
+        .style("stroke-width", 3)
+
+    })
     .on('mouseout', function (d) {
       arcLinksPaths
         .style("opacity", 0.3)
         .style("stroke-width", 1)
-        
-      .style("stroke", d => {
-        return d.target.category == 'location' ? colours(planetNumber(d.target.name)) : colours(planetNumber(d.target.location.name))
-      })
-  })
-}
+        .style("stroke", d => {
+          return d.target.category == 'location' ? colours(planetNumber(d.target.name)) : colours(planetNumber(d.target.location.name))
+        })
 
+      labels.style("fill", d => {
+          return d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name))
+        })
+        .attr('font-size', 2)
+    })
 
-function girdDiagram(data) {
+  // Add the highlighting functionality to labels
+  labels.on('mouseover', function (d) {
+      let selection = d3.select(this)
+      let className = selection._groups[0][0].className.animVal
 
-  let margin = {
-      top: 20,
-      right: 30,
-      bottom: 20,
-      left: 30
-    },
-    width = 1500 - margin.left - margin.right,
-    height = 900 - margin.top - margin.bottom;
+      //check if the item is a planet or character
+      if (className == 'planet-label') {
+        let planetId = selection._groups[0][0].id
+        //builds an array of ids to match the arc ids
+        let arrayOfArcs = []
+        let arrayOfCharacters = []
+        data.links.forEach(item => {
+          if (item.target.id == planetId) {
+            arrayOfArcs.push(`${item.source.id}-${item.target.id}`)
+            arrayOfCharacters.push(`${item.source.id}`)
+          }
+        })
+        //highlight the arcs
+        arrayOfArcs.forEach(item => {
+          d3.select(`#${CSS.escape(item)}`)
+            .style('stroke', 'white')
+            .style('opacity', 1)
+            .style("stroke-width", 1)
+        })
+        //highlight the characters
+        arrayOfCharacters.forEach(item => {
+          d3.select(`#${CSS.escape(item)}`)
+            .style('fill', 'white')
+            .attr('font-size', 12)
+        })
+        //highlight the planets
+        d3.select(`#${CSS.escape(planetId)}`)
+          .style('fill', 'white')
+          .attr('font-size', 12)
 
-  let adjustDiv = d3.select("#grid-chart")
-    .style("width", 3000)
+      } else {
+        let characterId = selection._groups[0][0].id
+        let planetId
+        let arcId
+        data.links.forEach(item => {
+          if (item.source.id == characterId) {
+            arcId = `${item.source.id}-${item.target.id}`
+            planetId = item.target.id
+          }
+        })
+        //highlight the planets
+        d3.select(`#${CSS.escape(planetId)}`)
+          .style('fill', 'white')
+          .attr('font-size', 12)
+        //highlight the characters
+        d3.select(`#${CSS.escape(characterId)}`)
+          .style('fill', 'white')
+          .attr('font-size', 12)
+        //highlight the arcs
+        d3.select(`#${CSS.escape(arcId)}`)
+          .style('stroke', 'white')
+          .style('opacity', 1)
+          .style("stroke-width", 1)
+      }
 
-  data = data.filter(d => d.category !== 'location')
+    })
+    .on('mouseout', function (d) {
+      arcLinksPaths
+        .style("opacity", 0.3)
+        .style("stroke-width", 1)
+        .style("stroke", d => {
+          return d.target.category == 'location' ? colours(planetNumber(d.target.name)) : colours(planetNumber(d.target.location.name))
+        })
 
-  let numberOfCharacters = data.length
+      labels.style("fill", d => {
+          return d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name))
+        })
+        .attr('font-size', 2)
+    })
 
-  let svg = d3.select('#grid-diagram')
-    .append('svg')
-    .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", `0 0 ${width} ${height}`)
-    .classed('svg-content-responsive', true)
-    .append("g")
-
-  let numCols = Math.ceil(Math.sqrt(numberOfCharacters));
-  let numRows = numCols
-
-  let y = d3.scaleBand()
-    .range([margin, height - margin])
-    .domain(d3.range(numRows))
-
-  let x = d3.scaleBand()
-    .range([margin, width - margin])
-    .domain(d3.range(numCols))
-
-  let container = svg.append("g")
-    .attr("transform", `translate(${x.bandwidth()/2},${y.bandwidth()/2})`);
-
-  container.selectAll("circle")
-    .data(data)
-    .enter()
-    .append("circle")
-    .attr("id", d => `${d.id}`)
-    .attr('cx', d => x((d.id - 1) % numCols))
-    .attr('cy', d => y(Math.floor((d.id - 1) / numCols)))
-    .attr('r', numCols / 3)
-    .attr('class', d => d.species)
-    .classed('bubble', true)
-    .append("title")
-    .text(d => `${d.name}: ${d.species}`)
 }
 
 
@@ -204,6 +244,7 @@ function networkGraph(data) {
   let margin = 20
   let width = 2000 - 2 * margin
   let height = 2000 - 2 * margin
+
 
   let svg = d3.select('#network-diagram')
     .append('svg')
@@ -214,7 +255,7 @@ function networkGraph(data) {
 
   let nodes = data.nodes
   nodes.forEach(node => {
-    node.radius = node.category == 'location' ? 20 : 10
+    node.radius = node.category == 'location' ? 30 : 8
   })
 
   // Colour scale calculated from the unique planets
@@ -310,6 +351,62 @@ function networkGraph(data) {
     d.fx = null;
     d.fy = null;
   }
+}
+
+
+
+
+function gridDiagram(data) {
+
+  let margin = {
+      top: 20,
+      right: 30,
+      bottom: 20,
+      left: 30
+    },
+    width = 1500 - margin.left - margin.right,
+    height = 900 - margin.top - margin.bottom;
+
+  let adjustDiv = d3.select("#grid-chart")
+    .style("width", 3000)
+
+  data = data.filter(d => d.category !== 'location')
+
+  let numberOfCharacters = data.length
+
+  let svg = d3.select('#grid-diagram')
+    .append('svg')
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .classed('svg-content-responsive', true)
+    .append("g")
+
+  let numCols = Math.ceil(Math.sqrt(numberOfCharacters));
+  let numRows = numCols
+
+  let y = d3.scaleBand()
+    .range([margin, height - margin])
+    .domain(d3.range(numRows))
+
+  let x = d3.scaleBand()
+    .range([margin, width - margin])
+    .domain(d3.range(numCols))
+
+  let container = svg.append("g")
+    .attr("transform", `translate(${x.bandwidth()/2},${y.bandwidth()/2})`);
+
+  container.selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+    .attr("id", d => `${d.id}`)
+    .attr('cx', d => x((d.id - 1) % numCols))
+    .attr('cy', d => y(Math.floor((d.id - 1) / numCols)))
+    .attr('r', numCols / 3)
+    .attr('class', d => d.species)
+    .classed('bubble', true)
+    .append("title")
+    .text(d => `${d.name}: ${d.species}`)
 }
 
 
