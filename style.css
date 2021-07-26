@@ -168,3 +168,26 @@ hr {
 .Planet {
     fill: var(--Planet)
 } */
+
+#legend{
+    display: flex;
+    justify-content: space-between;
+}
+
+.legend-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.checkbox{
+
+}
+
+.legend-text{
+    font-size: 0.8rem;
+    color: white;
+    padding-left: 0.5rem;
+
+}

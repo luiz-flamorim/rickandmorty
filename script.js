@@ -3,7 +3,6 @@ let data = d3.json('./dataForArcs.json')
 
 function drawCharts(data) {
 
-  console.log(data)
   // setup: dimensions and margins of the graph
   let margin = {
       top: 20,
@@ -40,6 +39,7 @@ function drawCharts(data) {
     .domain([0, planets.length - 1])
     .interpolator(d3.interpolateRainbow)
 
+  // defining the unique species
   let species = []
   let speciesData = data.nodes.filter(d => d.category == 'character')
   let uniqueCharacters = d3.groups(speciesData, d => d.species)
@@ -48,60 +48,81 @@ function drawCharts(data) {
   })
   species.sort()
 
-  let legendScale = d3.scaleBand()
-    .domain(species)
-    .range([0, width])
+  // making the simulation for the network graph
 
-  
+  let p5Noise = new p5() //using P5.js for the Perlim Noise method for the links
+
+  let nodes = data.nodes
+  nodes.forEach(node => {
+    node.radius = node.category == 'location' ? 30 : 8
+  })
+
+  let simulation = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(data.links)
+      .id(d => d.id)
+      .distance((d, i) => 200 * (p5Noise.noise(i))))
+    .force("charge", d3.forceManyBody().strength(-100))
+    .force("x", d3.forceX())
+    .force("y", d3.forceY())
+    .force('collide', d3.forceCollide(d => d.radius))
+    .force('center', d3.forceCenter()
+      .x(width / 2)
+      .y(height / 2))
+    .on("tick", ticked);
 
   networkGraph(data)
   // arcDiagram(data)
   // gridDiagram(data.nodes)
+  buildLegend(species)
+
+
+  function buildLegend(species) {
+
+    let legendDiv = document.querySelector('#legend')
+
+    species.forEach(item => {
+      let legendContent = document.createElement('div')
+      legendContent.setAttribute('class', 'legend-item')
+      legendDiv.appendChild(legendContent)
+
+      let checkBox = document.createElement('input')
+      checkBox.setAttribute('type', 'checkbox')
+      checkBox.setAttribute('checked', 'true')
+      legendContent.appendChild(checkBox)
+
+      checkBox.addEventListener('change', () => {
+        filterSpecies(checkBox, item)
+      })
+
+      let label = document.createElement('p')
+      label.setAttribute('class', 'legend-text')
+      label.innerHTML = item
+      legendContent.appendChild(label)
+    })
+  }
+
 
 
 
 
   function networkGraph(data) {
 
-    let nodes = data.nodes
-    nodes.forEach(node => {
-      node.radius = node.category == 'location' ? 30 : 8
-    })
-
-    let p5Noise = new p5() //using P5.js for the Perlim Noise method
-    let links = data.links
-
-    const simulation = d3.forceSimulation(nodes)
-      .force("link", d3.forceLink(links)
-        .id(d => d.id)
-        .distance((d, i) => 200 * (p5Noise.noise(i))))
-      .force("charge", d3.forceManyBody().strength(-100))
-      .force("x", d3.forceX())
-      .force("y", d3.forceY())
-      .force('collide', d3.forceCollide(d => d.radius))
-      .force('center', d3.forceCenter()
-        .x(width / 2)
-        .y(height / 2))
-      .on("tick", ticked);
-
-    const link = container.append("g")
+    let link = container.append("g")
       .attr("fill", "none")
       .attr("stroke-width", 1)
       .selectAll("line")
-      .data(links)
+      .data(data.links)
       .join("line")
       .attr('stroke', d => {
         return d.source.category == 'location' ? colours(planetNumber(d.source.name)) : colours(planetNumber(d.source.location.name))
       })
 
-    const node = container.append("g")
+    let node = container.append("g")
       .selectAll("g")
       .data(nodes)
       .join("g");
 
-    
-
-    const circles = node.append("circle")
+    let circles = node.append("circle")
       .attr("r", d => d.radius)
       .attr("radius", d => d.radius)
       .attr('fill', d => {
@@ -114,17 +135,7 @@ function drawCharts(data) {
         .on("drag", dragged)
         .on("end", dragended))
 
-    function ticked() {
-      link
-        .attr("x1", d => d.source.x)
-        .attr("y1", d => d.source.y)
-        .attr("x2", d => d.target.x)
-        .attr("y2", d => d.target.y);
-
-      circles
-        .attr("cx", d => Math.max(d.radius, Math.min(width - (2 * d.radius), d.x)))
-        .attr("cy", d => Math.max(d.radius, Math.min(height - (2 * d.radius), d.y)));
-    }
+    ticked()
 
     function dragstarted(event, d) {
       simulation.alphaTarget(1).restart();
@@ -143,34 +154,38 @@ function drawCharts(data) {
       d.fy = null;
     }
 
-
-    //legend
-
-    let legend = svg.append('g')
-    .attr('class', 'legend')
-
-  legend.selectAll('rect')
-    .data(species)
-    .join('rect')
-    .attr('width', 30)
-    .attr('height', 30)
-    .attr('x', d => legendScale(d))
-    .attr('y', 20)
-    .attr('fill', 'white')
-    .on('click', (event,d) => {
-      circles.filter(item => item.species == d )
-      .attr('fill','green')
-    })
-
-  let legendText = legend.selectAll('text')
-    .data(species)
-    .join('text')
-    .attr('x', d => legendScale(d) + 40)
-    .attr('y', 40)
-    .attr('fill', 'white')
-    .text(d => d)
-
   }
+
+  function filterSpecies(checkBox, item) {
+    let selectedSpecies = d3.selectAll('circle')
+      .filter(d => d.species == item)
+
+    if (checkBox.checked) {
+      selectedSpecies.attr('opacity', 1)
+    } else {
+      selectedSpecies.remove()
+      simulation.alpha(.1).restart();
+
+      // simulation.alphaTarget(0)
+    }
+  }
+
+  function ticked() {
+    let link = d3.selectAll('line')
+    let circles = d3.selectAll('circle')
+
+    link
+      .attr("x1", d => d.source.x)
+      .attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x)
+      .attr("y2", d => d.target.y);
+
+    circles
+      .attr("cx", d => Math.max(d.radius, Math.min(width - (2 * d.radius), d.x)))
+      .attr("cy", d => Math.max(d.radius, Math.min(height - (2 * d.radius), d.y)));
+  }
+
+
 
   function arcDiagram(data) {
 
