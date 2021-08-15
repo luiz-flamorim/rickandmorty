@@ -3,6 +3,10 @@ let data = d3.json('./dataForArcs.json')
 
 function drawCharts(data) {
 
+  console.log(data)
+
+  console.log(episodesList(data.nodes))
+
   //set of removed elements - use that on filters
   let removedLinks = new Set()
   let removedNodes = new Set()
@@ -57,8 +61,6 @@ function drawCharts(data) {
   species.sort()
 
   buildLegend(species)
-
-
 
   //using P5js for the Perlim Noise method for the links of the network graph
   let p5Noise = new p5()
@@ -145,9 +147,8 @@ function drawCharts(data) {
         .remove()
       )
 
-    circles.on('click', function (d) {
-      let data = d.srcElement.__data__
-      popUp(data)
+    circles.on('click', function (event, d) {
+      popUp(d)
 
     })
     // .on('mouseout',mouseout)
@@ -198,6 +199,7 @@ function drawCharts(data) {
 
       let checkBox = document.createElement('input')
       checkBox.setAttribute('type', 'checkbox')
+      checkBox.setAttribute('class','check-box')
       checkBox.setAttribute('checked', 'true')
       legendContent.appendChild(checkBox)
 
@@ -472,40 +474,93 @@ function popUp(d) {
 
   console.log(d)
 
-  let window = document.querySelector('#modal')
-  let bg = document.querySelector('.modal-bg')
+  // If it's a character, builds a big modal
+  if (d.category == 'character') {
+    let window = document.querySelector('#modal')
+    let bg = document.querySelector('.modal-bg')
 
-  bg.classList.add('bg-active')
+    bg.classList.add('bg-active')
 
-  let popupContainer = document.createElement('div')
-  popupContainer.setAttribute('id', 'card' + '-' + d.id)
-  popupContainer.setAttribute('class', 'popup-container')
-  window.appendChild(popupContainer)
+    let popupContainer = document.createElement('div')
+    popupContainer.setAttribute('id', 'card' + '-' + d.id)
+    popupContainer.setAttribute('class', 'popup-container')
+    window.appendChild(popupContainer)
 
-  let image = document.createElement('img');
-  image.setAttribute("src", d.image);
-  image.setAttribute('class', 'popup-image')
-  popupContainer.appendChild(image);
+    let imageDiv = document.createElement('div')
+    imageDiv.setAttribute('class', 'popup-image-div')
+    popupContainer.appendChild(imageDiv)
 
-  let contentDiv = document.createElement('div')
-  contentDiv.setAttribute('class', 'popup-content-div')
-  popupContainer.appendChild(contentDiv)
+    let contentDiv = document.createElement('div')
+    contentDiv.setAttribute('class', 'popup-content-div')
+    popupContainer.appendChild(contentDiv)
 
-  
-  let charName = document.createElement('p')
-  charName.innerHTML = d.name
-  charName.setAttribute('class', 'popup-char-name')
-  contentDiv.appendChild(charName)
-  
-    
-  let xClose = document.createElement('span')
-  xClose.setAttribute('class', 'close material-icons')
-  xClose.innerHTML = 'cancel'
-  popupContainer.appendChild(xClose)
-  xClose.addEventListener('click', function () {
-    window.innerHTML = ''
-    bg.classList.remove('bg-active')
-  })
+    let image = document.createElement('img');
+    image.setAttribute("src", d.image);
+    image.setAttribute('class', 'popup-image')
+    imageDiv.appendChild(image);
+
+    let charName = document.createElement('p')
+    charName.innerHTML = d.name
+    charName.setAttribute('class', 'popup-char-name')
+    contentDiv.appendChild(charName)
+
+    let charGender = document.createElement('p')
+    charGender.innerHTML = `<span class="popup-char-info-bold">Gender:</span> ${d.gender}`
+    charGender.setAttribute('class', 'popup-char-info')
+    contentDiv.appendChild(charGender)
+
+    let charOrigin = document.createElement('p')
+    charOrigin.innerHTML = `<span class="popup-char-info-bold">Origin:</span> ${d.origin.name}`
+    charOrigin.setAttribute('class', 'popup-char-info')
+    contentDiv.appendChild(charOrigin)
+
+    let charSpecies = document.createElement('p')
+    charSpecies.innerHTML = `<span class="popup-char-info-bold">Species:</span> ${d.species}`
+    charSpecies.setAttribute('class', 'popup-char-info')
+    contentDiv.appendChild(charSpecies)
+
+    let charEpisodesDiv = document.createElement('Div')
+    charEpisodesDiv.setAttribute('class', 'popup-char-episodes')
+    contentDiv.appendChild(charEpisodesDiv)
+
+    let allEpisodes = []
+
+    d.episode.forEach(ep => allEpisodes.push(ep))
+
+    let episodesParagraph = document.createElement('p')
+    episodesParagraph.setAttribute('class', 'popup-char-info')
+    episodesParagraph.innerHTML = `<span class="popup-char-info-bold">Episodes (${allEpisodes.length}):</span> ${allEpisodes.join(', ')}`
+    charEpisodesDiv.appendChild(episodesParagraph)
+
+
+    let xClose = document.createElement('span')
+    xClose.setAttribute('class', 'close material-icons')
+    xClose.innerHTML = 'cancel'
+    popupContainer.appendChild(xClose)
+    xClose.addEventListener('click', function () {
+      window.innerHTML = ''
+      bg.classList.remove('bg-active')
+    })
+  }
+  // If it's a planet, do something else
+  else {
+    console.log('I need to handle the planets/ locations')
+  }
+
 }
 
 
+// Move this function to scrape the episodes + their info
+function episodesList(data) {
+  totalEpisodes = new Set()
+  data.forEach(item => {
+    if (item.episode) {
+      item.episode.forEach(e => {
+        if (!totalEpisodes.has(e)) {
+          totalEpisodes.add(e)
+        }
+      })
+    }
+  })
+  return Array.from(totalEpisodes)
+}
