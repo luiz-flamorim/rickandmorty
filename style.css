@@ -13,10 +13,26 @@ body {
 }
 
 /* containers */
-#container {
-    width: 90%;
-    display: block;
-    margin: auto;
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.container-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin:auto;
+    width: 80%;
 }
 
 /* text */
@@ -24,23 +40,36 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     background-image: url("/links/header.jpg");
-    min-height: 30vh;
+    height: 60vh;
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+
+h1{
     text-transform: uppercase;
     text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
     color: white;
     font-size: 4rem;
     font-weight: 900;
 }
 
+h2{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.quote{
+    color:white;
+    text-align: center;
+}
 
 /* Arc Diagram */
 .arc-container {
@@ -79,7 +108,7 @@ body {
     -webkit-backdrop-filter: blur(10px);
     max-width: 70vh;
     min-width: 60vh;
-    max-height: 45vh;
+    max-height: 65vh;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -174,37 +203,75 @@ body {
     stroke-width: 5px;
 }
 
+#search{
+    width: 80%;
+}
+
 #legend {
+    width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.label{
+    color: white;
 }
 
-.legend-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 
-}
-/* https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
-.check-box input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-  .check-box {
-    position: absolute;
-    top: 10;
-    right: 50;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-  }
 
 .legend-text {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: white;
-    padding-left: 0.5rem;
+    padding-left: 0.2rem;
 }
+
+
+.check-box {
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .check-box + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+  .check-box+ label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 1rem;
+    height: 1rem;
+    background: white;
+  }
+  .check-box:hover + label:before {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .check-box:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+  .check-box:checked + label:before {
+    background: #29b3f3;
+  }
+  .check-box:checked + label:after {
+      content: "";
+      position: absolute;
+      left: 0.2rem;
+      top: 0.2rem;
+      background: rgba(255, 255, 255, 0.8);
+      width: 0.6rem;
+      height: 0.6rem;
+      /* box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white; */
+      /* transform: rotate(45deg); */
+    }
+
+    /* disabled */
+    .check-box:disabled + label {
+      color: #b8b8b8;
+      cursor: auto;
+    }
+    .check-box:disabled + label:before {
+      box-shadow: none;
+      background: #ddd;
+    }
