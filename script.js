@@ -10,6 +10,17 @@
 // as 0 and 1 inside of the character object
 
 
+// Instructions
+
+// Search:
+//  1- if the user searches a chatacter, the reuslt will isolate the cluster and the character will be paint white
+//  2- if the user seaches a planet, the result is that the cluster of the planet will be isolated
+// click on a planet isolates the cluster of the planet
+
+// Filter:
+// Use a range - slider - for the number of episodes the character appear
+
+
 let data = d3.json('./processed.json')
   .then(data => {
     drawCharts(data)
@@ -21,11 +32,13 @@ let data = d3.json('./processed.json')
     let init = M.AutoInit()
     // console.log(autocompleteNames)
 
-        let elems = document.querySelectorAll('.autocomplete');
-       M.Autocomplete.init(elems, {data:{
-         "Rick":null,
-         "Ricardo":null
-       }});
+    let elems = document.querySelectorAll('.autocomplete');
+    M.Autocomplete.init(elems, {
+      data: {
+        "Rick": 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+        "Ricardo": null
+      }
+    });
 
   })
 
@@ -117,16 +130,20 @@ function drawCharts(data) {
   // inserting the grid diagram here for now
   gridDiagram(data)
 
+  slider(data)
+
   // network graph accessory functions
   function dragstarted(event, d) {
     if (!event.active) simulation.alphaTarget(0.3).restart()
     d.fx = d.x;
     d.fy = d.y;
   }
+
   function dragged(event, d) {
     d.fx = event.x;
     d.fy = event.y;
   }
+
   function dragended(event, d) {
     if (!event.active) simulation.alphaTarget(0)
     d.fx = null;
@@ -167,7 +184,7 @@ function drawCharts(data) {
         })
         .on('mouseover', function () {
           d3.select(this)
-          .raise()
+            .raise()
             .transition()
             .duration(100)
             .attr('r', d => d.radius * 1.2)
@@ -261,7 +278,6 @@ function drawCharts(data) {
       legendContent.setAttribute('class', 'legend-item')
       legendDiv.appendChild(legendContent)
 
-
       let checkBox = document.createElement('input')
       checkBox.setAttribute('type', 'checkbox')
       checkBox.setAttribute('class', 'filled-in checkbox-colour')
@@ -339,7 +355,7 @@ function drawCharts(data) {
 }
 
 
-  // POP UP - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// POP UP - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 function popUp(d) {
 
@@ -419,9 +435,35 @@ function popUp(d) {
   else {
     console.log('I need to handle the planets/ locations')
   }
-
 }
 
+// SLIDER - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+function slider(data) {
+  let numberOfEpisodes = d3.extent(data.nodes, item => {
+    if(item.episode){
+      return item.episode.length
+    } else {
+      return 0
+    }
+  })
+  let min = numberOfEpisodes[0]
+  let max = numberOfEpisodes[1]
+
+  let htmlSlider = d3.select('#slider')
+    .attr('min', min)
+    .attr('max', max)
+    .attr('step', 1)
+    .attr('value',0)
+    .on('change', function(){ 
+      // this.value
+      // filter any nodes that's less than to this.value
+      // make sure about the consistency of the removed nodes thorugh the different filters
+      data.nodes.filter(node => !removedNodes.has(node))
+    })
+    
+
+}
 
 
 // 
@@ -684,4 +726,3 @@ function popUp(d) {
 //         .attr('font-size', 2)
 //     })
 // }
-
