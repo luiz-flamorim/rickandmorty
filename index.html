@@ -10,13 +10,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/backdrop.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
 </head>
@@ -31,28 +33,30 @@
 
     <div class="container">
         <p>
-            This webpage is an exploration of some data from "Ricky and Morty" series. The data is available at the XXXX, and my objective is to visualise that in a creative way.
+            This webpage is an exploration of some data from "Ricky and Morty" series. The data is available at the
+            XXXX, and my objective is to visualise that in a creative way.
         </p>
         <div class="container">
-           <span class="figures">
-            XXX episodes
-           </span>
-           <span class="figures">
-            XXX characters
-           </span>
-           <span class="figures">
-            XXX planets
-           </span>
-           <span class="figures">
-            XXX species
-           </span>
+            <span class="figures">
+                XXX episodes
+            </span>
+            <span class="figures">
+                XXX characters
+            </span>
+            <span class="figures">
+                XXX planets
+            </span>
+            <span class="figures">
+                XXX species
+            </span>
         </div>
     </div>
-    
+
     <div class="container">
         <h2>The planets</h2>
         <p>
-Below is a representation of the XX planets the series is set. You can hove over to get more information.</p>
+            Below is a representation of the <span id="number-of-planet">00</span> different planets and dimensions
+            where the series is set. You can hove over to get more information.</p>
     </div>
 
     <div id='grid-diagram'></div>
@@ -60,14 +64,16 @@ Below is a representation of the XX planets the series is set. You can hove over
     <div class="container">
         <h2>The Characters</h2>
         <p>
-            Check below the origin of most of the characters. You can drag and drop, or click on the circles to find out more.
+            Check below the origin of most of the characters. You can drag and drop, or click on the circles to find out
+            more.
         </p>
-            
-        </div>
 
-    <div class="container-input">
-        <span for="search" class="label">Search characters</span>
-        <input type="text" id="search">
+    </div>
+
+    <div class="input-field">
+        <i class="material-icons prefix">search</i>
+        <input type="text" id="autocomplete-input" class="autocomplete">
+          <label for="autocomplete-input">Search</label>
     </div>
 
     <div class='container'>
