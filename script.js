@@ -1,16 +1,9 @@
 // TO DO
-// style the legend - use checkbox labels
-// do something when the user clicks on the planets
 // episodes: create a mini area chart on the popup: total episodes x character appearence
-// find a character?
-// autofill for search characters
 // grid for the episodes inside of the modal
 
 // for the episode grid, think about building the list of episodes
 // as 0 and 1 inside of the character object
-
-
-// Instructions
 
 // Search:
 //  1- if the user searches a chatacter, the reuslt will isolate the cluster and the character will be paint white
@@ -19,27 +12,26 @@
 
 // Filter:
 // Use a range - slider - for the number of episodes the character appear
+// this range will remove characters and also the planet if it has no children.
 
 
+// AUTOCOMPLETE for the main form
 let data = d3.json('./processed.json')
   .then(data => {
     drawCharts(data)
-
     // Materialize Init
-    let names = data.nodes.map(d => d.name)
     let autocompleteNames = {}
-
+    let singleName = data.nodes.map(d => {
+      let char = {
+        [d.name]: d.image
+      }
+      Object.assign(autocompleteNames, char)
+    })
     let init = M.AutoInit()
-    // console.log(autocompleteNames)
-
     let elems = document.querySelectorAll('.autocomplete');
     M.Autocomplete.init(elems, {
-      data: {
-        "Rick": 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-        "Ricardo": null
-      }
+      data: autocompleteNames
     });
-
   })
 
 
@@ -50,6 +42,17 @@ function drawCharts(data) {
   //set of removed elements - use that on filters
   let removedLinks = new Set()
   let removedNodes = new Set()
+
+  // Extent of the number of episodes
+  let numberOfEpisodes = d3.extent(data.nodes, item => {
+    if (item.episode) {
+      return item.episode.length
+    } else {
+      return 0
+    }
+  })
+  let minEp = numberOfEpisodes[0]
+  let maxEp = numberOfEpisodes[1]
 
   // setup dimensions and margins of the graph
   let margin = {
@@ -91,8 +94,7 @@ function drawCharts(data) {
     .domain([0, planets.length - 1])
     .interpolator(d3.interpolateRainbow)
 
-
-
+  // LEGEND
   // defining the unique species
   let species = []
   let speciesData = data.nodes.filter(d => d.category == 'character')
@@ -101,7 +103,6 @@ function drawCharts(data) {
     species.push(d[0])
   })
   species.sort()
-
   buildLegend(species)
 
   //using Perlim Noise method for the links of the network graph
@@ -130,7 +131,7 @@ function drawCharts(data) {
   // inserting the grid diagram here for now
   gridDiagram(data)
 
-  slider(data)
+  slider(data, minEp, maxEp)
 
   // network graph accessory functions
   function dragstarted(event, d) {
@@ -211,7 +212,7 @@ function drawCharts(data) {
       )
 
     circles.on('click', function (event, d) {
-      popUp(d)
+      popUp(d, data, maxEp)
     })
   }
 
@@ -298,7 +299,6 @@ function drawCharts(data) {
   }
 
 
-
   // GRID DIAGRAM - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   function gridDiagram(data) {
 
@@ -356,11 +356,12 @@ function drawCharts(data) {
 
 
 // POP UP - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// it takes the selected circle data (d), the overall data object and the total episodes count (maxEp)
+function popUp(nodeData, allData, maxEp) {
 
-function popUp(d) {
-
+  // console.log(data)
   // If it's a character, builds a big modal
-  if (d.category == 'character') {
+  if (nodeData.category == 'character') {
     let window = document.querySelector('#modal')
     let bg = document.querySelector('.modal-bg')
     bg.addEventListener('click', function () {
@@ -371,7 +372,7 @@ function popUp(d) {
     bg.classList.add('bg-active')
 
     let popupContainer = document.createElement('div')
-    popupContainer.setAttribute('id', 'card' + '-' + d.id)
+    popupContainer.setAttribute('id', 'card' + '-' + nodeData.id)
     popupContainer.setAttribute('class', 'popup-container')
     window.appendChild(popupContainer)
 
@@ -384,27 +385,27 @@ function popUp(d) {
     popupContainer.appendChild(contentDiv)
 
     let image = document.createElement('img');
-    image.setAttribute("src", d.image);
+    image.setAttribute("src", nodeData.image);
     image.setAttribute('class', 'popup-image')
     imageDiv.appendChild(image);
 
     let charName = document.createElement('p')
-    charName.innerHTML = d.name
+    charName.innerHTML = nodeData.name
     charName.setAttribute('class', 'popup-char-name')
     contentDiv.appendChild(charName)
 
     let charGender = document.createElement('p')
-    charGender.innerHTML = `<span class="popup-char-info-bold">Gender:</span> ${d.gender}`
+    charGender.innerHTML = `<span class="popup-char-info-bold">Gender:</span> ${nodeData.gender}`
     charGender.setAttribute('class', 'popup-char-info')
     contentDiv.appendChild(charGender)
 
     let charOrigin = document.createElement('p')
-    charOrigin.innerHTML = `<span class="popup-char-info-bold">Origin:</span> ${d.origin.name}`
+    charOrigin.innerHTML = `<span class="popup-char-info-bold">Origin:</span> ${nodeData.origin.name}`
     charOrigin.setAttribute('class', 'popup-char-info')
     contentDiv.appendChild(charOrigin)
 
     let charSpecies = document.createElement('p')
-    charSpecies.innerHTML = `<span class="popup-char-info-bold">Species:</span> ${d.species}`
+    charSpecies.innerHTML = `<span class="popup-char-info-bold">Species:</span> ${nodeData.species}`
     charSpecies.setAttribute('class', 'popup-char-info')
     contentDiv.appendChild(charSpecies)
 
@@ -414,14 +415,71 @@ function popUp(d) {
 
     let allEpisodes = []
 
-    d.episode.forEach(ep => allEpisodes.push(ep))
+    nodeData.episode.forEach(ep => allEpisodes.push(ep))
 
     let episodesParagraph = document.createElement('p')
     episodesParagraph.setAttribute('class', 'popup-char-info')
-    episodesParagraph.innerHTML = `<span class="popup-char-info-bold">Episodes (${allEpisodes.length}):</span> ${allEpisodes.join(', ')}`
+    let htmlText
+    if (allEpisodes.length > 1) {
+      htmlText = `<span class="popup-char-info-bold">Participation on ${allEpisodes.length} Episodes</span> ${allEpisodes.join(', ')}`
+    } else {
+      htmlText = `<span class="popup-char-info-bold">Participation on ${allEpisodes.length} Episode</span> ${allEpisodes.join(', ')}`
+    }
+    episodesParagraph.innerHTML = htmlText
     charEpisodesDiv.appendChild(episodesParagraph)
 
+    // mini episodes chart
+    // follow from here: https://observablehq.com/@d3/bar-chart
 
+    // build an array of episodes the character has participated
+    // compare this list to the episode list to generate the chart colour or interatcion
+
+    let participationList = []
+    nodeData.episode.forEach(item => {
+      let epNumber = item.split('/').pop()
+      participationList.push(epNumber)
+    })
+
+    let miniW = contentDiv.getBoundingClientRect().width
+    let miniH = contentDiv.getBoundingClientRect().width / 5
+
+    let chartArea = d3.select(contentDiv)
+      .append('svg')
+      .attr('class', 'pop-up-mini-chart')
+      .attr('width', miniW)
+      .attr('height', miniH)
+
+    let x = d3.scaleBand()
+      .domain(d3.range(Object.keys(allData.episodes).length))
+      .range([0, miniW])
+      .padding(0.2)
+
+    chartArea.append("g")
+      .selectAll("rect")
+      .data(allData.episodes)
+      .join("rect")
+      .attr("class", "bar")
+      .attr("x", (d, i) => x(i))
+      // .attr("y", 10)
+      .attr("width", x.bandwidth())
+      .attr("height", miniH)
+      .attr('fill', 'white')
+      .attr("opacity", d => {
+        let opacity
+        participationList.forEach(ep => {
+          if (d.id == (+ep)) {
+            opacity = 1
+          } else {
+            opacity = 0.2
+          }
+        })
+        console.log(opacity)
+        return opacity
+      })
+
+      // I stopped here!
+
+    // CLOSE BUTTON
     let xClose = document.createElement('span')
     xClose.setAttribute('class', 'close material-icons')
     xClose.innerHTML = 'cancel'
@@ -438,34 +496,35 @@ function popUp(d) {
 }
 
 // SLIDER - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-function slider(data) {
-  let numberOfEpisodes = d3.extent(data.nodes, item => {
-    if(item.episode){
-      return item.episode.length
-    } else {
-      return 0
-    }
-  })
-  let min = numberOfEpisodes[0]
-  let max = numberOfEpisodes[1]
+function slider(data, minEp, maxEp) {
 
   let htmlSlider = d3.select('#slider')
-    .attr('min', min)
-    .attr('max', max)
+    .attr('min', minEp)
+    .attr('max', maxEp)
     .attr('step', 1)
-    .attr('value',0)
-    .on('change', function(){ 
+    .attr('value', 0)
+    .on('change', function () {
       // this.value
       // filter any nodes that's less than to this.value
       // make sure about the consistency of the removed nodes thorugh the different filters
-      data.nodes.filter(node => !removedNodes.has(node))
+      // data.nodes.filter(node => !removedNodes.has(node))
     })
-    
-
 }
-
-
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
 // 
 // 
 // 
