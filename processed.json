@@ -3500,12 +3500,15 @@
 				"https://rickandmortyapi.com/api/episode/40",
 				"https://rickandmortyapi.com/api/episode/41"
 			],
-			"url": "https://rickandmortyapi.com/api/character/1"
+			"url": "https://rickandmortyapi.com/api/character/1",
+			"locationToId": 761
 		},
 		{
 			"id": 681,
 			"name": "Earth (Replacement Dimension)",
-			"category": "location"
+			"location": "Earth (Replacement Dimension)",
+			"category": "location",
+			"locationToId": 761
 		},
 		{
 			"id": 2,
@@ -3566,7 +3569,8 @@
 				"https://rickandmortyapi.com/api/episode/40",
 				"https://rickandmortyapi.com/api/episode/41"
 			],
-			"url": "https://rickandmortyapi.com/api/character/2"
+			"url": "https://rickandmortyapi.com/api/character/2",
+			"locationToId": 761
 		},
 		{
 			"id": 3,
@@ -3619,7 +3623,8 @@
 				"https://rickandmortyapi.com/api/episode/40",
 				"https://rickandmortyapi.com/api/episode/41"
 			],
-			"url": "https://rickandmortyapi.com/api/character/3"
+			"url": "https://rickandmortyapi.com/api/character/3",
+			"locationToId": 761
 		},
 		{
 			"id": 4,
@@ -3672,7 +3677,8 @@
 				"https://rickandmortyapi.com/api/episode/40",
 				"https://rickandmortyapi.com/api/episode/41"
 			],
-			"url": "https://rickandmortyapi.com/api/character/4"
+			"url": "https://rickandmortyapi.com/api/character/4",
+			"locationToId": 761
 		},
 		{
 			"id": 5,
@@ -3721,7 +3727,8 @@
 				"https://rickandmortyapi.com/api/episode/40",
 				"https://rickandmortyapi.com/api/episode/41"
 			],
-			"url": "https://rickandmortyapi.com/api/character/5"
+			"url": "https://rickandmortyapi.com/api/character/5",
+			"locationToId": 761
 		},
 		{
 			"id": 6,
@@ -3742,12 +3749,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/27"
 			],
-			"url": "https://rickandmortyapi.com/api/character/6"
+			"url": "https://rickandmortyapi.com/api/character/6",
+			"locationToId": 682
 		},
 		{
 			"id": 682,
 			"name": "Abadango",
-			"category": "location"
+			"location": "Abadango",
+			"category": "location",
+			"locationToId": 682
 		},
 		{
 			"id": 7,
@@ -3769,12 +3779,15 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/11"
 			],
-			"url": "https://rickandmortyapi.com/api/character/7"
+			"url": "https://rickandmortyapi.com/api/character/7",
+			"locationToId": 737
 		},
 		{
 			"id": 683,
 			"name": "Testicle Monster Dimension",
-			"category": "location"
+			"location": "Testicle Monster Dimension",
+			"category": "location",
+			"locationToId": 737
 		},
 		{
 			"id": 8,
@@ -3795,12 +3808,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/8"
+			"url": "https://rickandmortyapi.com/api/character/8",
+			"locationToId": 738
 		},
 		{
 			"id": 684,
 			"name": "Citadel of Ricks",
-			"category": "location"
+			"location": "Citadel of Ricks",
+			"category": "location",
+			"locationToId": 738
 		},
 		{
 			"id": 9,
@@ -3821,7 +3837,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/24"
 			],
-			"url": "https://rickandmortyapi.com/api/character/9"
+			"url": "https://rickandmortyapi.com/api/character/9",
+			"locationToId": 761
 		},
 		{
 			"id": 10,
@@ -3842,12 +3859,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/10"
+			"url": "https://rickandmortyapi.com/api/character/10",
+			"locationToId": 732
 		},
 		{
 			"id": 685,
 			"name": "Worldender's lair",
-			"category": "location"
+			"location": "Worldender's lair",
+			"category": "location",
+			"locationToId": 732
 		},
 		{
 			"id": 11,
@@ -3868,7 +3888,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/12"
 			],
-			"url": "https://rickandmortyapi.com/api/character/11"
+			"url": "https://rickandmortyapi.com/api/character/11",
+			"locationToId": 761
 		},
 		{
 			"id": 12,
@@ -3889,12 +3910,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/12"
+			"url": "https://rickandmortyapi.com/api/character/12",
+			"locationToId": 727
 		},
 		{
 			"id": 686,
 			"name": "Anatomy Park",
-			"category": "location"
+			"location": "Anatomy Park",
+			"category": "location",
+			"locationToId": 727
 		},
 		{
 			"id": 13,
@@ -3915,7 +3939,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/31"
 			],
-			"url": "https://rickandmortyapi.com/api/character/13"
+			"url": "https://rickandmortyapi.com/api/character/13",
+			"locationToId": 761
 		},
 		{
 			"id": 14,
@@ -3936,7 +3961,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/14"
+			"url": "https://rickandmortyapi.com/api/character/14",
+			"locationToId": 738
 		},
 		{
 			"id": 15,
@@ -3957,7 +3983,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/15"
+			"url": "https://rickandmortyapi.com/api/character/15",
+			"locationToId": 738
 		},
 		{
 			"id": 16,
@@ -3978,7 +4005,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/16"
+			"url": "https://rickandmortyapi.com/api/character/16",
+			"locationToId": 761
 		},
 		{
 			"id": 17,
@@ -3999,7 +4027,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/17"
+			"url": "https://rickandmortyapi.com/api/character/17",
+			"locationToId": 727
 		},
 		{
 			"id": 18,
@@ -4021,7 +4050,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/18"
+			"url": "https://rickandmortyapi.com/api/character/18",
+			"locationToId": 738
 		},
 		{
 			"id": 19,
@@ -4042,12 +4072,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/19"
+			"url": "https://rickandmortyapi.com/api/character/19",
+			"locationToId": 737
 		},
 		{
 			"id": 687,
 			"name": "unknown",
-			"category": "location"
+			"location": "unknown",
+			"category": "location",
+			"locationToId": 737
 		},
 		{
 			"id": 20,
@@ -4068,12 +4101,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/20"
+			"url": "https://rickandmortyapi.com/api/character/20",
+			"locationToId": 737
 		},
 		{
 			"id": 688,
 			"name": "Interdimensional Cable",
-			"category": "location"
+			"location": "Interdimensional Cable",
+			"category": "location",
+			"locationToId": 737
 		},
 		{
 			"id": 21,
@@ -4095,7 +4131,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/21"
+			"url": "https://rickandmortyapi.com/api/character/21",
+			"locationToId": 738
 		},
 		{
 			"id": 22,
@@ -4118,7 +4155,8 @@
 				"https://rickandmortyapi.com/api/episode/22",
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/22"
+			"url": "https://rickandmortyapi.com/api/character/22",
+			"locationToId": 738
 		},
 		{
 			"id": 23,
@@ -4143,12 +4181,15 @@
 				"https://rickandmortyapi.com/api/episode/25",
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/23"
+			"url": "https://rickandmortyapi.com/api/character/23",
+			"locationToId": 728
 		},
 		{
 			"id": 689,
 			"name": "Immortality Field Resort",
-			"category": "location"
+			"location": "Immortality Field Resort",
+			"category": "location",
+			"locationToId": 728
 		},
 		{
 			"id": 24,
@@ -4169,12 +4210,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/16"
 			],
-			"url": "https://rickandmortyapi.com/api/character/24"
+			"url": "https://rickandmortyapi.com/api/character/24",
+			"locationToId": 727
 		},
 		{
 			"id": 690,
 			"name": "Signus 5 Expanse",
-			"category": "location"
+			"location": "Signus 5 Expanse",
+			"category": "location",
+			"locationToId": 727
 		},
 		{
 			"id": 25,
@@ -4195,12 +4239,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/23"
 			],
-			"url": "https://rickandmortyapi.com/api/character/25"
+			"url": "https://rickandmortyapi.com/api/character/25",
+			"locationToId": 728
 		},
 		{
 			"id": 691,
 			"name": "Post-Apocalyptic Earth",
-			"category": "location"
+			"location": "Post-Apocalyptic Earth",
+			"category": "location",
+			"locationToId": 728
 		},
 		{
 			"id": 26,
@@ -4221,12 +4268,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/20"
 			],
-			"url": "https://rickandmortyapi.com/api/character/26"
+			"url": "https://rickandmortyapi.com/api/character/26",
+			"locationToId": 726
 		},
 		{
 			"id": 692,
 			"name": "Purge Planet",
-			"category": "location"
+			"location": "Purge Planet",
+			"category": "location",
+			"locationToId": 726
 		},
 		{
 			"id": 27,
@@ -4248,7 +4298,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/27"
+			"url": "https://rickandmortyapi.com/api/character/27",
+			"locationToId": 738
 		},
 		{
 			"id": 28,
@@ -4271,7 +4322,8 @@
 				"https://rickandmortyapi.com/api/episode/13",
 				"https://rickandmortyapi.com/api/episode/17"
 			],
-			"url": "https://rickandmortyapi.com/api/character/28"
+			"url": "https://rickandmortyapi.com/api/character/28",
+			"locationToId": 737
 		},
 		{
 			"id": 29,
@@ -4292,7 +4344,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/29"
+			"url": "https://rickandmortyapi.com/api/character/29",
+			"locationToId": 737
 		},
 		{
 			"id": 30,
@@ -4313,7 +4366,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/31"
 			],
-			"url": "https://rickandmortyapi.com/api/character/30"
+			"url": "https://rickandmortyapi.com/api/character/30",
+			"locationToId": 737
 		},
 		{
 			"id": 31,
@@ -4334,7 +4388,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/31"
+			"url": "https://rickandmortyapi.com/api/character/31",
+			"locationToId": 761
 		},
 		{
 			"id": 32,
@@ -4355,7 +4410,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/32"
+			"url": "https://rickandmortyapi.com/api/character/32",
+			"locationToId": 761
 		},
 		{
 			"id": 33,
@@ -4376,12 +4432,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/29"
 			],
-			"url": "https://rickandmortyapi.com/api/character/33"
+			"url": "https://rickandmortyapi.com/api/character/33",
+			"locationToId": 693
 		},
 		{
 			"id": 693,
 			"name": "Venzenulon 7",
-			"category": "location"
+			"location": "Venzenulon 7",
+			"category": "location",
+			"locationToId": 693
 		},
 		{
 			"id": 34,
@@ -4404,7 +4463,8 @@
 				"https://rickandmortyapi.com/api/episode/13",
 				"https://rickandmortyapi.com/api/episode/17"
 			],
-			"url": "https://rickandmortyapi.com/api/character/34"
+			"url": "https://rickandmortyapi.com/api/character/34",
+			"locationToId": 737
 		},
 		{
 			"id": 35,
@@ -4428,12 +4488,15 @@
 				"https://rickandmortyapi.com/api/episode/19",
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/35"
+			"url": "https://rickandmortyapi.com/api/character/35",
+			"locationToId": 694
 		},
 		{
 			"id": 694,
 			"name": "Bepis 9",
-			"category": "location"
+			"location": "Bepis 9",
+			"category": "location",
+			"locationToId": 694
 		},
 		{
 			"id": 36,
@@ -4454,7 +4517,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/14"
 			],
-			"url": "https://rickandmortyapi.com/api/character/36"
+			"url": "https://rickandmortyapi.com/api/character/36",
+			"locationToId": 737
 		},
 		{
 			"id": 37,
@@ -4475,12 +4539,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/37"
+			"url": "https://rickandmortyapi.com/api/character/37",
+			"locationToId": 721
 		},
 		{
 			"id": 695,
 			"name": "Earth (C-500A)",
-			"category": "location"
+			"location": "Earth (C-500A)",
+			"category": "location",
+			"locationToId": 721
 		},
 		{
 			"id": 38,
@@ -4507,12 +4574,15 @@
 				"https://rickandmortyapi.com/api/episode/6",
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/38"
+			"url": "https://rickandmortyapi.com/api/character/38",
+			"locationToId": 732
 		},
 		{
 			"id": 696,
 			"name": "Earth (C-137)",
-			"category": "location"
+			"location": "Earth (C-137)",
+			"category": "location",
+			"locationToId": 732
 		},
 		{
 			"id": 39,
@@ -4533,12 +4603,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/39"
+			"url": "https://rickandmortyapi.com/api/character/39",
+			"locationToId": 728
 		},
 		{
 			"id": 697,
 			"name": "Earth (Evil Rick's Target Dimension)",
-			"category": "location"
+			"location": "Earth (Evil Rick's Target Dimension)",
+			"category": "location",
+			"locationToId": 728
 		},
 		{
 			"id": 40,
@@ -4559,12 +4632,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/40"
+			"url": "https://rickandmortyapi.com/api/character/40",
+			"locationToId": 732
 		},
 		{
 			"id": 698,
 			"name": "Nuptia 4",
-			"category": "location"
+			"location": "Nuptia 4",
+			"category": "location",
+			"locationToId": 732
 		},
 		{
 			"id": 41,
@@ -4585,12 +4661,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/5"
 			],
-			"url": "https://rickandmortyapi.com/api/character/41"
+			"url": "https://rickandmortyapi.com/api/character/41",
+			"locationToId": 728
 		},
 		{
 			"id": 699,
 			"name": "Fantasy World",
-			"category": "location"
+			"location": "Fantasy World",
+			"category": "location",
+			"locationToId": 728
 		},
 		{
 			"id": 42,
@@ -4611,7 +4690,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/42"
+			"url": "https://rickandmortyapi.com/api/character/42",
+			"locationToId": 738
 		},
 		{
 			"id": 43,
@@ -4632,7 +4712,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/43"
+			"url": "https://rickandmortyapi.com/api/character/43",
+			"locationToId": 738
 		},
 		{
 			"id": 44,
@@ -4653,7 +4734,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/44"
+			"url": "https://rickandmortyapi.com/api/character/44",
+			"locationToId": 738
 		},
 		{
 			"id": 45,
@@ -4674,7 +4756,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/45"
+			"url": "https://rickandmortyapi.com/api/character/45",
+			"locationToId": 732
 		},
 		{
 			"id": 46,
@@ -4695,7 +4778,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/2"
 			],
-			"url": "https://rickandmortyapi.com/api/character/46"
+			"url": "https://rickandmortyapi.com/api/character/46",
+			"locationToId": 737
 		},
 		{
 			"id": 47,
@@ -4720,12 +4804,15 @@
 				"https://rickandmortyapi.com/api/episode/22",
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/47"
+			"url": "https://rickandmortyapi.com/api/character/47",
+			"locationToId": 732
 		},
 		{
 			"id": 700,
 			"name": "Planet Squanch",
-			"category": "location"
+			"location": "Planet Squanch",
+			"category": "location",
+			"locationToId": 732
 		},
 		{
 			"id": 48,
@@ -4747,7 +4834,8 @@
 				"https://rickandmortyapi.com/api/episode/22",
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/48"
+			"url": "https://rickandmortyapi.com/api/character/48",
+			"locationToId": 738
 		},
 		{
 			"id": 49,
@@ -4768,7 +4856,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/49"
+			"url": "https://rickandmortyapi.com/api/character/49",
+			"locationToId": 737
 		},
 		{
 			"id": 50,
@@ -4789,7 +4878,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/14"
 			],
-			"url": "https://rickandmortyapi.com/api/character/50"
+			"url": "https://rickandmortyapi.com/api/character/50",
+			"locationToId": 761
 		},
 		{
 			"id": 51,
@@ -4810,7 +4900,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/51"
+			"url": "https://rickandmortyapi.com/api/character/51",
+			"locationToId": 737
 		},
 		{
 			"id": 52,
@@ -4831,7 +4922,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/23"
 			],
-			"url": "https://rickandmortyapi.com/api/character/52"
+			"url": "https://rickandmortyapi.com/api/character/52",
+			"locationToId": 728
 		},
 		{
 			"id": 53,
@@ -4852,7 +4944,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/53"
+			"url": "https://rickandmortyapi.com/api/character/53",
+			"locationToId": 738
 		},
 		{
 			"id": 54,
@@ -4873,7 +4966,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/54"
+			"url": "https://rickandmortyapi.com/api/character/54",
+			"locationToId": 737
 		},
 		{
 			"id": 55,
@@ -4895,7 +4989,8 @@
 				"https://rickandmortyapi.com/api/episode/18",
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/55"
+			"url": "https://rickandmortyapi.com/api/character/55",
+			"locationToId": 732
 		},
 		{
 			"id": 56,
@@ -4916,7 +5011,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/56"
+			"url": "https://rickandmortyapi.com/api/character/56",
+			"locationToId": 738
 		},
 		{
 			"id": 57,
@@ -4937,7 +5033,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/57"
+			"url": "https://rickandmortyapi.com/api/character/57",
+			"locationToId": 737
 		},
 		{
 			"id": 58,
@@ -4960,7 +5057,8 @@
 				"https://rickandmortyapi.com/api/episode/11",
 				"https://rickandmortyapi.com/api/episode/30"
 			],
-			"url": "https://rickandmortyapi.com/api/character/58"
+			"url": "https://rickandmortyapi.com/api/character/58",
+			"locationToId": 761
 		},
 		{
 			"id": 59,
@@ -4981,7 +5079,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/7"
 			],
-			"url": "https://rickandmortyapi.com/api/character/59"
+			"url": "https://rickandmortyapi.com/api/character/59",
+			"locationToId": 761
 		},
 		{
 			"id": 60,
@@ -5002,7 +5101,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/60"
+			"url": "https://rickandmortyapi.com/api/character/60",
+			"locationToId": 737
 		},
 		{
 			"id": 61,
@@ -5023,7 +5123,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/61"
+			"url": "https://rickandmortyapi.com/api/character/61",
+			"locationToId": 738
 		},
 		{
 			"id": 62,
@@ -5044,7 +5145,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/1"
 			],
-			"url": "https://rickandmortyapi.com/api/character/62"
+			"url": "https://rickandmortyapi.com/api/character/62",
+			"locationToId": 737
 		},
 		{
 			"id": 63,
@@ -5065,12 +5167,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/2"
 			],
-			"url": "https://rickandmortyapi.com/api/character/63"
+			"url": "https://rickandmortyapi.com/api/character/63",
+			"locationToId": 732
 		},
 		{
 			"id": 701,
 			"name": "Mr. Goldenfold's dream",
-			"category": "location"
+			"location": "Mr. Goldenfold's dream",
+			"category": "location",
+			"locationToId": 732
 		},
 		{
 			"id": 64,
@@ -5091,7 +5196,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/12"
 			],
-			"url": "https://rickandmortyapi.com/api/character/64"
+			"url": "https://rickandmortyapi.com/api/character/64",
+			"locationToId": 761
 		},
 		{
 			"id": 65,
@@ -5112,12 +5218,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/17"
 			],
-			"url": "https://rickandmortyapi.com/api/character/65"
+			"url": "https://rickandmortyapi.com/api/character/65",
+			"locationToId": 732
 		},
 		{
 			"id": 702,
 			"name": "Rick's Battery Microverse",
-			"category": "location"
+			"location": "Rick's Battery Microverse",
+			"category": "location",
+			"locationToId": 732
 		},
 		{
 			"id": 66,
@@ -5138,7 +5247,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/66"
+			"url": "https://rickandmortyapi.com/api/character/66",
+			"locationToId": 761
 		},
 		{
 			"id": 67,
@@ -5159,12 +5269,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/29"
 			],
-			"url": "https://rickandmortyapi.com/api/character/67"
+			"url": "https://rickandmortyapi.com/api/character/67",
+			"locationToId": 738
 		},
 		{
 			"id": 703,
 			"name": "The Menagerie",
-			"category": "location"
+			"location": "The Menagerie",
+			"category": "location",
+			"locationToId": 738
 		},
 		{
 			"id": 68,
@@ -5185,7 +5298,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/23"
 			],
-			"url": "https://rickandmortyapi.com/api/character/68"
+			"url": "https://rickandmortyapi.com/api/character/68",
+			"locationToId": 728
 		},
 		{
 			"id": 69,
@@ -5206,7 +5320,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/69"
+			"url": "https://rickandmortyapi.com/api/character/69",
+			"locationToId": 738
 		},
 		{
 			"id": 70,
@@ -5227,7 +5342,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/24"
 			],
-			"url": "https://rickandmortyapi.com/api/character/70"
+			"url": "https://rickandmortyapi.com/api/character/70",
+			"locationToId": 737
 		},
 		{
 			"id": 71,
@@ -5248,7 +5364,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/71"
+			"url": "https://rickandmortyapi.com/api/character/71",
+			"locationToId": 732
 		},
 		{
 			"id": 72,
@@ -5269,7 +5386,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/72"
+			"url": "https://rickandmortyapi.com/api/character/72",
+			"locationToId": 738
 		},
 		{
 			"id": 73,
@@ -5290,7 +5408,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/73"
+			"url": "https://rickandmortyapi.com/api/character/73",
+			"locationToId": 738
 		},
 		{
 			"id": 74,
@@ -5311,7 +5430,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/74"
+			"url": "https://rickandmortyapi.com/api/character/74",
+			"locationToId": 738
 		},
 		{
 			"id": 75,
@@ -5332,7 +5452,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/75"
+			"url": "https://rickandmortyapi.com/api/character/75",
+			"locationToId": 732
 		},
 		{
 			"id": 76,
@@ -5353,7 +5474,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/76"
+			"url": "https://rickandmortyapi.com/api/character/76",
+			"locationToId": 761
 		},
 		{
 			"id": 77,
@@ -5374,7 +5496,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/77"
+			"url": "https://rickandmortyapi.com/api/character/77",
+			"locationToId": 738
 		},
 		{
 			"id": 78,
@@ -5396,7 +5519,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/78"
+			"url": "https://rickandmortyapi.com/api/character/78",
+			"locationToId": 738
 		},
 		{
 			"id": 79,
@@ -5417,12 +5541,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/79"
+			"url": "https://rickandmortyapi.com/api/character/79",
+			"locationToId": 705
 		},
 		{
 			"id": 704,
 			"name": "Hideout Planet",
-			"category": "location"
+			"location": "Hideout Planet",
+			"category": "location",
+			"locationToId": 705
 		},
 		{
 			"id": 80,
@@ -5443,7 +5570,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/2"
 			],
-			"url": "https://rickandmortyapi.com/api/character/80"
+			"url": "https://rickandmortyapi.com/api/character/80",
+			"locationToId": 732
 		},
 		{
 			"id": 81,
@@ -5464,7 +5592,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/81"
+			"url": "https://rickandmortyapi.com/api/character/81",
+			"locationToId": 732
 		},
 		{
 			"id": 82,
@@ -5486,7 +5615,8 @@
 				"https://rickandmortyapi.com/api/episode/6",
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/82"
+			"url": "https://rickandmortyapi.com/api/character/82",
+			"locationToId": 732
 		},
 		{
 			"id": 83,
@@ -5508,7 +5638,8 @@
 				"https://rickandmortyapi.com/api/episode/6",
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/83"
+			"url": "https://rickandmortyapi.com/api/character/83",
+			"locationToId": 732
 		},
 		{
 			"id": 84,
@@ -5529,7 +5660,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/84"
+			"url": "https://rickandmortyapi.com/api/character/84",
+			"locationToId": 705
 		},
 		{
 			"id": 85,
@@ -5551,7 +5683,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/85"
+			"url": "https://rickandmortyapi.com/api/character/85",
+			"locationToId": 738
 		},
 		{
 			"id": 86,
@@ -5574,7 +5707,8 @@
 				"https://rickandmortyapi.com/api/episode/22",
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/86"
+			"url": "https://rickandmortyapi.com/api/character/86",
+			"locationToId": 738
 		},
 		{
 			"id": 87,
@@ -5595,12 +5729,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/4"
 			],
-			"url": "https://rickandmortyapi.com/api/character/87"
+			"url": "https://rickandmortyapi.com/api/character/87",
+			"locationToId": 728
 		},
 		{
 			"id": 705,
 			"name": "Zigerion's Base",
-			"category": "location"
+			"location": "Zigerion's Base",
+			"category": "location",
+			"locationToId": 728
 		},
 		{
 			"id": 88,
@@ -5624,7 +5761,8 @@
 				"https://rickandmortyapi.com/api/episode/11",
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/88"
+			"url": "https://rickandmortyapi.com/api/character/88",
+			"locationToId": 761
 		},
 		{
 			"id": 89,
@@ -5645,12 +5783,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/5"
 			],
-			"url": "https://rickandmortyapi.com/api/character/89"
+			"url": "https://rickandmortyapi.com/api/character/89",
+			"locationToId": 733
 		},
 		{
 			"id": 706,
 			"name": "Giant's Town",
-			"category": "location"
+			"location": "Giant's Town",
+			"category": "location",
+			"locationToId": 733
 		},
 		{
 			"id": 90,
@@ -5671,12 +5812,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/14"
 			],
-			"url": "https://rickandmortyapi.com/api/character/90"
+			"url": "https://rickandmortyapi.com/api/character/90",
+			"locationToId": 732
 		},
 		{
 			"id": 707,
 			"name": "Unity's Planet",
-			"category": "location"
+			"location": "Unity's Planet",
+			"category": "location",
+			"locationToId": 732
 		},
 		{
 			"id": 91,
@@ -5697,7 +5841,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/91"
+			"url": "https://rickandmortyapi.com/api/character/91",
+			"locationToId": 721
 		},
 		{
 			"id": 92,
@@ -5719,7 +5864,8 @@
 				"https://rickandmortyapi.com/api/episode/1",
 				"https://rickandmortyapi.com/api/episode/6"
 			],
-			"url": "https://rickandmortyapi.com/api/character/92"
+			"url": "https://rickandmortyapi.com/api/character/92",
+			"locationToId": 732
 		},
 		{
 			"id": 93,
@@ -5740,12 +5886,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/93"
+			"url": "https://rickandmortyapi.com/api/character/93",
+			"locationToId": 722
 		},
 		{
 			"id": 708,
 			"name": "Dorian 5",
-			"category": "location"
+			"location": "Dorian 5",
+			"category": "location",
+			"locationToId": 722
 		},
 		{
 			"id": 94,
@@ -5766,12 +5915,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/94"
+			"url": "https://rickandmortyapi.com/api/character/94",
+			"locationToId": 709
 		},
 		{
 			"id": 709,
 			"name": "Earth (Unknown dimension)",
-			"category": "location"
+			"location": "Earth (Unknown dimension)",
+			"category": "location",
+			"locationToId": 709
 		},
 		{
 			"id": 95,
@@ -5792,7 +5944,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/95"
+			"url": "https://rickandmortyapi.com/api/character/95",
+			"locationToId": 738
 		},
 		{
 			"id": 96,
@@ -5813,7 +5966,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/96"
+			"url": "https://rickandmortyapi.com/api/character/96",
+			"locationToId": 727
 		},
 		{
 			"id": 97,
@@ -5834,7 +5988,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/97"
+			"url": "https://rickandmortyapi.com/api/character/97",
+			"locationToId": 727
 		},
 		{
 			"id": 98,
@@ -5855,7 +6010,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/98"
+			"url": "https://rickandmortyapi.com/api/character/98",
+			"locationToId": 727
 		},
 		{
 			"id": 99,
@@ -5876,7 +6032,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/99"
+			"url": "https://rickandmortyapi.com/api/character/99",
+			"locationToId": 727
 		},
 		{
 			"id": 100,
@@ -5897,7 +6054,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/100"
+			"url": "https://rickandmortyapi.com/api/character/100",
+			"locationToId": 727
 		},
 		{
 			"id": 101,
@@ -5918,7 +6076,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/101"
+			"url": "https://rickandmortyapi.com/api/character/101",
+			"locationToId": 727
 		},
 		{
 			"id": 102,
@@ -5939,7 +6098,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/102"
+			"url": "https://rickandmortyapi.com/api/character/102",
+			"locationToId": 732
 		},
 		{
 			"id": 103,
@@ -5961,7 +6121,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/103"
+			"url": "https://rickandmortyapi.com/api/character/103",
+			"locationToId": 761
 		},
 		{
 			"id": 104,
@@ -5982,7 +6143,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/104"
+			"url": "https://rickandmortyapi.com/api/character/104",
+			"locationToId": 722
 		},
 		{
 			"id": 105,
@@ -6003,12 +6165,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/105"
+			"url": "https://rickandmortyapi.com/api/character/105",
+			"locationToId": 737
 		},
 		{
 			"id": 710,
 			"name": "St. Gloopy Noops Hospital",
-			"category": "location"
+			"location": "St. Gloopy Noops Hospital",
+			"category": "location",
+			"locationToId": 737
 		},
 		{
 			"id": 106,
@@ -6029,12 +6194,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/106"
+			"url": "https://rickandmortyapi.com/api/character/106",
+			"locationToId": 737
 		},
 		{
 			"id": 711,
 			"name": "Roy: A Life Well Lived",
-			"category": "location"
+			"location": "Roy: A Life Well Lived",
+			"category": "location",
+			"locationToId": 737
 		},
 		{
 			"id": 107,
@@ -6056,7 +6224,8 @@
 				"https://rickandmortyapi.com/api/episode/24",
 				"https://rickandmortyapi.com/api/episode/41"
 			],
-			"url": "https://rickandmortyapi.com/api/character/107"
+			"url": "https://rickandmortyapi.com/api/character/107",
+			"locationToId": 761
 		},
 		{
 			"id": 108,
@@ -6077,7 +6246,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/108"
+			"url": "https://rickandmortyapi.com/api/character/108",
+			"locationToId": 727
 		},
 		{
 			"id": 109,
@@ -6098,7 +6268,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/109"
+			"url": "https://rickandmortyapi.com/api/character/109",
+			"locationToId": 761
 		},
 		{
 			"id": 110,
@@ -6119,7 +6290,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/23"
 			],
-			"url": "https://rickandmortyapi.com/api/character/110"
+			"url": "https://rickandmortyapi.com/api/character/110",
+			"locationToId": 728
 		},
 		{
 			"id": 111,
@@ -6140,7 +6312,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/23"
 			],
-			"url": "https://rickandmortyapi.com/api/character/111"
+			"url": "https://rickandmortyapi.com/api/character/111",
+			"locationToId": 728
 		},
 		{
 			"id": 112,
@@ -6161,7 +6334,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/112"
+			"url": "https://rickandmortyapi.com/api/character/112",
+			"locationToId": 732
 		},
 		{
 			"id": 113,
@@ -6182,7 +6356,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/113"
+			"url": "https://rickandmortyapi.com/api/character/113",
+			"locationToId": 761
 		},
 		{
 			"id": 114,
@@ -6203,7 +6378,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/114"
+			"url": "https://rickandmortyapi.com/api/character/114",
+			"locationToId": 732
 		},
 		{
 			"id": 115,
@@ -6225,7 +6401,8 @@
 				"https://rickandmortyapi.com/api/episode/16",
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/115"
+			"url": "https://rickandmortyapi.com/api/character/115",
+			"locationToId": 761
 		},
 		{
 			"id": 116,
@@ -6246,7 +6423,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/5"
 			],
-			"url": "https://rickandmortyapi.com/api/character/116"
+			"url": "https://rickandmortyapi.com/api/character/116",
+			"locationToId": 732
 		},
 		{
 			"id": 117,
@@ -6267,7 +6445,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/5"
 			],
-			"url": "https://rickandmortyapi.com/api/character/117"
+			"url": "https://rickandmortyapi.com/api/character/117",
+			"locationToId": 732
 		},
 		{
 			"id": 118,
@@ -6289,7 +6468,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/118"
+			"url": "https://rickandmortyapi.com/api/character/118",
+			"locationToId": 738
 		},
 		{
 			"id": 119,
@@ -6310,7 +6490,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/119"
+			"url": "https://rickandmortyapi.com/api/character/119",
+			"locationToId": 738
 		},
 		{
 			"id": 120,
@@ -6331,7 +6512,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/5"
 			],
-			"url": "https://rickandmortyapi.com/api/character/120"
+			"url": "https://rickandmortyapi.com/api/character/120",
+			"locationToId": 732
 		},
 		{
 			"id": 121,
@@ -6352,7 +6534,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/121"
+			"url": "https://rickandmortyapi.com/api/character/121",
+			"locationToId": 737
 		},
 		{
 			"id": 122,
@@ -6373,7 +6556,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/122"
+			"url": "https://rickandmortyapi.com/api/character/122",
+			"locationToId": 737
 		},
 		{
 			"id": 123,
@@ -6394,7 +6578,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/123"
+			"url": "https://rickandmortyapi.com/api/character/123",
+			"locationToId": 738
 		},
 		{
 			"id": 124,
@@ -6416,7 +6601,8 @@
 				"https://rickandmortyapi.com/api/episode/16",
 				"https://rickandmortyapi.com/api/episode/27"
 			],
-			"url": "https://rickandmortyapi.com/api/character/124"
+			"url": "https://rickandmortyapi.com/api/character/124",
+			"locationToId": 761
 		},
 		{
 			"id": 125,
@@ -6439,7 +6625,8 @@
 				"https://rickandmortyapi.com/api/episode/21",
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/125"
+			"url": "https://rickandmortyapi.com/api/character/125",
+			"locationToId": 732
 		},
 		{
 			"id": 126,
@@ -6460,7 +6647,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/126"
+			"url": "https://rickandmortyapi.com/api/character/126",
+			"locationToId": 737
 		},
 		{
 			"id": 127,
@@ -6481,7 +6669,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/1"
 			],
-			"url": "https://rickandmortyapi.com/api/character/127"
+			"url": "https://rickandmortyapi.com/api/character/127",
+			"locationToId": 732
 		},
 		{
 			"id": 128,
@@ -6502,7 +6691,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/128"
+			"url": "https://rickandmortyapi.com/api/character/128",
+			"locationToId": 761
 		},
 		{
 			"id": 129,
@@ -6525,7 +6715,8 @@
 				"https://rickandmortyapi.com/api/episode/13",
 				"https://rickandmortyapi.com/api/episode/17"
 			],
-			"url": "https://rickandmortyapi.com/api/character/129"
+			"url": "https://rickandmortyapi.com/api/character/129",
+			"locationToId": 737
 		},
 		{
 			"id": 130,
@@ -6546,7 +6737,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/130"
+			"url": "https://rickandmortyapi.com/api/character/130",
+			"locationToId": 737
 		},
 		{
 			"id": 131,
@@ -6569,7 +6761,8 @@
 				"https://rickandmortyapi.com/api/episode/18",
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/131"
+			"url": "https://rickandmortyapi.com/api/character/131",
+			"locationToId": 732
 		},
 		{
 			"id": 132,
@@ -6590,7 +6783,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/132"
+			"url": "https://rickandmortyapi.com/api/character/132",
+			"locationToId": 732
 		},
 		{
 			"id": 133,
@@ -6613,7 +6807,8 @@
 				"https://rickandmortyapi.com/api/episode/19",
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/133"
+			"url": "https://rickandmortyapi.com/api/character/133",
+			"locationToId": 737
 		},
 		{
 			"id": 134,
@@ -6634,7 +6829,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/134"
+			"url": "https://rickandmortyapi.com/api/character/134",
+			"locationToId": 737
 		},
 		{
 			"id": 135,
@@ -6655,7 +6851,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/135"
+			"url": "https://rickandmortyapi.com/api/character/135",
+			"locationToId": 738
 		},
 		{
 			"id": 136,
@@ -6677,7 +6874,8 @@
 				"https://rickandmortyapi.com/api/episode/8",
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/136"
+			"url": "https://rickandmortyapi.com/api/character/136",
+			"locationToId": 737
 		},
 		{
 			"id": 137,
@@ -6698,7 +6896,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/137"
+			"url": "https://rickandmortyapi.com/api/character/137",
+			"locationToId": 761
 		},
 		{
 			"id": 138,
@@ -6719,7 +6918,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/16"
 			],
-			"url": "https://rickandmortyapi.com/api/character/138"
+			"url": "https://rickandmortyapi.com/api/character/138",
+			"locationToId": 761
 		},
 		{
 			"id": 139,
@@ -6740,7 +6940,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/20"
 			],
-			"url": "https://rickandmortyapi.com/api/character/139"
+			"url": "https://rickandmortyapi.com/api/character/139",
+			"locationToId": 726
 		},
 		{
 			"id": 140,
@@ -6761,7 +6962,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/23"
 			],
-			"url": "https://rickandmortyapi.com/api/character/140"
+			"url": "https://rickandmortyapi.com/api/character/140",
+			"locationToId": 728
 		},
 		{
 			"id": 141,
@@ -6782,7 +6984,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/141"
+			"url": "https://rickandmortyapi.com/api/character/141",
+			"locationToId": 761
 		},
 		{
 			"id": 142,
@@ -6803,12 +7006,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/142"
+			"url": "https://rickandmortyapi.com/api/character/142",
+			"locationToId": 731
 		},
 		{
 			"id": 712,
 			"name": "Resort Planet",
-			"category": "location"
+			"location": "Resort Planet",
+			"category": "location",
+			"locationToId": 731
 		},
 		{
 			"id": 143,
@@ -6829,7 +7035,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/143"
+			"url": "https://rickandmortyapi.com/api/character/143",
+			"locationToId": 738
 		},
 		{
 			"id": 144,
@@ -6850,12 +7057,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/1"
 			],
-			"url": "https://rickandmortyapi.com/api/character/144"
+			"url": "https://rickandmortyapi.com/api/character/144",
+			"locationToId": 716
 		},
 		{
 			"id": 713,
 			"name": "Interdimensional Customs",
-			"category": "location"
+			"location": "Interdimensional Customs",
+			"category": "location",
+			"locationToId": 716
 		},
 		{
 			"id": 145,
@@ -6876,7 +7086,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/145"
+			"url": "https://rickandmortyapi.com/api/character/145",
+			"locationToId": 737
 		},
 		{
 			"id": 146,
@@ -6897,7 +7108,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/146"
+			"url": "https://rickandmortyapi.com/api/character/146",
+			"locationToId": 732
 		},
 		{
 			"id": 147,
@@ -6918,7 +7130,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/29"
 			],
-			"url": "https://rickandmortyapi.com/api/character/147"
+			"url": "https://rickandmortyapi.com/api/character/147",
+			"locationToId": 761
 		},
 		{
 			"id": 148,
@@ -6939,7 +7152,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/148"
+			"url": "https://rickandmortyapi.com/api/character/148",
+			"locationToId": 732
 		},
 		{
 			"id": 149,
@@ -6960,7 +7174,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/29"
 			],
-			"url": "https://rickandmortyapi.com/api/character/149"
+			"url": "https://rickandmortyapi.com/api/character/149",
+			"locationToId": 761
 		},
 		{
 			"id": 150,
@@ -6981,12 +7196,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/150"
+			"url": "https://rickandmortyapi.com/api/character/150",
+			"locationToId": 714
 		},
 		{
 			"id": 714,
 			"name": "Galactic Federation Prison",
-			"category": "location"
+			"location": "Galactic Federation Prison",
+			"category": "location",
+			"locationToId": 714
 		},
 		{
 			"id": 151,
@@ -7007,7 +7225,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/7"
 			],
-			"url": "https://rickandmortyapi.com/api/character/151"
+			"url": "https://rickandmortyapi.com/api/character/151",
+			"locationToId": 761
 		},
 		{
 			"id": 152,
@@ -7029,7 +7248,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/152"
+			"url": "https://rickandmortyapi.com/api/character/152",
+			"locationToId": 738
 		},
 		{
 			"id": 153,
@@ -7051,12 +7271,15 @@
 				"https://rickandmortyapi.com/api/episode/8",
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/153"
+			"url": "https://rickandmortyapi.com/api/character/153",
+			"locationToId": 715
 		},
 		{
 			"id": 715,
 			"name": "Hamster in Butt World",
-			"category": "location"
+			"location": "Hamster in Butt World",
+			"category": "location",
+			"locationToId": 715
 		},
 		{
 			"id": 154,
@@ -7077,7 +7300,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/154"
+			"url": "https://rickandmortyapi.com/api/character/154",
+			"locationToId": 761
 		},
 		{
 			"id": 155,
@@ -7098,7 +7322,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/6"
 			],
-			"url": "https://rickandmortyapi.com/api/character/155"
+			"url": "https://rickandmortyapi.com/api/character/155",
+			"locationToId": 732
 		},
 		{
 			"id": 156,
@@ -7119,7 +7344,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/23"
 			],
-			"url": "https://rickandmortyapi.com/api/character/156"
+			"url": "https://rickandmortyapi.com/api/character/156",
+			"locationToId": 728
 		},
 		{
 			"id": 157,
@@ -7140,7 +7366,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/157"
+			"url": "https://rickandmortyapi.com/api/character/157",
+			"locationToId": 737
 		},
 		{
 			"id": 158,
@@ -7161,7 +7388,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/1"
 			],
-			"url": "https://rickandmortyapi.com/api/character/158"
+			"url": "https://rickandmortyapi.com/api/character/158",
+			"locationToId": 716
 		},
 		{
 			"id": 159,
@@ -7182,12 +7410,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/17"
 			],
-			"url": "https://rickandmortyapi.com/api/character/159"
+			"url": "https://rickandmortyapi.com/api/character/159",
+			"locationToId": 717
 		},
 		{
 			"id": 716,
 			"name": "Earth (Giant Telepathic Spiders Dimension)",
-			"category": "location"
+			"location": "Earth (Giant Telepathic Spiders Dimension)",
+			"category": "location",
+			"locationToId": 717
 		},
 		{
 			"id": 160,
@@ -7208,7 +7439,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/17"
 			],
-			"url": "https://rickandmortyapi.com/api/character/160"
+			"url": "https://rickandmortyapi.com/api/character/160",
+			"locationToId": 717
 		},
 		{
 			"id": 161,
@@ -7229,12 +7461,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/16"
 			],
-			"url": "https://rickandmortyapi.com/api/character/161"
+			"url": "https://rickandmortyapi.com/api/character/161",
+			"locationToId": 724
 		},
 		{
 			"id": 717,
 			"name": "Alphabetrium",
-			"category": "location"
+			"location": "Alphabetrium",
+			"category": "location",
+			"locationToId": 724
 		},
 		{
 			"id": 162,
@@ -7255,7 +7490,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/16"
 			],
-			"url": "https://rickandmortyapi.com/api/character/162"
+			"url": "https://rickandmortyapi.com/api/character/162",
+			"locationToId": 724
 		},
 		{
 			"id": 163,
@@ -7276,7 +7512,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/163"
+			"url": "https://rickandmortyapi.com/api/character/163",
+			"locationToId": 732
 		},
 		{
 			"id": 164,
@@ -7297,7 +7534,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/164"
+			"url": "https://rickandmortyapi.com/api/character/164",
+			"locationToId": 738
 		},
 		{
 			"id": 165,
@@ -7318,7 +7556,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/165"
+			"url": "https://rickandmortyapi.com/api/character/165",
+			"locationToId": 738
 		},
 		{
 			"id": 166,
@@ -7339,7 +7578,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/31"
 			],
-			"url": "https://rickandmortyapi.com/api/character/166"
+			"url": "https://rickandmortyapi.com/api/character/166",
+			"locationToId": 761
 		},
 		{
 			"id": 167,
@@ -7360,7 +7600,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/24"
 			],
-			"url": "https://rickandmortyapi.com/api/character/167"
+			"url": "https://rickandmortyapi.com/api/character/167",
+			"locationToId": 761
 		},
 		{
 			"id": 168,
@@ -7381,12 +7622,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/7"
 			],
-			"url": "https://rickandmortyapi.com/api/character/168"
+			"url": "https://rickandmortyapi.com/api/character/168",
+			"locationToId": 732
 		},
 		{
 			"id": 718,
 			"name": "Gazorpazorp",
-			"category": "location"
+			"location": "Gazorpazorp",
+			"category": "location",
+			"locationToId": 732
 		},
 		{
 			"id": 169,
@@ -7408,7 +7652,8 @@
 				"https://rickandmortyapi.com/api/episode/3",
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/169"
+			"url": "https://rickandmortyapi.com/api/character/169",
+			"locationToId": 732
 		},
 		{
 			"id": 170,
@@ -7429,7 +7674,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/27"
 			],
-			"url": "https://rickandmortyapi.com/api/character/170"
+			"url": "https://rickandmortyapi.com/api/character/170",
+			"locationToId": 761
 		},
 		{
 			"id": 171,
@@ -7450,7 +7696,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/24"
 			],
-			"url": "https://rickandmortyapi.com/api/character/171"
+			"url": "https://rickandmortyapi.com/api/character/171",
+			"locationToId": 761
 		},
 		{
 			"id": 172,
@@ -7471,7 +7718,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/16"
 			],
-			"url": "https://rickandmortyapi.com/api/character/172"
+			"url": "https://rickandmortyapi.com/api/character/172",
+			"locationToId": 761
 		},
 		{
 			"id": 173,
@@ -7492,7 +7740,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/173"
+			"url": "https://rickandmortyapi.com/api/character/173",
+			"locationToId": 737
 		},
 		{
 			"id": 174,
@@ -7513,12 +7762,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/174"
+			"url": "https://rickandmortyapi.com/api/character/174",
+			"locationToId": 737
 		},
 		{
 			"id": 719,
 			"name": "Jerryboree",
-			"category": "location"
+			"location": "Jerryboree",
+			"category": "location",
+			"locationToId": 737
 		},
 		{
 			"id": 175,
@@ -7545,7 +7797,8 @@
 				"https://rickandmortyapi.com/api/episode/6",
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/175"
+			"url": "https://rickandmortyapi.com/api/character/175",
+			"locationToId": 732
 		},
 		{
 			"id": 176,
@@ -7566,7 +7819,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/176"
+			"url": "https://rickandmortyapi.com/api/character/176",
+			"locationToId": 721
 		},
 		{
 			"id": 177,
@@ -7587,7 +7841,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/177"
+			"url": "https://rickandmortyapi.com/api/character/177",
+			"locationToId": 728
 		},
 		{
 			"id": 178,
@@ -7608,7 +7863,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/178"
+			"url": "https://rickandmortyapi.com/api/character/178",
+			"locationToId": 732
 		},
 		{
 			"id": 179,
@@ -7631,7 +7887,8 @@
 				"https://rickandmortyapi.com/api/episode/4",
 				"https://rickandmortyapi.com/api/episode/6"
 			],
-			"url": "https://rickandmortyapi.com/api/character/179"
+			"url": "https://rickandmortyapi.com/api/character/179",
+			"locationToId": 732
 		},
 		{
 			"id": 180,
@@ -7662,7 +7919,8 @@
 				"https://rickandmortyapi.com/api/episode/32",
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/180"
+			"url": "https://rickandmortyapi.com/api/character/180",
+			"locationToId": 761
 		},
 		{
 			"id": 181,
@@ -7690,7 +7948,8 @@
 				"https://rickandmortyapi.com/api/episode/25",
 				"https://rickandmortyapi.com/api/episode/27"
 			],
-			"url": "https://rickandmortyapi.com/api/character/181"
+			"url": "https://rickandmortyapi.com/api/character/181",
+			"locationToId": 761
 		},
 		{
 			"id": 182,
@@ -7711,7 +7970,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/16"
 			],
-			"url": "https://rickandmortyapi.com/api/character/182"
+			"url": "https://rickandmortyapi.com/api/character/182",
+			"locationToId": 761
 		},
 		{
 			"id": 183,
@@ -7732,7 +7992,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/183"
+			"url": "https://rickandmortyapi.com/api/character/183",
+			"locationToId": 721
 		},
 		{
 			"id": 184,
@@ -7753,7 +8014,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/184"
+			"url": "https://rickandmortyapi.com/api/character/184",
+			"locationToId": 737
 		},
 		{
 			"id": 185,
@@ -7774,7 +8036,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/30"
 			],
-			"url": "https://rickandmortyapi.com/api/character/185"
+			"url": "https://rickandmortyapi.com/api/character/185",
+			"locationToId": 761
 		},
 		{
 			"id": 186,
@@ -7795,7 +8058,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/186"
+			"url": "https://rickandmortyapi.com/api/character/186",
+			"locationToId": 732
 		},
 		{
 			"id": 187,
@@ -7816,7 +8080,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/187"
+			"url": "https://rickandmortyapi.com/api/character/187",
+			"locationToId": 738
 		},
 		{
 			"id": 188,
@@ -7837,7 +8102,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/14"
 			],
-			"url": "https://rickandmortyapi.com/api/character/188"
+			"url": "https://rickandmortyapi.com/api/character/188",
+			"locationToId": 732
 		},
 		{
 			"id": 189,
@@ -7858,7 +8124,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/24"
 			],
-			"url": "https://rickandmortyapi.com/api/character/189"
+			"url": "https://rickandmortyapi.com/api/character/189",
+			"locationToId": 761
 		},
 		{
 			"id": 190,
@@ -7879,7 +8146,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/30"
 			],
-			"url": "https://rickandmortyapi.com/api/character/190"
+			"url": "https://rickandmortyapi.com/api/character/190",
+			"locationToId": 761
 		},
 		{
 			"id": 191,
@@ -7900,7 +8168,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/4"
 			],
-			"url": "https://rickandmortyapi.com/api/character/191"
+			"url": "https://rickandmortyapi.com/api/character/191",
+			"locationToId": 728
 		},
 		{
 			"id": 192,
@@ -7921,12 +8190,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/9"
 			],
-			"url": "https://rickandmortyapi.com/api/character/192"
+			"url": "https://rickandmortyapi.com/api/character/192",
+			"locationToId": 734
 		},
 		{
 			"id": 720,
 			"name": "Pluto",
-			"category": "location"
+			"location": "Pluto",
+			"category": "location",
+			"locationToId": 734
 		},
 		{
 			"id": 193,
@@ -7947,7 +8219,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/5"
 			],
-			"url": "https://rickandmortyapi.com/api/character/193"
+			"url": "https://rickandmortyapi.com/api/character/193",
+			"locationToId": 728
 		},
 		{
 			"id": 194,
@@ -7968,7 +8241,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/194"
+			"url": "https://rickandmortyapi.com/api/character/194",
+			"locationToId": 732
 		},
 		{
 			"id": 195,
@@ -7989,7 +8263,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/195"
+			"url": "https://rickandmortyapi.com/api/character/195",
+			"locationToId": 721
 		},
 		{
 			"id": 196,
@@ -8010,7 +8285,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/196"
+			"url": "https://rickandmortyapi.com/api/character/196",
+			"locationToId": 737
 		},
 		{
 			"id": 197,
@@ -8031,12 +8307,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/17"
 			],
-			"url": "https://rickandmortyapi.com/api/character/197"
+			"url": "https://rickandmortyapi.com/api/character/197",
+			"locationToId": 731
 		},
 		{
 			"id": 721,
 			"name": "Kyle's Teenyverse",
-			"category": "location"
+			"location": "Kyle's Teenyverse",
+			"category": "location",
+			"locationToId": 731
 		},
 		{
 			"id": 198,
@@ -8057,7 +8336,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/198"
+			"url": "https://rickandmortyapi.com/api/character/198",
+			"locationToId": 722
 		},
 		{
 			"id": 199,
@@ -8080,7 +8360,8 @@
 				"https://rickandmortyapi.com/api/episode/19",
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/199"
+			"url": "https://rickandmortyapi.com/api/character/199",
+			"locationToId": 732
 		},
 		{
 			"id": 200,
@@ -8101,7 +8382,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/200"
+			"url": "https://rickandmortyapi.com/api/character/200",
+			"locationToId": 738
 		},
 		{
 			"id": 201,
@@ -8122,7 +8404,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/201"
+			"url": "https://rickandmortyapi.com/api/character/201",
+			"locationToId": 732
 		},
 		{
 			"id": 202,
@@ -8143,7 +8426,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/20"
 			],
-			"url": "https://rickandmortyapi.com/api/character/202"
+			"url": "https://rickandmortyapi.com/api/character/202",
+			"locationToId": 726
 		},
 		{
 			"id": 203,
@@ -8164,7 +8448,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/203"
+			"url": "https://rickandmortyapi.com/api/character/203",
+			"locationToId": 732
 		},
 		{
 			"id": 204,
@@ -8185,7 +8470,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/204"
+			"url": "https://rickandmortyapi.com/api/character/204",
+			"locationToId": 728
 		},
 		{
 			"id": 205,
@@ -8206,7 +8492,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/205"
+			"url": "https://rickandmortyapi.com/api/character/205",
+			"locationToId": 737
 		},
 		{
 			"id": 206,
@@ -8227,7 +8514,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/206"
+			"url": "https://rickandmortyapi.com/api/character/206",
+			"locationToId": 738
 		},
 		{
 			"id": 207,
@@ -8250,7 +8538,8 @@
 				"https://rickandmortyapi.com/api/episode/13",
 				"https://rickandmortyapi.com/api/episode/17"
 			],
-			"url": "https://rickandmortyapi.com/api/character/207"
+			"url": "https://rickandmortyapi.com/api/character/207",
+			"locationToId": 737
 		},
 		{
 			"id": 208,
@@ -8271,7 +8560,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/208"
+			"url": "https://rickandmortyapi.com/api/character/208",
+			"locationToId": 732
 		},
 		{
 			"id": 209,
@@ -8292,7 +8582,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/209"
+			"url": "https://rickandmortyapi.com/api/character/209",
+			"locationToId": 738
 		},
 		{
 			"id": 210,
@@ -8313,7 +8604,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/11"
 			],
-			"url": "https://rickandmortyapi.com/api/character/210"
+			"url": "https://rickandmortyapi.com/api/character/210",
+			"locationToId": 761
 		},
 		{
 			"id": 211,
@@ -8334,7 +8626,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/7"
 			],
-			"url": "https://rickandmortyapi.com/api/character/211"
+			"url": "https://rickandmortyapi.com/api/character/211",
+			"locationToId": 732
 		},
 		{
 			"id": 212,
@@ -8355,7 +8648,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/16"
 			],
-			"url": "https://rickandmortyapi.com/api/character/212"
+			"url": "https://rickandmortyapi.com/api/character/212",
+			"locationToId": 724
 		},
 		{
 			"id": 213,
@@ -8376,7 +8670,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/16"
 			],
-			"url": "https://rickandmortyapi.com/api/character/213"
+			"url": "https://rickandmortyapi.com/api/character/213",
+			"locationToId": 724
 		},
 		{
 			"id": 214,
@@ -8397,7 +8692,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/214"
+			"url": "https://rickandmortyapi.com/api/character/214",
+			"locationToId": 737
 		},
 		{
 			"id": 215,
@@ -8419,7 +8715,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/215"
+			"url": "https://rickandmortyapi.com/api/character/215",
+			"locationToId": 738
 		},
 		{
 			"id": 216,
@@ -8442,7 +8739,8 @@
 				"https://rickandmortyapi.com/api/episode/11",
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/216"
+			"url": "https://rickandmortyapi.com/api/character/216",
+			"locationToId": 732
 		},
 		{
 			"id": 217,
@@ -8463,7 +8761,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/23"
 			],
-			"url": "https://rickandmortyapi.com/api/character/217"
+			"url": "https://rickandmortyapi.com/api/character/217",
+			"locationToId": 761
 		},
 		{
 			"id": 218,
@@ -8484,7 +8783,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/23"
 			],
-			"url": "https://rickandmortyapi.com/api/character/218"
+			"url": "https://rickandmortyapi.com/api/character/218",
+			"locationToId": 761
 		},
 		{
 			"id": 219,
@@ -8505,7 +8805,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/23"
 			],
-			"url": "https://rickandmortyapi.com/api/character/219"
+			"url": "https://rickandmortyapi.com/api/character/219",
+			"locationToId": 761
 		},
 		{
 			"id": 220,
@@ -8526,7 +8827,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/220"
+			"url": "https://rickandmortyapi.com/api/character/220",
+			"locationToId": 738
 		},
 		{
 			"id": 221,
@@ -8547,7 +8849,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/2"
 			],
-			"url": "https://rickandmortyapi.com/api/character/221"
+			"url": "https://rickandmortyapi.com/api/character/221",
+			"locationToId": 732
 		},
 		{
 			"id": 222,
@@ -8568,7 +8871,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/222"
+			"url": "https://rickandmortyapi.com/api/character/222",
+			"locationToId": 737
 		},
 		{
 			"id": 223,
@@ -8589,7 +8893,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/223"
+			"url": "https://rickandmortyapi.com/api/character/223",
+			"locationToId": 737
 		},
 		{
 			"id": 224,
@@ -8610,7 +8915,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/224"
+			"url": "https://rickandmortyapi.com/api/character/224",
+			"locationToId": 737
 		},
 		{
 			"id": 225,
@@ -8631,7 +8937,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/225"
+			"url": "https://rickandmortyapi.com/api/character/225",
+			"locationToId": 737
 		},
 		{
 			"id": 226,
@@ -8652,7 +8959,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/226"
+			"url": "https://rickandmortyapi.com/api/character/226",
+			"locationToId": 732
 		},
 		{
 			"id": 227,
@@ -8673,7 +8981,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/27"
 			],
-			"url": "https://rickandmortyapi.com/api/character/227"
+			"url": "https://rickandmortyapi.com/api/character/227",
+			"locationToId": 761
 		},
 		{
 			"id": 228,
@@ -8694,7 +9003,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/23"
 			],
-			"url": "https://rickandmortyapi.com/api/character/228"
+			"url": "https://rickandmortyapi.com/api/character/228",
+			"locationToId": 728
 		},
 		{
 			"id": 229,
@@ -8715,7 +9025,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/229"
+			"url": "https://rickandmortyapi.com/api/character/229",
+			"locationToId": 738
 		},
 		{
 			"id": 230,
@@ -8736,7 +9047,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/7"
 			],
-			"url": "https://rickandmortyapi.com/api/character/230"
+			"url": "https://rickandmortyapi.com/api/character/230",
+			"locationToId": 761
 		},
 		{
 			"id": 231,
@@ -8757,7 +9069,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/231"
+			"url": "https://rickandmortyapi.com/api/character/231",
+			"locationToId": 738
 		},
 		{
 			"id": 232,
@@ -8778,7 +9091,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/232"
+			"url": "https://rickandmortyapi.com/api/character/232",
+			"locationToId": 728
 		},
 		{
 			"id": 233,
@@ -8799,7 +9113,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/233"
+			"url": "https://rickandmortyapi.com/api/character/233",
+			"locationToId": 761
 		},
 		{
 			"id": 234,
@@ -8820,7 +9135,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/6"
 			],
-			"url": "https://rickandmortyapi.com/api/character/234"
+			"url": "https://rickandmortyapi.com/api/character/234",
+			"locationToId": 761
 		},
 		{
 			"id": 235,
@@ -8841,7 +9157,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/235"
+			"url": "https://rickandmortyapi.com/api/character/235",
+			"locationToId": 738
 		},
 		{
 			"id": 236,
@@ -8862,7 +9179,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/236"
+			"url": "https://rickandmortyapi.com/api/character/236",
+			"locationToId": 761
 		},
 		{
 			"id": 237,
@@ -8883,7 +9201,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/12"
 			],
-			"url": "https://rickandmortyapi.com/api/character/237"
+			"url": "https://rickandmortyapi.com/api/character/237",
+			"locationToId": 761
 		},
 		{
 			"id": 238,
@@ -8904,7 +9223,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/5"
 			],
-			"url": "https://rickandmortyapi.com/api/character/238"
+			"url": "https://rickandmortyapi.com/api/character/238",
+			"locationToId": 728
 		},
 		{
 			"id": 239,
@@ -8928,7 +9248,8 @@
 				"https://rickandmortyapi.com/api/episode/4",
 				"https://rickandmortyapi.com/api/episode/6"
 			],
-			"url": "https://rickandmortyapi.com/api/character/239"
+			"url": "https://rickandmortyapi.com/api/character/239",
+			"locationToId": 732
 		},
 		{
 			"id": 240,
@@ -8958,7 +9279,8 @@
 				"https://rickandmortyapi.com/api/episode/30",
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/240"
+			"url": "https://rickandmortyapi.com/api/character/240",
+			"locationToId": 761
 		},
 		{
 			"id": 241,
@@ -8980,7 +9302,8 @@
 				"https://rickandmortyapi.com/api/episode/4",
 				"https://rickandmortyapi.com/api/episode/16"
 			],
-			"url": "https://rickandmortyapi.com/api/character/241"
+			"url": "https://rickandmortyapi.com/api/character/241",
+			"locationToId": 761
 		},
 		{
 			"id": 242,
@@ -9005,12 +9328,15 @@
 				"https://rickandmortyapi.com/api/episode/29",
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/242"
+			"url": "https://rickandmortyapi.com/api/character/242",
+			"locationToId": 739
 		},
 		{
 			"id": 722,
 			"name": "Earth (Fascist Dimension)",
-			"category": "location"
+			"location": "Earth (Fascist Dimension)",
+			"category": "location",
+			"locationToId": 739
 		},
 		{
 			"id": 243,
@@ -9031,7 +9357,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/9"
 			],
-			"url": "https://rickandmortyapi.com/api/character/243"
+			"url": "https://rickandmortyapi.com/api/character/243",
+			"locationToId": 761
 		},
 		{
 			"id": 244,
@@ -9057,7 +9384,8 @@
 				"https://rickandmortyapi.com/api/episode/31",
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/244"
+			"url": "https://rickandmortyapi.com/api/character/244",
+			"locationToId": 761
 		},
 		{
 			"id": 245,
@@ -9078,7 +9406,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/30"
 			],
-			"url": "https://rickandmortyapi.com/api/character/245"
+			"url": "https://rickandmortyapi.com/api/character/245",
+			"locationToId": 761
 		},
 		{
 			"id": 246,
@@ -9100,7 +9429,8 @@
 				"https://rickandmortyapi.com/api/episode/2",
 				"https://rickandmortyapi.com/api/episode/27"
 			],
-			"url": "https://rickandmortyapi.com/api/character/246"
+			"url": "https://rickandmortyapi.com/api/character/246",
+			"locationToId": 732
 		},
 		{
 			"id": 247,
@@ -9121,7 +9451,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/31"
 			],
-			"url": "https://rickandmortyapi.com/api/character/247"
+			"url": "https://rickandmortyapi.com/api/character/247",
+			"locationToId": 737
 		},
 		{
 			"id": 248,
@@ -9142,7 +9473,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/248"
+			"url": "https://rickandmortyapi.com/api/character/248",
+			"locationToId": 761
 		},
 		{
 			"id": 249,
@@ -9166,7 +9498,8 @@
 				"https://rickandmortyapi.com/api/episode/14",
 				"https://rickandmortyapi.com/api/episode/30"
 			],
-			"url": "https://rickandmortyapi.com/api/character/249"
+			"url": "https://rickandmortyapi.com/api/character/249",
+			"locationToId": 737
 		},
 		{
 			"id": 250,
@@ -9187,7 +9520,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/250"
+			"url": "https://rickandmortyapi.com/api/character/250",
+			"locationToId": 737
 		},
 		{
 			"id": 251,
@@ -9213,7 +9547,8 @@
 				"https://rickandmortyapi.com/api/episode/29",
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/251"
+			"url": "https://rickandmortyapi.com/api/character/251",
+			"locationToId": 761
 		},
 		{
 			"id": 252,
@@ -9234,12 +9569,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/252"
+			"url": "https://rickandmortyapi.com/api/character/252",
+			"locationToId": 723
 		},
 		{
 			"id": 723,
 			"name": "Vindicator's Base",
-			"category": "location"
+			"location": "Vindicator's Base",
+			"category": "location",
+			"locationToId": 723
 		},
 		{
 			"id": 253,
@@ -9260,7 +9598,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/16"
 			],
-			"url": "https://rickandmortyapi.com/api/character/253"
+			"url": "https://rickandmortyapi.com/api/character/253",
+			"locationToId": 724
 		},
 		{
 			"id": 254,
@@ -9281,7 +9620,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/254"
+			"url": "https://rickandmortyapi.com/api/character/254",
+			"locationToId": 737
 		},
 		{
 			"id": 255,
@@ -9302,7 +9642,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/16"
 			],
-			"url": "https://rickandmortyapi.com/api/character/255"
+			"url": "https://rickandmortyapi.com/api/character/255",
+			"locationToId": 761
 		},
 		{
 			"id": 256,
@@ -9323,7 +9664,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/256"
+			"url": "https://rickandmortyapi.com/api/character/256",
+			"locationToId": 732
 		},
 		{
 			"id": 257,
@@ -9344,7 +9686,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/257"
+			"url": "https://rickandmortyapi.com/api/character/257",
+			"locationToId": 737
 		},
 		{
 			"id": 258,
@@ -9365,12 +9708,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/7"
 			],
-			"url": "https://rickandmortyapi.com/api/character/258"
+			"url": "https://rickandmortyapi.com/api/character/258",
+			"locationToId": 724
 		},
 		{
 			"id": 724,
 			"name": "Pawn Shop Planet",
-			"category": "location"
+			"location": "Pawn Shop Planet",
+			"category": "location",
+			"locationToId": 724
 		},
 		{
 			"id": 259,
@@ -9391,7 +9737,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/259"
+			"url": "https://rickandmortyapi.com/api/character/259",
+			"locationToId": 761
 		},
 		{
 			"id": 260,
@@ -9412,7 +9759,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/260"
+			"url": "https://rickandmortyapi.com/api/character/260",
+			"locationToId": 737
 		},
 		{
 			"id": 261,
@@ -9433,7 +9781,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/261"
+			"url": "https://rickandmortyapi.com/api/character/261",
+			"locationToId": 732
 		},
 		{
 			"id": 262,
@@ -9454,7 +9803,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/262"
+			"url": "https://rickandmortyapi.com/api/character/262",
+			"locationToId": 761
 		},
 		{
 			"id": 263,
@@ -9475,7 +9825,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/263"
+			"url": "https://rickandmortyapi.com/api/character/263",
+			"locationToId": 737
 		},
 		{
 			"id": 264,
@@ -9496,7 +9847,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/264"
+			"url": "https://rickandmortyapi.com/api/character/264",
+			"locationToId": 737
 		},
 		{
 			"id": 265,
@@ -9517,7 +9869,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/24"
 			],
-			"url": "https://rickandmortyapi.com/api/character/265"
+			"url": "https://rickandmortyapi.com/api/character/265",
+			"locationToId": 761
 		},
 		{
 			"id": 266,
@@ -9539,7 +9892,8 @@
 				"https://rickandmortyapi.com/api/episode/8",
 				"https://rickandmortyapi.com/api/episode/17"
 			],
-			"url": "https://rickandmortyapi.com/api/character/266"
+			"url": "https://rickandmortyapi.com/api/character/266",
+			"locationToId": 737
 		},
 		{
 			"id": 267,
@@ -9560,7 +9914,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/267"
+			"url": "https://rickandmortyapi.com/api/character/267",
+			"locationToId": 738
 		},
 		{
 			"id": 268,
@@ -9581,7 +9936,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/268"
+			"url": "https://rickandmortyapi.com/api/character/268",
+			"locationToId": 727
 		},
 		{
 			"id": 269,
@@ -9602,12 +9958,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/31"
 			],
-			"url": "https://rickandmortyapi.com/api/character/269"
+			"url": "https://rickandmortyapi.com/api/character/269",
+			"locationToId": 725
 		},
 		{
 			"id": 725,
 			"name": "Mega Gargantuan Kingdom",
-			"category": "location"
+			"location": "Mega Gargantuan Kingdom",
+			"category": "location",
+			"locationToId": 725
 		},
 		{
 			"id": 270,
@@ -9628,7 +9987,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/4"
 			],
-			"url": "https://rickandmortyapi.com/api/character/270"
+			"url": "https://rickandmortyapi.com/api/character/270",
+			"locationToId": 728
 		},
 		{
 			"id": 271,
@@ -9651,7 +10011,8 @@
 				"https://rickandmortyapi.com/api/episode/5",
 				"https://rickandmortyapi.com/api/episode/6"
 			],
-			"url": "https://rickandmortyapi.com/api/character/271"
+			"url": "https://rickandmortyapi.com/api/character/271",
+			"locationToId": 732
 		},
 		{
 			"id": 272,
@@ -9677,7 +10038,8 @@
 				"https://rickandmortyapi.com/api/episode/27",
 				"https://rickandmortyapi.com/api/episode/29"
 			],
-			"url": "https://rickandmortyapi.com/api/character/272"
+			"url": "https://rickandmortyapi.com/api/character/272",
+			"locationToId": 761
 		},
 		{
 			"id": 273,
@@ -9698,7 +10060,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/20"
 			],
-			"url": "https://rickandmortyapi.com/api/character/273"
+			"url": "https://rickandmortyapi.com/api/character/273",
+			"locationToId": 726
 		},
 		{
 			"id": 274,
@@ -9720,7 +10083,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/274"
+			"url": "https://rickandmortyapi.com/api/character/274",
+			"locationToId": 738
 		},
 		{
 			"id": 275,
@@ -9741,7 +10105,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/275"
+			"url": "https://rickandmortyapi.com/api/character/275",
+			"locationToId": 737
 		},
 		{
 			"id": 276,
@@ -9762,7 +10127,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/24"
 			],
-			"url": "https://rickandmortyapi.com/api/character/276"
+			"url": "https://rickandmortyapi.com/api/character/276",
+			"locationToId": 761
 		},
 		{
 			"id": 277,
@@ -9783,7 +10149,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/277"
+			"url": "https://rickandmortyapi.com/api/character/277",
+			"locationToId": 737
 		},
 		{
 			"id": 278,
@@ -9804,7 +10171,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/278"
+			"url": "https://rickandmortyapi.com/api/character/278",
+			"locationToId": 738
 		},
 		{
 			"id": 279,
@@ -9825,7 +10193,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/279"
+			"url": "https://rickandmortyapi.com/api/character/279",
+			"locationToId": 737
 		},
 		{
 			"id": 280,
@@ -9846,7 +10215,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/280"
+			"url": "https://rickandmortyapi.com/api/character/280",
+			"locationToId": 761
 		},
 		{
 			"id": 281,
@@ -9867,7 +10237,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/281"
+			"url": "https://rickandmortyapi.com/api/character/281",
+			"locationToId": 738
 		},
 		{
 			"id": 282,
@@ -9890,12 +10261,15 @@
 				"https://rickandmortyapi.com/api/episode/13",
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/282"
+			"url": "https://rickandmortyapi.com/api/character/282",
+			"locationToId": 737
 		},
 		{
 			"id": 726,
 			"name": "Gear World",
-			"category": "location"
+			"location": "Gear World",
+			"category": "location",
+			"locationToId": 737
 		},
 		{
 			"id": 283,
@@ -9916,7 +10290,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/283"
+			"url": "https://rickandmortyapi.com/api/character/283",
+			"locationToId": 738
 		},
 		{
 			"id": 284,
@@ -9937,7 +10312,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/284"
+			"url": "https://rickandmortyapi.com/api/character/284",
+			"locationToId": 738
 		},
 		{
 			"id": 285,
@@ -9959,7 +10335,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/285"
+			"url": "https://rickandmortyapi.com/api/character/285",
+			"locationToId": 738
 		},
 		{
 			"id": 286,
@@ -9980,7 +10357,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/286"
+			"url": "https://rickandmortyapi.com/api/character/286",
+			"locationToId": 738
 		},
 		{
 			"id": 287,
@@ -10001,7 +10379,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/287"
+			"url": "https://rickandmortyapi.com/api/character/287",
+			"locationToId": 738
 		},
 		{
 			"id": 288,
@@ -10022,7 +10401,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/288"
+			"url": "https://rickandmortyapi.com/api/character/288",
+			"locationToId": 738
 		},
 		{
 			"id": 289,
@@ -10043,7 +10423,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/289"
+			"url": "https://rickandmortyapi.com/api/character/289",
+			"locationToId": 738
 		},
 		{
 			"id": 290,
@@ -10064,7 +10445,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/290"
+			"url": "https://rickandmortyapi.com/api/character/290",
+			"locationToId": 728
 		},
 		{
 			"id": 291,
@@ -10085,7 +10467,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/291"
+			"url": "https://rickandmortyapi.com/api/character/291",
+			"locationToId": 738
 		},
 		{
 			"id": 292,
@@ -10106,7 +10489,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/292"
+			"url": "https://rickandmortyapi.com/api/character/292",
+			"locationToId": 761
 		},
 		{
 			"id": 293,
@@ -10127,7 +10511,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/6"
 			],
-			"url": "https://rickandmortyapi.com/api/character/293"
+			"url": "https://rickandmortyapi.com/api/character/293",
+			"locationToId": 761
 		},
 		{
 			"id": 294,
@@ -10149,7 +10534,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/294"
+			"url": "https://rickandmortyapi.com/api/character/294",
+			"locationToId": 738
 		},
 		{
 			"id": 295,
@@ -10172,7 +10558,8 @@
 				"https://rickandmortyapi.com/api/episode/11",
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/295"
+			"url": "https://rickandmortyapi.com/api/character/295",
+			"locationToId": 738
 		},
 		{
 			"id": 296,
@@ -10193,7 +10580,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/296"
+			"url": "https://rickandmortyapi.com/api/character/296",
+			"locationToId": 731
 		},
 		{
 			"id": 297,
@@ -10214,7 +10602,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/297"
+			"url": "https://rickandmortyapi.com/api/character/297",
+			"locationToId": 731
 		},
 		{
 			"id": 298,
@@ -10235,7 +10624,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/298"
+			"url": "https://rickandmortyapi.com/api/character/298",
+			"locationToId": 738
 		},
 		{
 			"id": 299,
@@ -10256,7 +10646,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/299"
+			"url": "https://rickandmortyapi.com/api/character/299",
+			"locationToId": 738
 		},
 		{
 			"id": 300,
@@ -10277,7 +10668,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/300"
+			"url": "https://rickandmortyapi.com/api/character/300",
+			"locationToId": 727
 		},
 		{
 			"id": 301,
@@ -10298,7 +10690,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/14"
 			],
-			"url": "https://rickandmortyapi.com/api/character/301"
+			"url": "https://rickandmortyapi.com/api/character/301",
+			"locationToId": 732
 		},
 		{
 			"id": 302,
@@ -10319,7 +10712,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/302"
+			"url": "https://rickandmortyapi.com/api/character/302",
+			"locationToId": 732
 		},
 		{
 			"id": 303,
@@ -10340,7 +10734,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/5"
 			],
-			"url": "https://rickandmortyapi.com/api/character/303"
+			"url": "https://rickandmortyapi.com/api/character/303",
+			"locationToId": 732
 		},
 		{
 			"id": 304,
@@ -10361,7 +10756,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/2"
 			],
-			"url": "https://rickandmortyapi.com/api/character/304"
+			"url": "https://rickandmortyapi.com/api/character/304",
+			"locationToId": 732
 		},
 		{
 			"id": 305,
@@ -10382,7 +10778,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/2"
 			],
-			"url": "https://rickandmortyapi.com/api/character/305"
+			"url": "https://rickandmortyapi.com/api/character/305",
+			"locationToId": 732
 		},
 		{
 			"id": 306,
@@ -10403,7 +10800,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/2"
 			],
-			"url": "https://rickandmortyapi.com/api/character/306"
+			"url": "https://rickandmortyapi.com/api/character/306",
+			"locationToId": 732
 		},
 		{
 			"id": 307,
@@ -10424,7 +10822,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/9"
 			],
-			"url": "https://rickandmortyapi.com/api/character/307"
+			"url": "https://rickandmortyapi.com/api/character/307",
+			"locationToId": 734
 		},
 		{
 			"id": 308,
@@ -10446,7 +10845,8 @@
 				"https://rickandmortyapi.com/api/episode/11",
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/308"
+			"url": "https://rickandmortyapi.com/api/character/308",
+			"locationToId": 732
 		},
 		{
 			"id": 309,
@@ -10470,7 +10870,8 @@
 				"https://rickandmortyapi.com/api/episode/21",
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/309"
+			"url": "https://rickandmortyapi.com/api/character/309",
+			"locationToId": 727
 		},
 		{
 			"id": 310,
@@ -10491,7 +10892,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/310"
+			"url": "https://rickandmortyapi.com/api/character/310",
+			"locationToId": 732
 		},
 		{
 			"id": 311,
@@ -10514,7 +10916,8 @@
 				"https://rickandmortyapi.com/api/episode/21",
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/311"
+			"url": "https://rickandmortyapi.com/api/character/311",
+			"locationToId": 732
 		},
 		{
 			"id": 312,
@@ -10535,7 +10938,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/312"
+			"url": "https://rickandmortyapi.com/api/character/312",
+			"locationToId": 737
 		},
 		{
 			"id": 313,
@@ -10557,12 +10961,15 @@
 				"https://rickandmortyapi.com/api/episode/12",
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/313"
+			"url": "https://rickandmortyapi.com/api/character/313",
+			"locationToId": 751
 		},
 		{
 			"id": 727,
 			"name": "Snake Planet",
-			"category": "location"
+			"location": "Snake Planet",
+			"category": "location",
+			"locationToId": 751
 		},
 		{
 			"id": 314,
@@ -10583,7 +10990,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/314"
+			"url": "https://rickandmortyapi.com/api/character/314",
+			"locationToId": 737
 		},
 		{
 			"id": 315,
@@ -10604,7 +11012,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/315"
+			"url": "https://rickandmortyapi.com/api/character/315",
+			"locationToId": 737
 		},
 		{
 			"id": 316,
@@ -10625,7 +11034,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/316"
+			"url": "https://rickandmortyapi.com/api/character/316",
+			"locationToId": 737
 		},
 		{
 			"id": 317,
@@ -10646,7 +11056,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/317"
+			"url": "https://rickandmortyapi.com/api/character/317",
+			"locationToId": 737
 		},
 		{
 			"id": 318,
@@ -10667,7 +11078,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/318"
+			"url": "https://rickandmortyapi.com/api/character/318",
+			"locationToId": 737
 		},
 		{
 			"id": 319,
@@ -10688,7 +11100,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/319"
+			"url": "https://rickandmortyapi.com/api/character/319",
+			"locationToId": 731
 		},
 		{
 			"id": 320,
@@ -10709,7 +11122,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/320"
+			"url": "https://rickandmortyapi.com/api/character/320",
+			"locationToId": 728
 		},
 		{
 			"id": 321,
@@ -10730,7 +11144,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/321"
+			"url": "https://rickandmortyapi.com/api/character/321",
+			"locationToId": 737
 		},
 		{
 			"id": 322,
@@ -10751,7 +11166,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/322"
+			"url": "https://rickandmortyapi.com/api/character/322",
+			"locationToId": 738
 		},
 		{
 			"id": 323,
@@ -10772,7 +11188,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/23"
 			],
-			"url": "https://rickandmortyapi.com/api/character/323"
+			"url": "https://rickandmortyapi.com/api/character/323",
+			"locationToId": 728
 		},
 		{
 			"id": 324,
@@ -10793,7 +11210,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/324"
+			"url": "https://rickandmortyapi.com/api/character/324",
+			"locationToId": 761
 		},
 		{
 			"id": 325,
@@ -10814,7 +11232,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/325"
+			"url": "https://rickandmortyapi.com/api/character/325",
+			"locationToId": 738
 		},
 		{
 			"id": 326,
@@ -10836,7 +11255,8 @@
 				"https://rickandmortyapi.com/api/episode/5",
 				"https://rickandmortyapi.com/api/episode/11"
 			],
-			"url": "https://rickandmortyapi.com/api/character/326"
+			"url": "https://rickandmortyapi.com/api/character/326",
+			"locationToId": 761
 		},
 		{
 			"id": 327,
@@ -10857,7 +11277,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/11"
 			],
-			"url": "https://rickandmortyapi.com/api/character/327"
+			"url": "https://rickandmortyapi.com/api/character/327",
+			"locationToId": 761
 		},
 		{
 			"id": 328,
@@ -10878,7 +11299,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/328"
+			"url": "https://rickandmortyapi.com/api/character/328",
+			"locationToId": 738
 		},
 		{
 			"id": 329,
@@ -10906,7 +11328,8 @@
 				"https://rickandmortyapi.com/api/episode/29",
 				"https://rickandmortyapi.com/api/episode/30"
 			],
-			"url": "https://rickandmortyapi.com/api/character/329"
+			"url": "https://rickandmortyapi.com/api/character/329",
+			"locationToId": 737
 		},
 		{
 			"id": 330,
@@ -10928,7 +11351,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/330"
+			"url": "https://rickandmortyapi.com/api/character/330",
+			"locationToId": 738
 		},
 		{
 			"id": 331,
@@ -10951,7 +11375,8 @@
 				"https://rickandmortyapi.com/api/episode/16",
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/331"
+			"url": "https://rickandmortyapi.com/api/character/331",
+			"locationToId": 732
 		},
 		{
 			"id": 332,
@@ -10972,7 +11397,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/27"
 			],
-			"url": "https://rickandmortyapi.com/api/character/332"
+			"url": "https://rickandmortyapi.com/api/character/332",
+			"locationToId": 761
 		},
 		{
 			"id": 333,
@@ -10995,7 +11421,8 @@
 				"https://rickandmortyapi.com/api/episode/11",
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/333"
+			"url": "https://rickandmortyapi.com/api/character/333",
+			"locationToId": 728
 		},
 		{
 			"id": 334,
@@ -11016,7 +11443,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/334"
+			"url": "https://rickandmortyapi.com/api/character/334",
+			"locationToId": 737
 		},
 		{
 			"id": 335,
@@ -11037,7 +11465,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/31"
 			],
-			"url": "https://rickandmortyapi.com/api/character/335"
+			"url": "https://rickandmortyapi.com/api/character/335",
+			"locationToId": 761
 		},
 		{
 			"id": 336,
@@ -11058,7 +11487,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/14"
 			],
-			"url": "https://rickandmortyapi.com/api/character/336"
+			"url": "https://rickandmortyapi.com/api/character/336",
+			"locationToId": 732
 		},
 		{
 			"id": 337,
@@ -11079,7 +11509,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/4"
 			],
-			"url": "https://rickandmortyapi.com/api/character/337"
+			"url": "https://rickandmortyapi.com/api/character/337",
+			"locationToId": 728
 		},
 		{
 			"id": 338,
@@ -11106,7 +11537,8 @@
 				"https://rickandmortyapi.com/api/episode/6",
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/338"
+			"url": "https://rickandmortyapi.com/api/character/338",
+			"locationToId": 732
 		},
 		{
 			"id": 339,
@@ -11127,7 +11559,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/339"
+			"url": "https://rickandmortyapi.com/api/character/339",
+			"locationToId": 728
 		},
 		{
 			"id": 340,
@@ -11148,7 +11581,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/340"
+			"url": "https://rickandmortyapi.com/api/character/340",
+			"locationToId": 732
 		},
 		{
 			"id": 341,
@@ -11169,7 +11603,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/20"
 			],
-			"url": "https://rickandmortyapi.com/api/character/341"
+			"url": "https://rickandmortyapi.com/api/character/341",
+			"locationToId": 761
 		},
 		{
 			"id": 342,
@@ -11190,7 +11625,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/23"
 			],
-			"url": "https://rickandmortyapi.com/api/character/342"
+			"url": "https://rickandmortyapi.com/api/character/342",
+			"locationToId": 728
 		},
 		{
 			"id": 343,
@@ -11212,7 +11648,8 @@
 				"https://rickandmortyapi.com/api/episode/5",
 				"https://rickandmortyapi.com/api/episode/6"
 			],
-			"url": "https://rickandmortyapi.com/api/character/343"
+			"url": "https://rickandmortyapi.com/api/character/343",
+			"locationToId": 732
 		},
 		{
 			"id": 344,
@@ -11237,12 +11674,15 @@
 				"https://rickandmortyapi.com/api/episode/22",
 				"https://rickandmortyapi.com/api/episode/41"
 			],
-			"url": "https://rickandmortyapi.com/api/character/344"
+			"url": "https://rickandmortyapi.com/api/character/344",
+			"locationToId": 763
 		},
 		{
 			"id": 728,
 			"name": "NX-5 Planet Remover",
-			"category": "location"
+			"location": "NX-5 Planet Remover",
+			"category": "location",
+			"locationToId": 763
 		},
 		{
 			"id": 345,
@@ -11263,7 +11703,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/345"
+			"url": "https://rickandmortyapi.com/api/character/345",
+			"locationToId": 738
 		},
 		{
 			"id": 346,
@@ -11284,7 +11725,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/16"
 			],
-			"url": "https://rickandmortyapi.com/api/character/346"
+			"url": "https://rickandmortyapi.com/api/character/346",
+			"locationToId": 761
 		},
 		{
 			"id": 347,
@@ -11306,7 +11748,8 @@
 				"https://rickandmortyapi.com/api/episode/16",
 				"https://rickandmortyapi.com/api/episode/31"
 			],
-			"url": "https://rickandmortyapi.com/api/character/347"
+			"url": "https://rickandmortyapi.com/api/character/347",
+			"locationToId": 761
 		},
 		{
 			"id": 348,
@@ -11327,12 +11770,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/17"
 			],
-			"url": "https://rickandmortyapi.com/api/character/348"
+			"url": "https://rickandmortyapi.com/api/character/348",
+			"locationToId": 729
 		},
 		{
 			"id": 729,
 			"name": "Zeep Xanflorp's Miniverse",
-			"category": "location"
+			"location": "Zeep Xanflorp's Miniverse",
+			"category": "location",
+			"locationToId": 729
 		},
 		{
 			"id": 349,
@@ -11353,7 +11799,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/349"
+			"url": "https://rickandmortyapi.com/api/character/349",
+			"locationToId": 737
 		},
 		{
 			"id": 350,
@@ -11374,12 +11821,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/30"
 			],
-			"url": "https://rickandmortyapi.com/api/character/350"
+			"url": "https://rickandmortyapi.com/api/character/350",
+			"locationToId": 730
 		},
 		{
 			"id": 730,
 			"name": "Froopyland",
-			"category": "location"
+			"location": "Froopyland",
+			"category": "location",
+			"locationToId": 730
 		},
 		{
 			"id": 351,
@@ -11400,7 +11850,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/351"
+			"url": "https://rickandmortyapi.com/api/character/351",
+			"locationToId": 737
 		},
 		{
 			"id": 352,
@@ -11421,7 +11872,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/352"
+			"url": "https://rickandmortyapi.com/api/character/352",
+			"locationToId": 761
 		},
 		{
 			"id": 353,
@@ -11442,7 +11894,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/353"
+			"url": "https://rickandmortyapi.com/api/character/353",
+			"locationToId": 761
 		},
 		{
 			"id": 354,
@@ -11463,7 +11916,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/354"
+			"url": "https://rickandmortyapi.com/api/character/354",
+			"locationToId": 761
 		},
 		{
 			"id": 355,
@@ -11484,7 +11938,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/14"
 			],
-			"url": "https://rickandmortyapi.com/api/character/355"
+			"url": "https://rickandmortyapi.com/api/character/355",
+			"locationToId": 732
 		},
 		{
 			"id": 356,
@@ -11505,7 +11960,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/3"
 			],
-			"url": "https://rickandmortyapi.com/api/character/356"
+			"url": "https://rickandmortyapi.com/api/character/356",
+			"locationToId": 732
 		},
 		{
 			"id": 357,
@@ -11526,7 +11982,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/30"
 			],
-			"url": "https://rickandmortyapi.com/api/character/357"
+			"url": "https://rickandmortyapi.com/api/character/357",
+			"locationToId": 761
 		},
 		{
 			"id": 358,
@@ -11549,7 +12006,8 @@
 				"https://rickandmortyapi.com/api/episode/18",
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/358"
+			"url": "https://rickandmortyapi.com/api/character/358",
+			"locationToId": 737
 		},
 		{
 			"id": 359,
@@ -11570,7 +12028,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/359"
+			"url": "https://rickandmortyapi.com/api/character/359",
+			"locationToId": 738
 		},
 		{
 			"id": 360,
@@ -11591,7 +12050,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/27"
 			],
-			"url": "https://rickandmortyapi.com/api/character/360"
+			"url": "https://rickandmortyapi.com/api/character/360",
+			"locationToId": 761
 		},
 		{
 			"id": 361,
@@ -11612,7 +12072,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/27"
 			],
-			"url": "https://rickandmortyapi.com/api/character/361"
+			"url": "https://rickandmortyapi.com/api/character/361",
+			"locationToId": 761
 		},
 		{
 			"id": 362,
@@ -11637,7 +12098,8 @@
 				"https://rickandmortyapi.com/api/episode/21",
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/362"
+			"url": "https://rickandmortyapi.com/api/character/362",
+			"locationToId": 732
 		},
 		{
 			"id": 363,
@@ -11658,7 +12120,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/30"
 			],
-			"url": "https://rickandmortyapi.com/api/character/363"
+			"url": "https://rickandmortyapi.com/api/character/363",
+			"locationToId": 761
 		},
 		{
 			"id": 364,
@@ -11679,7 +12142,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/17"
 			],
-			"url": "https://rickandmortyapi.com/api/character/364"
+			"url": "https://rickandmortyapi.com/api/character/364",
+			"locationToId": 731
 		},
 		{
 			"id": 365,
@@ -11703,7 +12167,8 @@
 				"https://rickandmortyapi.com/api/episode/36",
 				"https://rickandmortyapi.com/api/episode/38"
 			],
-			"url": "https://rickandmortyapi.com/api/character/365"
+			"url": "https://rickandmortyapi.com/api/character/365",
+			"locationToId": 761
 		},
 		{
 			"id": 366,
@@ -11724,7 +12189,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/366"
+			"url": "https://rickandmortyapi.com/api/character/366",
+			"locationToId": 738
 		},
 		{
 			"id": 367,
@@ -11746,7 +12212,8 @@
 				"https://rickandmortyapi.com/api/episode/8",
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/367"
+			"url": "https://rickandmortyapi.com/api/character/367",
+			"locationToId": 737
 		},
 		{
 			"id": 368,
@@ -11767,7 +12234,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/29"
 			],
-			"url": "https://rickandmortyapi.com/api/character/368"
+			"url": "https://rickandmortyapi.com/api/character/368",
+			"locationToId": 737
 		},
 		{
 			"id": 369,
@@ -11788,7 +12256,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/369"
+			"url": "https://rickandmortyapi.com/api/character/369",
+			"locationToId": 731
 		},
 		{
 			"id": 370,
@@ -11809,7 +12278,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/370"
+			"url": "https://rickandmortyapi.com/api/character/370",
+			"locationToId": 737
 		},
 		{
 			"id": 371,
@@ -11830,12 +12300,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/371"
+			"url": "https://rickandmortyapi.com/api/character/371",
+			"locationToId": 731
 		},
 		{
 			"id": 731,
 			"name": "Plopstar",
-			"category": "location"
+			"location": "Plopstar",
+			"category": "location",
+			"locationToId": 731
 		},
 		{
 			"id": 372,
@@ -11856,7 +12329,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/14"
 			],
-			"url": "https://rickandmortyapi.com/api/character/372"
+			"url": "https://rickandmortyapi.com/api/character/372",
+			"locationToId": 732
 		},
 		{
 			"id": 373,
@@ -11877,7 +12351,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/373"
+			"url": "https://rickandmortyapi.com/api/character/373",
+			"locationToId": 737
 		},
 		{
 			"id": 374,
@@ -11898,7 +12373,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/374"
+			"url": "https://rickandmortyapi.com/api/character/374",
+			"locationToId": 761
 		},
 		{
 			"id": 375,
@@ -11919,7 +12395,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/375"
+			"url": "https://rickandmortyapi.com/api/character/375",
+			"locationToId": 732
 		},
 		{
 			"id": 376,
@@ -11940,7 +12417,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/7"
 			],
-			"url": "https://rickandmortyapi.com/api/character/376"
+			"url": "https://rickandmortyapi.com/api/character/376",
+			"locationToId": 732
 		},
 		{
 			"id": 377,
@@ -11961,7 +12439,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/29"
 			],
-			"url": "https://rickandmortyapi.com/api/character/377"
+			"url": "https://rickandmortyapi.com/api/character/377",
+			"locationToId": 761
 		},
 		{
 			"id": 378,
@@ -11982,7 +12461,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/378"
+			"url": "https://rickandmortyapi.com/api/character/378",
+			"locationToId": 738
 		},
 		{
 			"id": 379,
@@ -12003,7 +12483,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/379"
+			"url": "https://rickandmortyapi.com/api/character/379",
+			"locationToId": 732
 		},
 		{
 			"id": 380,
@@ -12024,7 +12505,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/380"
+			"url": "https://rickandmortyapi.com/api/character/380",
+			"locationToId": 737
 		},
 		{
 			"id": 381,
@@ -12045,7 +12527,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/381"
+			"url": "https://rickandmortyapi.com/api/character/381",
+			"locationToId": 737
 		},
 		{
 			"id": 382,
@@ -12066,7 +12549,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/382"
+			"url": "https://rickandmortyapi.com/api/character/382",
+			"locationToId": 732
 		},
 		{
 			"id": 383,
@@ -12087,7 +12571,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/383"
+			"url": "https://rickandmortyapi.com/api/character/383",
+			"locationToId": 737
 		},
 		{
 			"id": 384,
@@ -12108,7 +12593,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/384"
+			"url": "https://rickandmortyapi.com/api/character/384",
+			"locationToId": 737
 		},
 		{
 			"id": 385,
@@ -12129,7 +12615,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/385"
+			"url": "https://rickandmortyapi.com/api/character/385",
+			"locationToId": 738
 		},
 		{
 			"id": 386,
@@ -12151,7 +12638,8 @@
 				"https://rickandmortyapi.com/api/episode/13",
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/386"
+			"url": "https://rickandmortyapi.com/api/character/386",
+			"locationToId": 732
 		},
 		{
 			"id": 387,
@@ -12172,7 +12660,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/387"
+			"url": "https://rickandmortyapi.com/api/character/387",
+			"locationToId": 732
 		},
 		{
 			"id": 388,
@@ -12193,7 +12682,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/17"
 			],
-			"url": "https://rickandmortyapi.com/api/character/388"
+			"url": "https://rickandmortyapi.com/api/character/388",
+			"locationToId": 732
 		},
 		{
 			"id": 389,
@@ -12216,7 +12706,8 @@
 				"https://rickandmortyapi.com/api/episode/11",
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/389"
+			"url": "https://rickandmortyapi.com/api/character/389",
+			"locationToId": 738
 		},
 		{
 			"id": 390,
@@ -12237,7 +12728,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/29"
 			],
-			"url": "https://rickandmortyapi.com/api/character/390"
+			"url": "https://rickandmortyapi.com/api/character/390",
+			"locationToId": 761
 		},
 		{
 			"id": 391,
@@ -12258,7 +12750,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/15"
 			],
-			"url": "https://rickandmortyapi.com/api/character/391"
+			"url": "https://rickandmortyapi.com/api/character/391",
+			"locationToId": 761
 		},
 		{
 			"id": 392,
@@ -12279,7 +12772,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/392"
+			"url": "https://rickandmortyapi.com/api/character/392",
+			"locationToId": 738
 		},
 		{
 			"id": 393,
@@ -12300,7 +12794,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/393"
+			"url": "https://rickandmortyapi.com/api/character/393",
+			"locationToId": 737
 		},
 		{
 			"id": 394,
@@ -12322,7 +12817,8 @@
 				"https://rickandmortyapi.com/api/episode/1",
 				"https://rickandmortyapi.com/api/episode/6"
 			],
-			"url": "https://rickandmortyapi.com/api/character/394"
+			"url": "https://rickandmortyapi.com/api/character/394",
+			"locationToId": 732
 		},
 		{
 			"id": 395,
@@ -12346,7 +12842,8 @@
 				"https://rickandmortyapi.com/api/episode/16",
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/395"
+			"url": "https://rickandmortyapi.com/api/character/395",
+			"locationToId": 732
 		},
 		{
 			"id": 396,
@@ -12367,7 +12864,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/2"
 			],
-			"url": "https://rickandmortyapi.com/api/character/396"
+			"url": "https://rickandmortyapi.com/api/character/396",
+			"locationToId": 732
 		},
 		{
 			"id": 397,
@@ -12388,12 +12886,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/2"
 			],
-			"url": "https://rickandmortyapi.com/api/character/397"
+			"url": "https://rickandmortyapi.com/api/character/397",
+			"locationToId": 733
 		},
 		{
 			"id": 732,
 			"name": "Snuffles' Dream",
-			"category": "location"
+			"location": "Snuffles' Dream",
+			"category": "location",
+			"locationToId": 733
 		},
 		{
 			"id": 398,
@@ -12414,7 +12915,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/2"
 			],
-			"url": "https://rickandmortyapi.com/api/character/398"
+			"url": "https://rickandmortyapi.com/api/character/398",
+			"locationToId": 733
 		},
 		{
 			"id": 399,
@@ -12435,7 +12937,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/5"
 			],
-			"url": "https://rickandmortyapi.com/api/character/399"
+			"url": "https://rickandmortyapi.com/api/character/399",
+			"locationToId": 733
 		},
 		{
 			"id": 400,
@@ -12456,7 +12959,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/5"
 			],
-			"url": "https://rickandmortyapi.com/api/character/400"
+			"url": "https://rickandmortyapi.com/api/character/400",
+			"locationToId": 733
 		},
 		{
 			"id": 401,
@@ -12477,7 +12981,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/7"
 			],
-			"url": "https://rickandmortyapi.com/api/character/401"
+			"url": "https://rickandmortyapi.com/api/character/401",
+			"locationToId": 761
 		},
 		{
 			"id": 402,
@@ -12498,7 +13003,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/402"
+			"url": "https://rickandmortyapi.com/api/character/402",
+			"locationToId": 761
 		},
 		{
 			"id": 403,
@@ -12519,7 +13025,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/403"
+			"url": "https://rickandmortyapi.com/api/character/403",
+			"locationToId": 737
 		},
 		{
 			"id": 404,
@@ -12540,12 +13047,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/404"
+			"url": "https://rickandmortyapi.com/api/character/404",
+			"locationToId": 736
 		},
 		{
 			"id": 733,
 			"name": "Earth (Phone Dimension)",
-			"category": "location"
+			"location": "Earth (Phone Dimension)",
+			"category": "location",
+			"locationToId": 736
 		},
 		{
 			"id": 405,
@@ -12569,7 +13079,8 @@
 				"https://rickandmortyapi.com/api/episode/10",
 				"https://rickandmortyapi.com/api/episode/11"
 			],
-			"url": "https://rickandmortyapi.com/api/character/405"
+			"url": "https://rickandmortyapi.com/api/character/405",
+			"locationToId": 761
 		},
 		{
 			"id": 406,
@@ -12590,7 +13101,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/406"
+			"url": "https://rickandmortyapi.com/api/character/406",
+			"locationToId": 737
 		},
 		{
 			"id": 407,
@@ -12611,7 +13123,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/407"
+			"url": "https://rickandmortyapi.com/api/character/407",
+			"locationToId": 737
 		},
 		{
 			"id": 408,
@@ -12632,7 +13145,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/408"
+			"url": "https://rickandmortyapi.com/api/character/408",
+			"locationToId": 737
 		},
 		{
 			"id": 409,
@@ -12653,7 +13167,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/409"
+			"url": "https://rickandmortyapi.com/api/character/409",
+			"locationToId": 737
 		},
 		{
 			"id": 410,
@@ -12674,7 +13189,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/410"
+			"url": "https://rickandmortyapi.com/api/character/410",
+			"locationToId": 737
 		},
 		{
 			"id": 411,
@@ -12695,7 +13211,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/411"
+			"url": "https://rickandmortyapi.com/api/character/411",
+			"locationToId": 737
 		},
 		{
 			"id": 412,
@@ -12716,7 +13233,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/412"
+			"url": "https://rickandmortyapi.com/api/character/412",
+			"locationToId": 737
 		},
 		{
 			"id": 413,
@@ -12737,7 +13255,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/413"
+			"url": "https://rickandmortyapi.com/api/character/413",
+			"locationToId": 737
 		},
 		{
 			"id": 414,
@@ -12758,7 +13277,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/414"
+			"url": "https://rickandmortyapi.com/api/character/414",
+			"locationToId": 737
 		},
 		{
 			"id": 415,
@@ -12779,7 +13299,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/415"
+			"url": "https://rickandmortyapi.com/api/character/415",
+			"locationToId": 737
 		},
 		{
 			"id": 416,
@@ -12800,7 +13321,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/416"
+			"url": "https://rickandmortyapi.com/api/character/416",
+			"locationToId": 737
 		},
 		{
 			"id": 417,
@@ -12821,7 +13343,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/417"
+			"url": "https://rickandmortyapi.com/api/character/417",
+			"locationToId": 737
 		},
 		{
 			"id": 418,
@@ -12842,7 +13365,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/8"
 			],
-			"url": "https://rickandmortyapi.com/api/character/418"
+			"url": "https://rickandmortyapi.com/api/character/418",
+			"locationToId": 737
 		},
 		{
 			"id": 419,
@@ -12863,7 +13387,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/9"
 			],
-			"url": "https://rickandmortyapi.com/api/character/419"
+			"url": "https://rickandmortyapi.com/api/character/419",
+			"locationToId": 734
 		},
 		{
 			"id": 420,
@@ -12884,7 +13409,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/9"
 			],
-			"url": "https://rickandmortyapi.com/api/character/420"
+			"url": "https://rickandmortyapi.com/api/character/420",
+			"locationToId": 734
 		},
 		{
 			"id": 421,
@@ -12905,7 +13431,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/9"
 			],
-			"url": "https://rickandmortyapi.com/api/character/421"
+			"url": "https://rickandmortyapi.com/api/character/421",
+			"locationToId": 734
 		},
 		{
 			"id": 422,
@@ -12926,7 +13453,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/9"
 			],
-			"url": "https://rickandmortyapi.com/api/character/422"
+			"url": "https://rickandmortyapi.com/api/character/422",
+			"locationToId": 734
 		},
 		{
 			"id": 423,
@@ -12947,7 +13475,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/11"
 			],
-			"url": "https://rickandmortyapi.com/api/character/423"
+			"url": "https://rickandmortyapi.com/api/character/423",
+			"locationToId": 761
 		},
 		{
 			"id": 424,
@@ -12968,12 +13497,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/424"
+			"url": "https://rickandmortyapi.com/api/character/424",
+			"locationToId": 735
 		},
 		{
 			"id": 734,
 			"name": "Earth (Pizza Dimension)",
-			"category": "location"
+			"location": "Earth (Pizza Dimension)",
+			"category": "location",
+			"locationToId": 735
 		},
 		{
 			"id": 425,
@@ -12994,7 +13526,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/425"
+			"url": "https://rickandmortyapi.com/api/character/425",
+			"locationToId": 735
 		},
 		{
 			"id": 426,
@@ -13015,12 +13548,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/426"
+			"url": "https://rickandmortyapi.com/api/character/426",
+			"locationToId": 735
 		},
 		{
 			"id": 735,
 			"name": "Greasy Grandma World",
-			"category": "location"
+			"location": "Greasy Grandma World",
+			"category": "location",
+			"locationToId": 735
 		},
 		{
 			"id": 427,
@@ -13041,7 +13577,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/427"
+			"url": "https://rickandmortyapi.com/api/character/427",
+			"locationToId": 736
 		},
 		{
 			"id": 428,
@@ -13062,7 +13599,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/428"
+			"url": "https://rickandmortyapi.com/api/character/428",
+			"locationToId": 736
 		},
 		{
 			"id": 429,
@@ -13083,12 +13621,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/429"
+			"url": "https://rickandmortyapi.com/api/character/429",
+			"locationToId": 737
 		},
 		{
 			"id": 736,
 			"name": "Earth (Chair Dimension)",
-			"category": "location"
+			"location": "Earth (Chair Dimension)",
+			"category": "location",
+			"locationToId": 737
 		},
 		{
 			"id": 430,
@@ -13109,7 +13650,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/430"
+			"url": "https://rickandmortyapi.com/api/character/430",
+			"locationToId": 737
 		},
 		{
 			"id": 431,
@@ -13130,7 +13672,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/431"
+			"url": "https://rickandmortyapi.com/api/character/431",
+			"locationToId": 737
 		},
 		{
 			"id": 432,
@@ -13151,7 +13694,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/432"
+			"url": "https://rickandmortyapi.com/api/character/432",
+			"locationToId": 737
 		},
 		{
 			"id": 433,
@@ -13172,7 +13716,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/433"
+			"url": "https://rickandmortyapi.com/api/character/433",
+			"locationToId": 737
 		},
 		{
 			"id": 434,
@@ -13193,7 +13738,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/10"
 			],
-			"url": "https://rickandmortyapi.com/api/character/434"
+			"url": "https://rickandmortyapi.com/api/character/434",
+			"locationToId": 737
 		},
 		{
 			"id": 435,
@@ -13217,7 +13763,8 @@
 				"https://rickandmortyapi.com/api/episode/19",
 				"https://rickandmortyapi.com/api/episode/25"
 			],
-			"url": "https://rickandmortyapi.com/api/character/435"
+			"url": "https://rickandmortyapi.com/api/character/435",
+			"locationToId": 761
 		},
 		{
 			"id": 436,
@@ -13239,7 +13786,8 @@
 				"https://rickandmortyapi.com/api/episode/11",
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/436"
+			"url": "https://rickandmortyapi.com/api/character/436",
+			"locationToId": 737
 		},
 		{
 			"id": 437,
@@ -13260,7 +13808,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/12"
 			],
-			"url": "https://rickandmortyapi.com/api/character/437"
+			"url": "https://rickandmortyapi.com/api/character/437",
+			"locationToId": 761
 		},
 		{
 			"id": 438,
@@ -13281,7 +13830,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/12"
 			],
-			"url": "https://rickandmortyapi.com/api/character/438"
+			"url": "https://rickandmortyapi.com/api/character/438",
+			"locationToId": 761
 		},
 		{
 			"id": 439,
@@ -13302,7 +13852,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/12"
 			],
-			"url": "https://rickandmortyapi.com/api/character/439"
+			"url": "https://rickandmortyapi.com/api/character/439",
+			"locationToId": 761
 		},
 		{
 			"id": 440,
@@ -13323,7 +13874,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/12"
 			],
-			"url": "https://rickandmortyapi.com/api/character/440"
+			"url": "https://rickandmortyapi.com/api/character/440",
+			"locationToId": 761
 		},
 		{
 			"id": 441,
@@ -13344,7 +13896,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/441"
+			"url": "https://rickandmortyapi.com/api/character/441",
+			"locationToId": 737
 		},
 		{
 			"id": 442,
@@ -13365,7 +13918,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/442"
+			"url": "https://rickandmortyapi.com/api/character/442",
+			"locationToId": 737
 		},
 		{
 			"id": 443,
@@ -13386,7 +13940,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/443"
+			"url": "https://rickandmortyapi.com/api/character/443",
+			"locationToId": 737
 		},
 		{
 			"id": 444,
@@ -13407,7 +13962,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/444"
+			"url": "https://rickandmortyapi.com/api/character/444",
+			"locationToId": 737
 		},
 		{
 			"id": 445,
@@ -13428,7 +13984,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/445"
+			"url": "https://rickandmortyapi.com/api/character/445",
+			"locationToId": 737
 		},
 		{
 			"id": 446,
@@ -13449,7 +14006,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/446"
+			"url": "https://rickandmortyapi.com/api/character/446",
+			"locationToId": 737
 		},
 		{
 			"id": 447,
@@ -13470,7 +14028,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/447"
+			"url": "https://rickandmortyapi.com/api/character/447",
+			"locationToId": 737
 		},
 		{
 			"id": 448,
@@ -13491,7 +14050,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/448"
+			"url": "https://rickandmortyapi.com/api/character/448",
+			"locationToId": 737
 		},
 		{
 			"id": 449,
@@ -13512,7 +14072,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/449"
+			"url": "https://rickandmortyapi.com/api/character/449",
+			"locationToId": 737
 		},
 		{
 			"id": 450,
@@ -13533,7 +14094,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/450"
+			"url": "https://rickandmortyapi.com/api/character/450",
+			"locationToId": 737
 		},
 		{
 			"id": 451,
@@ -13554,7 +14116,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/13"
 			],
-			"url": "https://rickandmortyapi.com/api/character/451"
+			"url": "https://rickandmortyapi.com/api/character/451",
+			"locationToId": 737
 		},
 		{
 			"id": 452,
@@ -13575,7 +14138,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/16"
 			],
-			"url": "https://rickandmortyapi.com/api/character/452"
+			"url": "https://rickandmortyapi.com/api/character/452",
+			"locationToId": 761
 		},
 		{
 			"id": 453,
@@ -13596,7 +14160,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/18"
 			],
-			"url": "https://rickandmortyapi.com/api/character/453"
+			"url": "https://rickandmortyapi.com/api/character/453",
+			"locationToId": 761
 		},
 		{
 			"id": 454,
@@ -13619,7 +14184,8 @@
 				"https://rickandmortyapi.com/api/episode/19",
 				"https://rickandmortyapi.com/api/episode/21"
 			],
-			"url": "https://rickandmortyapi.com/api/character/454"
+			"url": "https://rickandmortyapi.com/api/character/454",
+			"locationToId": 737
 		},
 		{
 			"id": 455,
@@ -13640,7 +14206,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/455"
+			"url": "https://rickandmortyapi.com/api/character/455",
+			"locationToId": 737
 		},
 		{
 			"id": 456,
@@ -13661,7 +14228,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/456"
+			"url": "https://rickandmortyapi.com/api/character/456",
+			"locationToId": 737
 		},
 		{
 			"id": 457,
@@ -13682,7 +14250,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/457"
+			"url": "https://rickandmortyapi.com/api/character/457",
+			"locationToId": 737
 		},
 		{
 			"id": 458,
@@ -13703,7 +14272,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/458"
+			"url": "https://rickandmortyapi.com/api/character/458",
+			"locationToId": 737
 		},
 		{
 			"id": 459,
@@ -13724,7 +14294,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/459"
+			"url": "https://rickandmortyapi.com/api/character/459",
+			"locationToId": 737
 		},
 		{
 			"id": 460,
@@ -13745,7 +14316,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/19"
 			],
-			"url": "https://rickandmortyapi.com/api/character/460"
+			"url": "https://rickandmortyapi.com/api/character/460",
+			"locationToId": 737
 		},
 		{
 			"id": 461,
@@ -13766,7 +14338,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/461"
+			"url": "https://rickandmortyapi.com/api/character/461",
+			"locationToId": 738
 		},
 		{
 			"id": 462,
@@ -13787,7 +14360,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/462"
+			"url": "https://rickandmortyapi.com/api/character/462",
+			"locationToId": 738
 		},
 		{
 			"id": 463,
@@ -13808,7 +14382,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/463"
+			"url": "https://rickandmortyapi.com/api/character/463",
+			"locationToId": 738
 		},
 		{
 			"id": 464,
@@ -13829,7 +14404,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/464"
+			"url": "https://rickandmortyapi.com/api/character/464",
+			"locationToId": 738
 		},
 		{
 			"id": 465,
@@ -13850,7 +14426,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/465"
+			"url": "https://rickandmortyapi.com/api/character/465",
+			"locationToId": 738
 		},
 		{
 			"id": 466,
@@ -13871,7 +14448,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/22"
 			],
-			"url": "https://rickandmortyapi.com/api/character/466"
+			"url": "https://rickandmortyapi.com/api/character/466",
+			"locationToId": 738
 		},
 		{
 			"id": 467,
@@ -13892,7 +14470,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/467"
+			"url": "https://rickandmortyapi.com/api/character/467",
+			"locationToId": 761
 		},
 		{
 			"id": 468,
@@ -13913,7 +14492,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/468"
+			"url": "https://rickandmortyapi.com/api/character/468",
+			"locationToId": 761
 		},
 		{
 			"id": 469,
@@ -13934,7 +14514,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/26"
 			],
-			"url": "https://rickandmortyapi.com/api/character/469"
+			"url": "https://rickandmortyapi.com/api/character/469",
+			"locationToId": 761
 		},
 		{
 			"id": 470,
@@ -13955,12 +14536,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/27"
 			],
-			"url": "https://rickandmortyapi.com/api/character/470"
+			"url": "https://rickandmortyapi.com/api/character/470",
+			"locationToId": 737
 		},
 		{
 			"id": 737,
 			"name": "Alien Day Spa",
-			"category": "location"
+			"location": "Alien Day Spa",
+			"category": "location",
+			"locationToId": 737
 		},
 		{
 			"id": 471,
@@ -13981,7 +14565,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/27"
 			],
-			"url": "https://rickandmortyapi.com/api/character/471"
+			"url": "https://rickandmortyapi.com/api/character/471",
+			"locationToId": 761
 		},
 		{
 			"id": 472,
@@ -14002,7 +14587,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/472"
+			"url": "https://rickandmortyapi.com/api/character/472",
+			"locationToId": 738
 		},
 		{
 			"id": 473,
@@ -14023,7 +14609,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/473"
+			"url": "https://rickandmortyapi.com/api/character/473",
+			"locationToId": 738
 		},
 		{
 			"id": 474,
@@ -14044,7 +14631,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/474"
+			"url": "https://rickandmortyapi.com/api/character/474",
+			"locationToId": 738
 		},
 		{
 			"id": 475,
@@ -14065,7 +14653,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/475"
+			"url": "https://rickandmortyapi.com/api/character/475",
+			"locationToId": 738
 		},
 		{
 			"id": 476,
@@ -14086,7 +14675,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/476"
+			"url": "https://rickandmortyapi.com/api/character/476",
+			"locationToId": 738
 		},
 		{
 			"id": 477,
@@ -14107,7 +14697,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/477"
+			"url": "https://rickandmortyapi.com/api/character/477",
+			"locationToId": 738
 		},
 		{
 			"id": 478,
@@ -14128,7 +14719,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/478"
+			"url": "https://rickandmortyapi.com/api/character/478",
+			"locationToId": 738
 		},
 		{
 			"id": 479,
@@ -14149,7 +14741,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/479"
+			"url": "https://rickandmortyapi.com/api/character/479",
+			"locationToId": 738
 		},
 		{
 			"id": 480,
@@ -14170,7 +14763,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/480"
+			"url": "https://rickandmortyapi.com/api/character/480",
+			"locationToId": 738
 		},
 		{
 			"id": 481,
@@ -14191,7 +14785,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/481"
+			"url": "https://rickandmortyapi.com/api/character/481",
+			"locationToId": 738
 		},
 		{
 			"id": 482,
@@ -14212,7 +14807,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/482"
+			"url": "https://rickandmortyapi.com/api/character/482",
+			"locationToId": 738
 		},
 		{
 			"id": 483,
@@ -14233,7 +14829,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/483"
+			"url": "https://rickandmortyapi.com/api/character/483",
+			"locationToId": 738
 		},
 		{
 			"id": 484,
@@ -14254,7 +14851,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/484"
+			"url": "https://rickandmortyapi.com/api/character/484",
+			"locationToId": 738
 		},
 		{
 			"id": 485,
@@ -14275,7 +14873,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/485"
+			"url": "https://rickandmortyapi.com/api/character/485",
+			"locationToId": 738
 		},
 		{
 			"id": 486,
@@ -14296,7 +14895,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/486"
+			"url": "https://rickandmortyapi.com/api/character/486",
+			"locationToId": 738
 		},
 		{
 			"id": 487,
@@ -14317,7 +14917,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/487"
+			"url": "https://rickandmortyapi.com/api/character/487",
+			"locationToId": 738
 		},
 		{
 			"id": 488,
@@ -14338,7 +14939,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/488"
+			"url": "https://rickandmortyapi.com/api/character/488",
+			"locationToId": 738
 		},
 		{
 			"id": 489,
@@ -14359,7 +14961,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/28"
 			],
-			"url": "https://rickandmortyapi.com/api/character/489"
+			"url": "https://rickandmortyapi.com/api/character/489",
+			"locationToId": 738
 		},
 		{
 			"id": 490,
@@ -14380,7 +14983,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/29"
 			],
-			"url": "https://rickandmortyapi.com/api/character/490"
+			"url": "https://rickandmortyapi.com/api/character/490",
+			"locationToId": 738
 		},
 		{
 			"id": 491,
@@ -14401,7 +15005,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/29"
 			],
-			"url": "https://rickandmortyapi.com/api/character/491"
+			"url": "https://rickandmortyapi.com/api/character/491",
+			"locationToId": 738
 		},
 		{
 			"id": 492,
@@ -14422,7 +15027,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/30"
 			],
-			"url": "https://rickandmortyapi.com/api/character/492"
+			"url": "https://rickandmortyapi.com/api/character/492",
+			"locationToId": 761
 		},
 		{
 			"id": 493,
@@ -14443,7 +15049,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/31"
 			],
-			"url": "https://rickandmortyapi.com/api/character/493"
+			"url": "https://rickandmortyapi.com/api/character/493",
+			"locationToId": 761
 		},
 		{
 			"id": 494,
@@ -14464,12 +15071,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/494"
+			"url": "https://rickandmortyapi.com/api/character/494",
+			"locationToId": 739
 		},
 		{
 			"id": 738,
 			"name": "Forbodulon Prime",
-			"category": "location"
+			"location": "Forbodulon Prime",
+			"category": "location",
+			"locationToId": 739
 		},
 		{
 			"id": 495,
@@ -14490,7 +15100,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/495"
+			"url": "https://rickandmortyapi.com/api/character/495",
+			"locationToId": 739
 		},
 		{
 			"id": 496,
@@ -14511,7 +15122,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/496"
+			"url": "https://rickandmortyapi.com/api/character/496",
+			"locationToId": 739
 		},
 		{
 			"id": 497,
@@ -14532,7 +15144,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/497"
+			"url": "https://rickandmortyapi.com/api/character/497",
+			"locationToId": 761
 		},
 		{
 			"id": 498,
@@ -14553,7 +15166,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/498"
+			"url": "https://rickandmortyapi.com/api/character/498",
+			"locationToId": 739
 		},
 		{
 			"id": 499,
@@ -14574,7 +15188,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/499"
+			"url": "https://rickandmortyapi.com/api/character/499",
+			"locationToId": 739
 		},
 		{
 			"id": 500,
@@ -14595,7 +15210,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/500"
+			"url": "https://rickandmortyapi.com/api/character/500",
+			"locationToId": 739
 		},
 		{
 			"id": 501,
@@ -14616,7 +15232,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/501"
+			"url": "https://rickandmortyapi.com/api/character/501",
+			"locationToId": 739
 		},
 		{
 			"id": 502,
@@ -14637,7 +15254,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/502"
+			"url": "https://rickandmortyapi.com/api/character/502",
+			"locationToId": 739
 		},
 		{
 			"id": 503,
@@ -14658,12 +15276,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/503"
+			"url": "https://rickandmortyapi.com/api/character/503",
+			"locationToId": 740
 		},
 		{
 			"id": 739,
 			"name": "Earth (Fascist Shrimp Dimension)",
-			"category": "location"
+			"location": "Earth (Fascist Shrimp Dimension)",
+			"category": "location",
+			"locationToId": 740
 		},
 		{
 			"id": 504,
@@ -14684,7 +15305,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/504"
+			"url": "https://rickandmortyapi.com/api/character/504",
+			"locationToId": 740
 		},
 		{
 			"id": 505,
@@ -14705,7 +15327,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/505"
+			"url": "https://rickandmortyapi.com/api/character/505",
+			"locationToId": 740
 		},
 		{
 			"id": 506,
@@ -14726,7 +15349,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/506"
+			"url": "https://rickandmortyapi.com/api/character/506",
+			"locationToId": 740
 		},
 		{
 			"id": 507,
@@ -14747,12 +15371,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/507"
+			"url": "https://rickandmortyapi.com/api/character/507",
+			"locationToId": 741
 		},
 		{
 			"id": 740,
 			"name": "Earth (Fascist Teddy Bear Dimension)",
-			"category": "location"
+			"location": "Earth (Fascist Teddy Bear Dimension)",
+			"category": "location",
+			"locationToId": 741
 		},
 		{
 			"id": 508,
@@ -14773,7 +15400,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/508"
+			"url": "https://rickandmortyapi.com/api/character/508",
+			"locationToId": 741
 		},
 		{
 			"id": 509,
@@ -14794,7 +15422,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/509"
+			"url": "https://rickandmortyapi.com/api/character/509",
+			"locationToId": 761
 		},
 		{
 			"id": 510,
@@ -14815,7 +15444,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/510"
+			"url": "https://rickandmortyapi.com/api/character/510",
+			"locationToId": 761
 		},
 		{
 			"id": 511,
@@ -14836,7 +15466,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/511"
+			"url": "https://rickandmortyapi.com/api/character/511",
+			"locationToId": 761
 		},
 		{
 			"id": 512,
@@ -14857,7 +15488,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/512"
+			"url": "https://rickandmortyapi.com/api/character/512",
+			"locationToId": 761
 		},
 		{
 			"id": 513,
@@ -14878,7 +15510,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/513"
+			"url": "https://rickandmortyapi.com/api/character/513",
+			"locationToId": 761
 		},
 		{
 			"id": 514,
@@ -14899,7 +15532,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/514"
+			"url": "https://rickandmortyapi.com/api/character/514",
+			"locationToId": 761
 		},
 		{
 			"id": 515,
@@ -14920,12 +15554,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/515"
+			"url": "https://rickandmortyapi.com/api/character/515",
+			"locationToId": 742
 		},
 		{
 			"id": 741,
 			"name": "Earth (Wasp Dimension)",
-			"category": "location"
+			"location": "Earth (Wasp Dimension)",
+			"category": "location",
+			"locationToId": 742
 		},
 		{
 			"id": 516,
@@ -14946,7 +15583,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/516"
+			"url": "https://rickandmortyapi.com/api/character/516",
+			"locationToId": 761
 		},
 		{
 			"id": 517,
@@ -14967,7 +15605,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/517"
+			"url": "https://rickandmortyapi.com/api/character/517",
+			"locationToId": 761
 		},
 		{
 			"id": 518,
@@ -14988,7 +15627,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/518"
+			"url": "https://rickandmortyapi.com/api/character/518",
+			"locationToId": 742
 		},
 		{
 			"id": 519,
@@ -15009,7 +15649,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/519"
+			"url": "https://rickandmortyapi.com/api/character/519",
+			"locationToId": 742
 		},
 		{
 			"id": 520,
@@ -15030,7 +15671,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/520"
+			"url": "https://rickandmortyapi.com/api/character/520",
+			"locationToId": 742
 		},
 		{
 			"id": 521,
@@ -15051,7 +15693,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/521"
+			"url": "https://rickandmortyapi.com/api/character/521",
+			"locationToId": 742
 		},
 		{
 			"id": 522,
@@ -15072,7 +15715,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/522"
+			"url": "https://rickandmortyapi.com/api/character/522",
+			"locationToId": 742
 		},
 		{
 			"id": 523,
@@ -15093,7 +15737,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/523"
+			"url": "https://rickandmortyapi.com/api/character/523",
+			"locationToId": 761
 		},
 		{
 			"id": 524,
@@ -15114,7 +15759,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/32"
 			],
-			"url": "https://rickandmortyapi.com/api/character/524"
+			"url": "https://rickandmortyapi.com/api/character/524",
+			"locationToId": 761
 		},
 		{
 			"id": 525,
@@ -15135,12 +15781,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/525"
+			"url": "https://rickandmortyapi.com/api/character/525",
+			"locationToId": 746
 		},
 		{
 			"id": 742,
 			"name": "Monogatron Mothership",
-			"category": "location"
+			"location": "Monogatron Mothership",
+			"category": "location",
+			"locationToId": 746
 		},
 		{
 			"id": 526,
@@ -15161,7 +15810,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/526"
+			"url": "https://rickandmortyapi.com/api/character/526",
+			"locationToId": 761
 		},
 		{
 			"id": 527,
@@ -15182,7 +15832,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/527"
+			"url": "https://rickandmortyapi.com/api/character/527",
+			"locationToId": 746
 		},
 		{
 			"id": 528,
@@ -15203,7 +15854,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/528"
+			"url": "https://rickandmortyapi.com/api/character/528",
+			"locationToId": 746
 		},
 		{
 			"id": 529,
@@ -15224,12 +15876,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/529"
+			"url": "https://rickandmortyapi.com/api/character/529",
+			"locationToId": 744
 		},
 		{
 			"id": 743,
 			"name": "Midland Quasar",
-			"category": "location"
+			"location": "Midland Quasar",
+			"category": "location",
+			"locationToId": 744
 		},
 		{
 			"id": 530,
@@ -15250,7 +15905,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/530"
+			"url": "https://rickandmortyapi.com/api/character/530",
+			"locationToId": 744
 		},
 		{
 			"id": 531,
@@ -15271,12 +15927,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/531"
+			"url": "https://rickandmortyapi.com/api/character/531",
+			"locationToId": 744
 		},
 		{
 			"id": 744,
 			"name": "Mount Space Everest",
-			"category": "location"
+			"location": "Mount Space Everest",
+			"category": "location",
+			"locationToId": 744
 		},
 		{
 			"id": 532,
@@ -15297,12 +15956,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/532"
+			"url": "https://rickandmortyapi.com/api/character/532",
+			"locationToId": 746
 		},
 		{
 			"id": 745,
 			"name": "Globaflyn",
-			"category": "location"
+			"location": "Globaflyn",
+			"category": "location",
+			"locationToId": 746
 		},
 		{
 			"id": 533,
@@ -15323,7 +15985,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/533"
+			"url": "https://rickandmortyapi.com/api/character/533",
+			"locationToId": 746
 		},
 		{
 			"id": 534,
@@ -15344,7 +16007,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/534"
+			"url": "https://rickandmortyapi.com/api/character/534",
+			"locationToId": 761
 		},
 		{
 			"id": 535,
@@ -15365,7 +16029,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/535"
+			"url": "https://rickandmortyapi.com/api/character/535",
+			"locationToId": 761
 		},
 		{
 			"id": 536,
@@ -15386,7 +16051,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/536"
+			"url": "https://rickandmortyapi.com/api/character/536",
+			"locationToId": 761
 		},
 		{
 			"id": 537,
@@ -15407,7 +16073,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/537"
+			"url": "https://rickandmortyapi.com/api/character/537",
+			"locationToId": 761
 		},
 		{
 			"id": 538,
@@ -15428,7 +16095,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/538"
+			"url": "https://rickandmortyapi.com/api/character/538",
+			"locationToId": 761
 		},
 		{
 			"id": 539,
@@ -15449,7 +16117,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/539"
+			"url": "https://rickandmortyapi.com/api/character/539",
+			"locationToId": 761
 		},
 		{
 			"id": 540,
@@ -15470,7 +16139,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/540"
+			"url": "https://rickandmortyapi.com/api/character/540",
+			"locationToId": 761
 		},
 		{
 			"id": 541,
@@ -15491,7 +16161,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/541"
+			"url": "https://rickandmortyapi.com/api/character/541",
+			"locationToId": 761
 		},
 		{
 			"id": 542,
@@ -15512,7 +16183,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/542"
+			"url": "https://rickandmortyapi.com/api/character/542",
+			"locationToId": 746
 		},
 		{
 			"id": 543,
@@ -15533,12 +16205,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/33"
 			],
-			"url": "https://rickandmortyapi.com/api/character/543"
+			"url": "https://rickandmortyapi.com/api/character/543",
+			"locationToId": 746
 		},
 		{
 			"id": 746,
 			"name": "Gorgon Quadrant",
-			"category": "location"
+			"location": "Gorgon Quadrant",
+			"category": "location",
+			"locationToId": 746
 		},
 		{
 			"id": 544,
@@ -15559,12 +16234,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/544"
+			"url": "https://rickandmortyapi.com/api/character/544",
+			"locationToId": 748
 		},
 		{
 			"id": 747,
 			"name": "Heist-Con",
-			"category": "location"
+			"location": "Heist-Con",
+			"category": "location",
+			"locationToId": 748
 		},
 		{
 			"id": 545,
@@ -15585,7 +16263,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/545"
+			"url": "https://rickandmortyapi.com/api/character/545",
+			"locationToId": 748
 		},
 		{
 			"id": 546,
@@ -15606,7 +16285,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/546"
+			"url": "https://rickandmortyapi.com/api/character/546",
+			"locationToId": 748
 		},
 		{
 			"id": 547,
@@ -15627,7 +16307,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/547"
+			"url": "https://rickandmortyapi.com/api/character/547",
+			"locationToId": 748
 		},
 		{
 			"id": 548,
@@ -15648,7 +16329,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/548"
+			"url": "https://rickandmortyapi.com/api/character/548",
+			"locationToId": 748
 		},
 		{
 			"id": 549,
@@ -15669,7 +16351,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/549"
+			"url": "https://rickandmortyapi.com/api/character/549",
+			"locationToId": 748
 		},
 		{
 			"id": 550,
@@ -15690,7 +16373,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/550"
+			"url": "https://rickandmortyapi.com/api/character/550",
+			"locationToId": 748
 		},
 		{
 			"id": 551,
@@ -15711,7 +16395,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/551"
+			"url": "https://rickandmortyapi.com/api/character/551",
+			"locationToId": 748
 		},
 		{
 			"id": 552,
@@ -15732,7 +16417,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/552"
+			"url": "https://rickandmortyapi.com/api/character/552",
+			"locationToId": 748
 		},
 		{
 			"id": 553,
@@ -15753,7 +16439,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/553"
+			"url": "https://rickandmortyapi.com/api/character/553",
+			"locationToId": 748
 		},
 		{
 			"id": 554,
@@ -15774,12 +16461,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/554"
+			"url": "https://rickandmortyapi.com/api/character/554",
+			"locationToId": 749
 		},
 		{
 			"id": 748,
 			"name": "Heistotron Base",
-			"category": "location"
+			"location": "Heistotron Base",
+			"category": "location",
+			"locationToId": 749
 		},
 		{
 			"id": 555,
@@ -15800,7 +16490,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/555"
+			"url": "https://rickandmortyapi.com/api/character/555",
+			"locationToId": 749
 		},
 		{
 			"id": 556,
@@ -15821,7 +16512,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/556"
+			"url": "https://rickandmortyapi.com/api/character/556",
+			"locationToId": 749
 		},
 		{
 			"id": 557,
@@ -15842,7 +16534,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/557"
+			"url": "https://rickandmortyapi.com/api/character/557",
+			"locationToId": 749
 		},
 		{
 			"id": 558,
@@ -15863,7 +16556,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/558"
+			"url": "https://rickandmortyapi.com/api/character/558",
+			"locationToId": 749
 		},
 		{
 			"id": 559,
@@ -15884,12 +16578,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/559"
+			"url": "https://rickandmortyapi.com/api/character/559",
+			"locationToId": 750
 		},
 		{
 			"id": 749,
 			"name": "Gramuflack",
-			"category": "location"
+			"location": "Gramuflack",
+			"category": "location",
+			"locationToId": 750
 		},
 		{
 			"id": 560,
@@ -15910,7 +16607,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/560"
+			"url": "https://rickandmortyapi.com/api/character/560",
+			"locationToId": 750
 		},
 		{
 			"id": 561,
@@ -15931,7 +16629,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/34"
 			],
-			"url": "https://rickandmortyapi.com/api/character/561"
+			"url": "https://rickandmortyapi.com/api/character/561",
+			"locationToId": 761
 		},
 		{
 			"id": 562,
@@ -15952,7 +16651,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/35"
 			],
-			"url": "https://rickandmortyapi.com/api/character/562"
+			"url": "https://rickandmortyapi.com/api/character/562",
+			"locationToId": 761
 		},
 		{
 			"id": 563,
@@ -15973,12 +16673,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/35"
 			],
-			"url": "https://rickandmortyapi.com/api/character/563"
+			"url": "https://rickandmortyapi.com/api/character/563",
+			"locationToId": 751
 		},
 		{
 			"id": 750,
 			"name": "Draygon",
-			"category": "location"
+			"location": "Draygon",
+			"category": "location",
+			"locationToId": 751
 		},
 		{
 			"id": 564,
@@ -15999,7 +16702,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/35"
 			],
-			"url": "https://rickandmortyapi.com/api/character/564"
+			"url": "https://rickandmortyapi.com/api/character/564",
+			"locationToId": 761
 		},
 		{
 			"id": 565,
@@ -16020,7 +16724,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/35"
 			],
-			"url": "https://rickandmortyapi.com/api/character/565"
+			"url": "https://rickandmortyapi.com/api/character/565",
+			"locationToId": 751
 		},
 		{
 			"id": 566,
@@ -16041,7 +16746,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/35"
 			],
-			"url": "https://rickandmortyapi.com/api/character/566"
+			"url": "https://rickandmortyapi.com/api/character/566",
+			"locationToId": 751
 		},
 		{
 			"id": 567,
@@ -16062,7 +16768,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/35"
 			],
-			"url": "https://rickandmortyapi.com/api/character/567"
+			"url": "https://rickandmortyapi.com/api/character/567",
+			"locationToId": 751
 		},
 		{
 			"id": 568,
@@ -16083,7 +16790,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/35"
 			],
-			"url": "https://rickandmortyapi.com/api/character/568"
+			"url": "https://rickandmortyapi.com/api/character/568",
+			"locationToId": 751
 		},
 		{
 			"id": 569,
@@ -16104,7 +16812,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/35"
 			],
-			"url": "https://rickandmortyapi.com/api/character/569"
+			"url": "https://rickandmortyapi.com/api/character/569",
+			"locationToId": 751
 		},
 		{
 			"id": 570,
@@ -16125,7 +16834,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/35"
 			],
-			"url": "https://rickandmortyapi.com/api/character/570"
+			"url": "https://rickandmortyapi.com/api/character/570",
+			"locationToId": 761
 		},
 		{
 			"id": 571,
@@ -16146,7 +16856,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/571"
+			"url": "https://rickandmortyapi.com/api/character/571",
+			"locationToId": 751
 		},
 		{
 			"id": 572,
@@ -16167,7 +16878,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/572"
+			"url": "https://rickandmortyapi.com/api/character/572",
+			"locationToId": 751
 		},
 		{
 			"id": 573,
@@ -16188,7 +16900,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/573"
+			"url": "https://rickandmortyapi.com/api/character/573",
+			"locationToId": 751
 		},
 		{
 			"id": 574,
@@ -16209,7 +16922,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/574"
+			"url": "https://rickandmortyapi.com/api/character/574",
+			"locationToId": 751
 		},
 		{
 			"id": 575,
@@ -16230,7 +16944,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/575"
+			"url": "https://rickandmortyapi.com/api/character/575",
+			"locationToId": 761
 		},
 		{
 			"id": 576,
@@ -16251,7 +16966,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/576"
+			"url": "https://rickandmortyapi.com/api/character/576",
+			"locationToId": 751
 		},
 		{
 			"id": 577,
@@ -16272,7 +16988,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/577"
+			"url": "https://rickandmortyapi.com/api/character/577",
+			"locationToId": 751
 		},
 		{
 			"id": 578,
@@ -16293,7 +17010,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/578"
+			"url": "https://rickandmortyapi.com/api/character/578",
+			"locationToId": 751
 		},
 		{
 			"id": 579,
@@ -16314,7 +17032,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/579"
+			"url": "https://rickandmortyapi.com/api/character/579",
+			"locationToId": 751
 		},
 		{
 			"id": 580,
@@ -16335,7 +17054,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/580"
+			"url": "https://rickandmortyapi.com/api/character/580",
+			"locationToId": 751
 		},
 		{
 			"id": 581,
@@ -16356,7 +17076,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/581"
+			"url": "https://rickandmortyapi.com/api/character/581",
+			"locationToId": 751
 		},
 		{
 			"id": 582,
@@ -16377,7 +17098,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/582"
+			"url": "https://rickandmortyapi.com/api/character/582",
+			"locationToId": 751
 		},
 		{
 			"id": 583,
@@ -16398,7 +17120,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/583"
+			"url": "https://rickandmortyapi.com/api/character/583",
+			"locationToId": 751
 		},
 		{
 			"id": 584,
@@ -16419,7 +17142,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/584"
+			"url": "https://rickandmortyapi.com/api/character/584",
+			"locationToId": 761
 		},
 		{
 			"id": 585,
@@ -16440,7 +17164,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/585"
+			"url": "https://rickandmortyapi.com/api/character/585",
+			"locationToId": 761
 		},
 		{
 			"id": 586,
@@ -16461,7 +17186,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/586"
+			"url": "https://rickandmortyapi.com/api/character/586",
+			"locationToId": 761
 		},
 		{
 			"id": 587,
@@ -16482,7 +17208,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/587"
+			"url": "https://rickandmortyapi.com/api/character/587",
+			"locationToId": 751
 		},
 		{
 			"id": 588,
@@ -16503,7 +17230,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/588"
+			"url": "https://rickandmortyapi.com/api/character/588",
+			"locationToId": 761
 		},
 		{
 			"id": 589,
@@ -16524,7 +17252,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/589"
+			"url": "https://rickandmortyapi.com/api/character/589",
+			"locationToId": 751
 		},
 		{
 			"id": 590,
@@ -16545,7 +17274,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/590"
+			"url": "https://rickandmortyapi.com/api/character/590",
+			"locationToId": 761
 		},
 		{
 			"id": 591,
@@ -16566,7 +17296,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/36"
 			],
-			"url": "https://rickandmortyapi.com/api/character/591"
+			"url": "https://rickandmortyapi.com/api/character/591",
+			"locationToId": 761
 		},
 		{
 			"id": 592,
@@ -16588,7 +17319,8 @@
 				"https://rickandmortyapi.com/api/episode/22",
 				"https://rickandmortyapi.com/api/episode/41"
 			],
-			"url": "https://rickandmortyapi.com/api/character/592"
+			"url": "https://rickandmortyapi.com/api/character/592",
+			"locationToId": 761
 		},
 		{
 			"id": 593,
@@ -16609,12 +17341,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/593"
+			"url": "https://rickandmortyapi.com/api/character/593",
+			"locationToId": 751
 		},
 		{
 			"id": 751,
 			"name": "Non-Diegetic Alternative Reality",
-			"category": "location"
+			"location": "Non-Diegetic Alternative Reality",
+			"category": "location",
+			"locationToId": 751
 		},
 		{
 			"id": 594,
@@ -16635,12 +17370,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/594"
+			"url": "https://rickandmortyapi.com/api/character/594",
+			"locationToId": 756
 		},
 		{
 			"id": 752,
 			"name": "Tickets Please Guy Nightmare",
-			"category": "location"
+			"location": "Tickets Please Guy Nightmare",
+			"category": "location",
+			"locationToId": 756
 		},
 		{
 			"id": 595,
@@ -16661,7 +17399,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/595"
+			"url": "https://rickandmortyapi.com/api/character/595",
+			"locationToId": 756
 		},
 		{
 			"id": 596,
@@ -16682,7 +17421,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/596"
+			"url": "https://rickandmortyapi.com/api/character/596",
+			"locationToId": 756
 		},
 		{
 			"id": 597,
@@ -16703,12 +17443,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/597"
+			"url": "https://rickandmortyapi.com/api/character/597",
+			"locationToId": 756
 		},
 		{
 			"id": 753,
 			"name": "Story Train",
-			"category": "location"
+			"location": "Story Train",
+			"category": "location",
+			"locationToId": 756
 		},
 		{
 			"id": 598,
@@ -16729,7 +17472,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/598"
+			"url": "https://rickandmortyapi.com/api/character/598",
+			"locationToId": 756
 		},
 		{
 			"id": 599,
@@ -16750,7 +17494,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/599"
+			"url": "https://rickandmortyapi.com/api/character/599",
+			"locationToId": 756
 		},
 		{
 			"id": 600,
@@ -16771,7 +17516,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/600"
+			"url": "https://rickandmortyapi.com/api/character/600",
+			"locationToId": 756
 		},
 		{
 			"id": 601,
@@ -16792,7 +17538,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/601"
+			"url": "https://rickandmortyapi.com/api/character/601",
+			"locationToId": 756
 		},
 		{
 			"id": 602,
@@ -16813,12 +17560,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/602"
+			"url": "https://rickandmortyapi.com/api/character/602",
+			"locationToId": 756
 		},
 		{
 			"id": 754,
 			"name": "Morty’s Story",
-			"category": "location"
+			"location": "Morty’s Story",
+			"category": "location",
+			"locationToId": 756
 		},
 		{
 			"id": 603,
@@ -16839,12 +17589,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/603"
+			"url": "https://rickandmortyapi.com/api/character/603",
+			"locationToId": 756
 		},
 		{
 			"id": 755,
 			"name": "Ricks’s Story",
-			"category": "location"
+			"location": "Ricks’s Story",
+			"category": "location",
+			"locationToId": 756
 		},
 		{
 			"id": 604,
@@ -16865,7 +17618,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/604"
+			"url": "https://rickandmortyapi.com/api/character/604",
+			"locationToId": 756
 		},
 		{
 			"id": 605,
@@ -16886,7 +17640,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/605"
+			"url": "https://rickandmortyapi.com/api/character/605",
+			"locationToId": 756
 		},
 		{
 			"id": 606,
@@ -16907,7 +17662,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/606"
+			"url": "https://rickandmortyapi.com/api/character/606",
+			"locationToId": 756
 		},
 		{
 			"id": 607,
@@ -16928,7 +17684,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/607"
+			"url": "https://rickandmortyapi.com/api/character/607",
+			"locationToId": 756
 		},
 		{
 			"id": 608,
@@ -16949,7 +17706,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/608"
+			"url": "https://rickandmortyapi.com/api/character/608",
+			"locationToId": 756
 		},
 		{
 			"id": 609,
@@ -16970,7 +17728,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/609"
+			"url": "https://rickandmortyapi.com/api/character/609",
+			"locationToId": 756
 		},
 		{
 			"id": 610,
@@ -16991,7 +17750,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/610"
+			"url": "https://rickandmortyapi.com/api/character/610",
+			"locationToId": 756
 		},
 		{
 			"id": 611,
@@ -17012,7 +17772,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/611"
+			"url": "https://rickandmortyapi.com/api/character/611",
+			"locationToId": 756
 		},
 		{
 			"id": 612,
@@ -17033,7 +17794,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/612"
+			"url": "https://rickandmortyapi.com/api/character/612",
+			"locationToId": 756
 		},
 		{
 			"id": 613,
@@ -17054,7 +17816,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/613"
+			"url": "https://rickandmortyapi.com/api/character/613",
+			"locationToId": 756
 		},
 		{
 			"id": 614,
@@ -17075,7 +17838,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/614"
+			"url": "https://rickandmortyapi.com/api/character/614",
+			"locationToId": 756
 		},
 		{
 			"id": 615,
@@ -17096,7 +17860,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/615"
+			"url": "https://rickandmortyapi.com/api/character/615",
+			"locationToId": 756
 		},
 		{
 			"id": 616,
@@ -17117,7 +17882,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/616"
+			"url": "https://rickandmortyapi.com/api/character/616",
+			"locationToId": 756
 		},
 		{
 			"id": 617,
@@ -17138,7 +17904,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/617"
+			"url": "https://rickandmortyapi.com/api/character/617",
+			"locationToId": 756
 		},
 		{
 			"id": 618,
@@ -17159,7 +17926,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/618"
+			"url": "https://rickandmortyapi.com/api/character/618",
+			"locationToId": 756
 		},
 		{
 			"id": 619,
@@ -17180,7 +17948,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/619"
+			"url": "https://rickandmortyapi.com/api/character/619",
+			"locationToId": 756
 		},
 		{
 			"id": 620,
@@ -17201,7 +17970,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/620"
+			"url": "https://rickandmortyapi.com/api/character/620",
+			"locationToId": 756
 		},
 		{
 			"id": 621,
@@ -17222,7 +17992,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/621"
+			"url": "https://rickandmortyapi.com/api/character/621",
+			"locationToId": 756
 		},
 		{
 			"id": 622,
@@ -17243,7 +18014,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/622"
+			"url": "https://rickandmortyapi.com/api/character/622",
+			"locationToId": 756
 		},
 		{
 			"id": 623,
@@ -17264,7 +18036,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/623"
+			"url": "https://rickandmortyapi.com/api/character/623",
+			"locationToId": 756
 		},
 		{
 			"id": 624,
@@ -17285,7 +18058,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/624"
+			"url": "https://rickandmortyapi.com/api/character/624",
+			"locationToId": 756
 		},
 		{
 			"id": 625,
@@ -17306,7 +18080,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/625"
+			"url": "https://rickandmortyapi.com/api/character/625",
+			"locationToId": 756
 		},
 		{
 			"id": 626,
@@ -17327,7 +18102,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/626"
+			"url": "https://rickandmortyapi.com/api/character/626",
+			"locationToId": 756
 		},
 		{
 			"id": 627,
@@ -17348,7 +18124,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/627"
+			"url": "https://rickandmortyapi.com/api/character/627",
+			"locationToId": 756
 		},
 		{
 			"id": 628,
@@ -17369,7 +18146,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/628"
+			"url": "https://rickandmortyapi.com/api/character/628",
+			"locationToId": 756
 		},
 		{
 			"id": 629,
@@ -17390,7 +18168,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/629"
+			"url": "https://rickandmortyapi.com/api/character/629",
+			"locationToId": 756
 		},
 		{
 			"id": 630,
@@ -17411,7 +18190,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/630"
+			"url": "https://rickandmortyapi.com/api/character/630",
+			"locationToId": 756
 		},
 		{
 			"id": 631,
@@ -17432,7 +18212,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/631"
+			"url": "https://rickandmortyapi.com/api/character/631",
+			"locationToId": 756
 		},
 		{
 			"id": 632,
@@ -17453,7 +18234,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/632"
+			"url": "https://rickandmortyapi.com/api/character/632",
+			"locationToId": 756
 		},
 		{
 			"id": 633,
@@ -17474,7 +18256,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/633"
+			"url": "https://rickandmortyapi.com/api/character/633",
+			"locationToId": 756
 		},
 		{
 			"id": 634,
@@ -17495,7 +18278,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/634"
+			"url": "https://rickandmortyapi.com/api/character/634",
+			"locationToId": 756
 		},
 		{
 			"id": 635,
@@ -17516,7 +18300,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/635"
+			"url": "https://rickandmortyapi.com/api/character/635",
+			"locationToId": 756
 		},
 		{
 			"id": 636,
@@ -17537,7 +18322,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/636"
+			"url": "https://rickandmortyapi.com/api/character/636",
+			"locationToId": 756
 		},
 		{
 			"id": 637,
@@ -17558,7 +18344,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/637"
+			"url": "https://rickandmortyapi.com/api/character/637",
+			"locationToId": 756
 		},
 		{
 			"id": 638,
@@ -17579,7 +18366,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/638"
+			"url": "https://rickandmortyapi.com/api/character/638",
+			"locationToId": 756
 		},
 		{
 			"id": 639,
@@ -17600,7 +18388,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/37"
 			],
-			"url": "https://rickandmortyapi.com/api/character/639"
+			"url": "https://rickandmortyapi.com/api/character/639",
+			"locationToId": 756
 		},
 		{
 			"id": 640,
@@ -17621,12 +18410,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/38"
 			],
-			"url": "https://rickandmortyapi.com/api/character/640"
+			"url": "https://rickandmortyapi.com/api/character/640",
+			"locationToId": 757
 		},
 		{
 			"id": 756,
 			"name": "Glorzo Asteroid",
-			"category": "location"
+			"location": "Glorzo Asteroid",
+			"category": "location",
+			"locationToId": 757
 		},
 		{
 			"id": 641,
@@ -17647,7 +18439,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/38"
 			],
-			"url": "https://rickandmortyapi.com/api/character/641"
+			"url": "https://rickandmortyapi.com/api/character/641",
+			"locationToId": 757
 		},
 		{
 			"id": 642,
@@ -17668,7 +18461,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/38"
 			],
-			"url": "https://rickandmortyapi.com/api/character/642"
+			"url": "https://rickandmortyapi.com/api/character/642",
+			"locationToId": 757
 		},
 		{
 			"id": 643,
@@ -17689,7 +18483,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/38"
 			],
-			"url": "https://rickandmortyapi.com/api/character/643"
+			"url": "https://rickandmortyapi.com/api/character/643",
+			"locationToId": 757
 		},
 		{
 			"id": 644,
@@ -17710,7 +18505,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/38"
 			],
-			"url": "https://rickandmortyapi.com/api/character/644"
+			"url": "https://rickandmortyapi.com/api/character/644",
+			"locationToId": 757
 		},
 		{
 			"id": 645,
@@ -17731,7 +18527,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/38"
 			],
-			"url": "https://rickandmortyapi.com/api/character/645"
+			"url": "https://rickandmortyapi.com/api/character/645",
+			"locationToId": 757
 		},
 		{
 			"id": 646,
@@ -17752,7 +18549,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/38"
 			],
-			"url": "https://rickandmortyapi.com/api/character/646"
+			"url": "https://rickandmortyapi.com/api/character/646",
+			"locationToId": 757
 		},
 		{
 			"id": 647,
@@ -17773,7 +18571,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/38"
 			],
-			"url": "https://rickandmortyapi.com/api/character/647"
+			"url": "https://rickandmortyapi.com/api/character/647",
+			"locationToId": 757
 		},
 		{
 			"id": 648,
@@ -17794,12 +18593,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/648"
+			"url": "https://rickandmortyapi.com/api/character/648",
+			"locationToId": 758
 		},
 		{
 			"id": 757,
 			"name": "Alien Acid Plant",
-			"category": "location"
+			"location": "Alien Acid Plant",
+			"category": "location",
+			"locationToId": 758
 		},
 		{
 			"id": 649,
@@ -17820,7 +18622,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/649"
+			"url": "https://rickandmortyapi.com/api/character/649",
+			"locationToId": 758
 		},
 		{
 			"id": 650,
@@ -17841,7 +18644,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/650"
+			"url": "https://rickandmortyapi.com/api/character/650",
+			"locationToId": 758
 		},
 		{
 			"id": 651,
@@ -17862,7 +18666,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/651"
+			"url": "https://rickandmortyapi.com/api/character/651",
+			"locationToId": 758
 		},
 		{
 			"id": 652,
@@ -17883,12 +18688,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/652"
+			"url": "https://rickandmortyapi.com/api/character/652",
+			"locationToId": 760
 		},
 		{
 			"id": 758,
 			"name": "Merged Universe",
-			"category": "location"
+			"location": "Merged Universe",
+			"category": "location",
+			"locationToId": 760
 		},
 		{
 			"id": 653,
@@ -17909,12 +18717,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/653"
+			"url": "https://rickandmortyapi.com/api/character/653",
+			"locationToId": 760
 		},
 		{
 			"id": 759,
 			"name": "Near-Duplicate Reality",
-			"category": "location"
+			"location": "Near-Duplicate Reality",
+			"category": "location",
+			"locationToId": 760
 		},
 		{
 			"id": 654,
@@ -17935,7 +18746,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/654"
+			"url": "https://rickandmortyapi.com/api/character/654",
+			"locationToId": 760
 		},
 		{
 			"id": 655,
@@ -17956,7 +18768,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/655"
+			"url": "https://rickandmortyapi.com/api/character/655",
+			"locationToId": 760
 		},
 		{
 			"id": 656,
@@ -17977,7 +18790,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/656"
+			"url": "https://rickandmortyapi.com/api/character/656",
+			"locationToId": 760
 		},
 		{
 			"id": 657,
@@ -17998,7 +18812,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/657"
+			"url": "https://rickandmortyapi.com/api/character/657",
+			"locationToId": 760
 		},
 		{
 			"id": 658,
@@ -18019,7 +18834,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/658"
+			"url": "https://rickandmortyapi.com/api/character/658",
+			"locationToId": 760
 		},
 		{
 			"id": 659,
@@ -18040,7 +18856,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/659"
+			"url": "https://rickandmortyapi.com/api/character/659",
+			"locationToId": 760
 		},
 		{
 			"id": 660,
@@ -18061,7 +18878,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/660"
+			"url": "https://rickandmortyapi.com/api/character/660",
+			"locationToId": 760
 		},
 		{
 			"id": 661,
@@ -18082,7 +18900,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/39"
 			],
-			"url": "https://rickandmortyapi.com/api/character/661"
+			"url": "https://rickandmortyapi.com/api/character/661",
+			"locationToId": 760
 		},
 		{
 			"id": 662,
@@ -18103,12 +18922,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/40"
 			],
-			"url": "https://rickandmortyapi.com/api/character/662"
+			"url": "https://rickandmortyapi.com/api/character/662",
+			"locationToId": 761
 		},
 		{
 			"id": 760,
 			"name": "Gaia",
-			"category": "location"
+			"location": "Gaia",
+			"category": "location",
+			"locationToId": 761
 		},
 		{
 			"id": 663,
@@ -18129,7 +18951,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/40"
 			],
-			"url": "https://rickandmortyapi.com/api/character/663"
+			"url": "https://rickandmortyapi.com/api/character/663",
+			"locationToId": 761
 		},
 		{
 			"id": 664,
@@ -18150,7 +18973,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/40"
 			],
-			"url": "https://rickandmortyapi.com/api/character/664"
+			"url": "https://rickandmortyapi.com/api/character/664",
+			"locationToId": 761
 		},
 		{
 			"id": 665,
@@ -18171,7 +18995,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/40"
 			],
-			"url": "https://rickandmortyapi.com/api/character/665"
+			"url": "https://rickandmortyapi.com/api/character/665",
+			"locationToId": 761
 		},
 		{
 			"id": 666,
@@ -18192,7 +19017,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/40"
 			],
-			"url": "https://rickandmortyapi.com/api/character/666"
+			"url": "https://rickandmortyapi.com/api/character/666",
+			"locationToId": 761
 		},
 		{
 			"id": 667,
@@ -18213,7 +19039,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/41"
 			],
-			"url": "https://rickandmortyapi.com/api/character/667"
+			"url": "https://rickandmortyapi.com/api/character/667",
+			"locationToId": 761
 		},
 		{
 			"id": 668,
@@ -18234,12 +19061,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/41"
 			],
-			"url": "https://rickandmortyapi.com/api/character/668"
+			"url": "https://rickandmortyapi.com/api/character/668",
+			"locationToId": 761
 		},
 		{
 			"id": 761,
 			"name": "Defiance's Ship",
-			"category": "location"
+			"location": "Defiance's Ship",
+			"category": "location",
+			"locationToId": 761
 		},
 		{
 			"id": 669,
@@ -18260,12 +19090,15 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/41"
 			],
-			"url": "https://rickandmortyapi.com/api/character/669"
+			"url": "https://rickandmortyapi.com/api/character/669",
+			"locationToId": 762
 		},
 		{
 			"id": 762,
 			"name": "Defiance's Base",
-			"category": "location"
+			"location": "Defiance's Base",
+			"category": "location",
+			"locationToId": 762
 		},
 		{
 			"id": 670,
@@ -18286,7 +19119,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/41"
 			],
-			"url": "https://rickandmortyapi.com/api/character/670"
+			"url": "https://rickandmortyapi.com/api/character/670",
+			"locationToId": 763
 		},
 		{
 			"id": 671,
@@ -18307,7 +19141,8 @@
 			"episode": [
 				"https://rickandmortyapi.com/api/episode/41"
 			],
-			"url": "https://rickandmortyapi.com/api/character/671"
+			"url": "https://rickandmortyapi.com/api/character/671",
+			"locationToId": 763
 		}
 	],
 	"episodes": [

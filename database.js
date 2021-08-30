@@ -7,6 +7,8 @@ fetchData(urlChar, urlEp)
 
 async function fetchData(url, url2) {
 
+    let locationToId = new Map()
+
     try {
         let numPages = await fetch(url)
             .then((res) => res.json())
@@ -84,7 +86,6 @@ async function fetchData(url, url2) {
                 })
         }
 
-
         //pre-processing the original data for the arc diagram
         let links = []
         let locationsList = new Map()
@@ -98,11 +99,10 @@ async function fetchData(url, url2) {
 
             let location = item.location.name
             let id = count
+            locationToId.set(location, id)
 
             if (!charactersList.has(item.id)) {
-                // console.log(item.id)
                 let charId = item.id
-                // let name = item.name
                 let charObject = {
                     id: charId,
                     name: item.name,
@@ -125,6 +125,7 @@ async function fetchData(url, url2) {
                 let locObject = {
                     id: id,
                     name: location,
+                    location: location,
                     category: 'location',
                 }
                 nodes.push(locObject)
@@ -145,6 +146,14 @@ async function fetchData(url, url2) {
         for (let [key, value] of locationsList) {
             caractersAndLocationsList.push(value)
         }
+
+        nodes.forEach(item =>{
+            if(item.category == 'location' ){
+                item['locationToId'] = locationToId.get(item.location)
+            } else {
+                item['locationToId'] = locationToId.get(item.location.name)
+            }
+          })
 
         let processedData = {
             links,

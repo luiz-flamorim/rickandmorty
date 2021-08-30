@@ -6,7 +6,7 @@
 // as 0 and 1 inside of the character object
 
 // Search:
-//  1- if the user searches a chatacter, the reuslt will isolate the cluster and the character will be paint white
+//  1- if the user searches a character, the reuslt will isolate the cluster and the character will be paint white
 //  2- if the user seaches a planet, the result is that the cluster of the planet will be isolated
 // click on a planet isolates the cluster of the planet
 
@@ -19,21 +19,8 @@
 let data = d3.json('./processed.json')
   .then(data => {
     drawCharts(data)
-    // Materialize Init
-    let autocompleteNames = {}
-    let singleName = data.nodes.map(d => {
-      let char = {
-        [d.name]: d.image
-      }
-      Object.assign(autocompleteNames, char)
-    })
-    let init = M.AutoInit()
-    let elems = document.querySelectorAll('.autocomplete');
-    M.Autocomplete.init(elems, {
-      data: autocompleteNames
-    });
+    
   })
-
 
 function drawCharts(data) {
 
@@ -43,7 +30,7 @@ function drawCharts(data) {
   let removedLinks = new Set()
   let removedNodes = new Set()
 
-  // Extent of the number of episodes
+    // Extent of the number of episodes
   let numberOfEpisodes = d3.extent(data.nodes, item => {
     if (item.episode) {
       return item.episode.length
@@ -110,10 +97,43 @@ function drawCharts(data) {
 
   let nodes = data.nodes
   nodes.forEach(node => {
+    // add opacity for filtering
+    node.opacity = 1
+
     node.radius = node.category == 'location' ? 40 : 8
     node.x = Math.random() * width;
     node.y = Math.random() * height;
   })
+
+
+  // Materialize Init & Filter on search input
+  let autocompleteNames = {}
+  let singleName = nodes.map(d => {
+    let char = {
+      [d.name]: d.image
+    }
+    Object.assign(autocompleteNames, char)
+  })
+  let init = M.AutoInit()
+  let elems = document.querySelectorAll('.autocomplete')
+  M.Autocomplete.init(elems, {
+    data: autocompleteNames,
+    onAutocomplete: filterCharAndPlanets
+  });
+
+  function filterCharAndPlanets(name) {
+    let filteredName = nodes.filter(d => d.name == name)
+    nodes.forEach(item => {
+      if (item.locationToId == filteredName[0].locationToId) {
+        item.opacity = 1
+      } else {
+        item.opacity = 0.2
+      }
+    })
+    let updatedNodes = nodes.filter(node => !removedNodes.has(node))
+    let updatedLinks = data.links.filter(link => !removedLinks.has(link))
+    update(updatedNodes, updatedLinks)
+  }
 
   let simulation = d3.forceSimulation(nodes)
     .force("link", d3.forceLink(data.links)
@@ -175,6 +195,7 @@ function drawCharts(data) {
         .attr("r", d => d.radius)
         .attr("class", d => d.category == 'location' ? 'locations' : 'characters')
         .attr("radius", d => d.radius)
+        .attr("opacity", d => d.opacity)
         .attr('fill', d => {
           return d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name))
         })
@@ -196,13 +217,12 @@ function drawCharts(data) {
             .duration(200)
             .attr('r', d => d.radius)
         })
-
         .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended)),
 
-        update => update,
+        update => update.attr('opacity',d =>d.opacity),
 
         exit => exit.style("opacity", 1)
         .transition()
@@ -228,8 +248,6 @@ function drawCharts(data) {
 
   // this function works as a filter
   function filterSpecies(checkBox, item) {
-    // let selectedSpecies = d3.selectAll('circle')
-    //   .filter(d => d.species == item)
 
     let selectedSpecies = nodes.filter(d => d.species == item)
     let selectedLinks = data.links.filter(d => d.source.species == item)
@@ -248,10 +266,16 @@ function drawCharts(data) {
         removedLinks.add(item)
       })
     }
+// 
+// 
+// 
+// 
+// 
+// 
 
+    // put this in a separate function. 
     let updatedNodes = nodes.filter(node => !removedNodes.has(node))
     let updatedLinks = data.links.filter(link => !removedLinks.has(link))
-
     update(updatedNodes, updatedLinks)
     simulation.alpha(.1).restart();
   }
@@ -431,13 +455,10 @@ function popUp(nodeData, allData, maxEp) {
     // mini episodes chart
     // follow from here: https://observablehq.com/@d3/bar-chart
 
-    // build an array of episodes the character has participated
-    // compare this list to the episode list to generate the chart colour or interatcion
-
-    let participationList = []
+    let participationList = new Set()
     nodeData.episode.forEach(item => {
       let epNumber = item.split('/').pop()
-      participationList.push(epNumber)
+      participationList.add(+epNumber)
     })
 
     let miniW = contentDiv.getBoundingClientRect().width
@@ -452,7 +473,7 @@ function popUp(nodeData, allData, maxEp) {
     let x = d3.scaleBand()
       .domain(d3.range(Object.keys(allData.episodes).length))
       .range([0, miniW])
-      .padding(0.2)
+      .padding(0.5)
 
     chartArea.append("g")
       .selectAll("rect")
@@ -460,24 +481,23 @@ function popUp(nodeData, allData, maxEp) {
       .join("rect")
       .attr("class", "bar")
       .attr("x", (d, i) => x(i))
-      // .attr("y", 10)
       .attr("width", x.bandwidth())
       .attr("height", miniH)
       .attr('fill', 'white')
-      .attr("opacity", d => {
-        let opacity
-        participationList.forEach(ep => {
-          if (d.id == (+ep)) {
-            opacity = 1
-          } else {
-            opacity = 0.2
-          }
-        })
-        console.log(opacity)
-        return opacity
+      .attr("opacity", d => participationList.has(d.id) ? 1 : 0.2)
+      .attr('data-tippy-content', (d, i) => {
+        return `${d.airdate} | ${d.name} | ${d.episode}`
       })
 
-      // I stopped here!
+    // ADD to the mini chart
+    let rectangles = d3.selectAll("rect")
+
+    tippy(rectangles.nodes(), {
+      inertia: true,
+      animateFill: true,
+      offset: [0, 10]
+    })
+
 
     // CLOSE BUTTON
     let xClose = document.createElement('span')
