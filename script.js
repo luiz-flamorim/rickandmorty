@@ -90,7 +90,7 @@ function drawCharts(data) {
     species.push(d[0])
   })
   species.sort()
-  buildLegend(species)
+  // buildLegend(species)
 
   //using Perlim Noise method for the links of the network graph
   let noise = new p5()
@@ -294,33 +294,33 @@ function drawCharts(data) {
   }
 
   // this function gets the array of unique species to build the legend
-  function buildLegend(species) {
+  // function buildLegend(species) {
 
-    let legendDiv = document.querySelector('#legend')
+  //   let legendDiv = document.querySelector('#legend')
 
-    species.forEach(item => {
-      let legendContent = document.createElement('label')
-      legendContent.setAttribute('class', 'legend-item')
-      legendDiv.appendChild(legendContent)
+  //   species.forEach(item => {
+  //     let legendContent = document.createElement('label')
+  //     legendContent.setAttribute('class', 'legend-item')
+  //     legendDiv.appendChild(legendContent)
 
-      let checkBox = document.createElement('input')
-      checkBox.setAttribute('type', 'checkbox')
-      checkBox.setAttribute('class', 'filled-in checkbox-colour')
-      checkBox.setAttribute('id', `cb-${item}`)
-      checkBox.setAttribute('checked', 'true')
-      legendContent.appendChild(checkBox)
+  //     let checkBox = document.createElement('input')
+  //     checkBox.setAttribute('type', 'checkbox')
+  //     checkBox.setAttribute('class', 'filled-in checkbox-colour')
+  //     checkBox.setAttribute('id', `cb-${item}`)
+  //     checkBox.setAttribute('checked', 'true')
+  //     legendContent.appendChild(checkBox)
 
-      checkBox.addEventListener('change', () => {
-        filterSpecies(checkBox, item)
-      })
+  //     checkBox.addEventListener('change', () => {
+  //       filterSpecies(checkBox, item)
+  //     })
 
-      let label = document.createElement('span')
-      label.htmlFor = `cb-${item}`
-      label.appendChild(document.createTextNode(`${item}`))
-      label.setAttribute('class', 'legend-text')
-      legendContent.appendChild(label)
-    })
-  }
+  //     let label = document.createElement('span')
+  //     label.htmlFor = `cb-${item}`
+  //     label.appendChild(document.createTextNode(`${item}`))
+  //     label.setAttribute('class', 'legend-text')
+  //     legendContent.appendChild(label)
+  //   })
+  // }
 
 
   // GRID DIAGRAM - - - - - - - - - - - - - - - - - - - - - - - - - - - -
