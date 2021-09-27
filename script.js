@@ -19,10 +19,11 @@
 let data = d3.json('./processed.json')
   .then(data => {
     drawCharts(data)
-    
+
   })
 
 function drawCharts(data) {
+
 
   console.log(data)
 
@@ -30,7 +31,7 @@ function drawCharts(data) {
   let removedLinks = new Set()
   let removedNodes = new Set()
 
-    // Extent of the number of episodes
+  // Extent of the number of episodes
   let numberOfEpisodes = d3.extent(data.nodes, item => {
     if (item.episode) {
       return item.episode.length
@@ -60,8 +61,12 @@ function drawCharts(data) {
     .classed('svg-content-responsive', true)
 
   //new group to transform translate
-  let container = svg.append('g')
+  let svgContainer = svg.append('g')
     .attr("transform", `translate(${margin.left},${margin.top})`)
+
+
+
+
 
   // Array of the unique planets
   let planets = []
@@ -80,6 +85,12 @@ function drawCharts(data) {
   let colours = d3.scaleSequential()
     .domain([0, planets.length - 1])
     .interpolator(d3.interpolateRainbow)
+
+
+
+
+
+
 
   // LEGEND
   // defining the unique species
@@ -114,7 +125,7 @@ function drawCharts(data) {
     }
     Object.assign(autocompleteNames, char)
   })
-  let init = M.AutoInit()
+  let mInit = M.AutoInit()
   let elems = document.querySelectorAll('.autocomplete')
   M.Autocomplete.init(elems, {
     data: autocompleteNames,
@@ -175,7 +186,7 @@ function drawCharts(data) {
 
   function update(nodes, links) {
 
-    let link = container.selectAll("line")
+    let link = svgContainer.selectAll("line")
       .data(links, d => d.index)
       .join(
         enter => enter.append("line")
@@ -188,7 +199,7 @@ function drawCharts(data) {
         exit => exit.remove()
       )
 
-    let circles = container.selectAll("circle")
+    let circles = svgContainer.selectAll("circle")
       .data(nodes, d => d.id)
       .join(
         enter => enter.append("circle")
@@ -222,7 +233,7 @@ function drawCharts(data) {
           .on("drag", dragged)
           .on("end", dragended)),
 
-        update => update.attr('opacity',d =>d.opacity),
+        update => update.attr('opacity', d => d.opacity),
 
         exit => exit.style("opacity", 1)
         .transition()
@@ -266,12 +277,12 @@ function drawCharts(data) {
         removedLinks.add(item)
       })
     }
-// 
-// 
-// 
-// 
-// 
-// 
+    // 
+    // 
+    // 
+    // 
+    // 
+    // 
 
     // put this in a separate function. 
     let updatedNodes = nodes.filter(node => !removedNodes.has(node))
@@ -281,8 +292,8 @@ function drawCharts(data) {
   }
 
   function ticked() {
-    let link = container.selectAll('line')
-    let circles = container.selectAll('circle')
+    let link = svgContainer.selectAll('line')
+    let circles = svgContainer.selectAll('circle')
     link
       .attr("x1", d => d.source.x)
       .attr("y1", d => d.source.y)
@@ -345,10 +356,10 @@ function drawCharts(data) {
       .range([margin.left, width - margin.right])
       .domain(d3.range(numCols))
 
-    let container = svgGrid.append("g")
+    let svgContainer = svgGrid.append("g")
       .attr("transform", `translate(${x.bandwidth()/2},${y.bandwidth()/2})`);
 
-    container.selectAll("circle")
+      svgContainer.selectAll("circle")
       .data(data, d => d.id)
       .enter()
       .append("circle")
@@ -377,6 +388,7 @@ function drawCharts(data) {
       })
   }
 }
+
 
 
 // POP UP - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -607,10 +619,10 @@ function slider(data, minEp, maxEp) {
 //     .range([margin, width - margin])
 //     .domain(d3.range(numCols))
 
-//   let container = svg.append("g")
+//   let svgContainer = svg.append("g")
 //     .attr("transform", `translate(${x.bandwidth()/2},${y.bandwidth()/2})`);
 
-//   container.selectAll("circle")
+//   svgContainer.selectAll("circle")
 //     .data(data)
 //     .enter()
 //     .append("circle")
@@ -633,7 +645,7 @@ function slider(data, minEp, maxEp) {
 //     .domain(data.caractersAndLocationsList)
 
 //   // Circles
-//   let circles = container
+//   let circles = svgContainer
 //     .selectAll("circles")
 //     .data(data.nodes)
 //     .enter()
@@ -644,7 +656,7 @@ function slider(data, minEp, maxEp) {
 //     .style("fill", "white")
 
 //   // add labels
-//   let labels = container.selectAll('text')
+//   let labels = svgContainer.selectAll('text')
 //     .data(data.nodes)
 //     .join('text')
 //     .text(d => d.name)
@@ -664,7 +676,7 @@ function slider(data, minEp, maxEp) {
 //     })
 
 //   // Add the arc links
-//   let arcLinksPaths = container.selectAll('path')
+//   let arcLinksPaths = svgContainer.selectAll('path')
 //     .data(data.links)
 //     .join(
 //       enter => enter.append("path")

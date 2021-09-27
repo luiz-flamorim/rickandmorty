@@ -19,8 +19,11 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
 </head>
 
 <body>
@@ -33,60 +36,63 @@
 
 
 
-    <!-- text supporting the chart -->
-    <div class='scroll__text'>
+    <!-- Diagrams -->
+    <section id='scroll'>
+        <!--  graphic container  -->
+        <div class='scroll__graphic'>
+            <div id='grid-diagram'></div>
+            <div id='diagram'></div>
+        </div>
+        </div>
 
-        <div class='step' data-step='1'>
-            <div class="container">
-                <p> This webpage is an exploration of some data from "Ricky and Morty" series. The data is available at the XXXX, and my objective is to visualise that in a creative way.</p>
+
+        <!-- text supporting the chart -->
+        <div class='scroll__text'>
+
+            <div class='step' data-step='1'>
                 <div class="container">
-                    <span class="figures">
-                        XXX episodes
-                    </span>
-                    <span class="figures">
-                        XXX characters
-                    </span>
-                    <span class="figures">
-                        XXX planets
-                    </span>
-                    <span class="figures">
-                        XXX species
-                    </span>
+                    <p> This webpage is an exploration of some data from "Ricky and Morty" series. The data is available
+                        at the XXXX, and my objective is to visualise that in a creative way.</p>
+                    <div class="container">
+                        <span class="figures">
+                            XXX episodes
+                        </span>
+                        <span class="figures">
+                            XXX characters
+                        </span>
+                        <span class="figures">
+                            XXX planets
+                        </span>
+                        <span class="figures">
+                            XXX species
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class='step' data-step='2'>
+                <div class="container">
+                    <h2>The planets</h2>
+                    <p>Below is a representation of the <span id="number-of-planet">00</span> different planets and
+                        dimensions where the series is set. You can hove over to get more information.</p>
+                </div>
+            </div>
+
+            <div class='step' data-step='3'>
+                <div class="container">
+                    <h2>The Characters</h2>
+                    <p>Check below the origin of most of the characters. You can drag and drop, or click on the circles
+                        to find out more.</p>
                 </div>
             </div>
         </div>
 
-        <div class='step' data-step='2'>
-            <div class="container">
-                <h2>The planets</h2>
-                <p>Below is a representation of the <span id="number-of-planet">00</span> different planets and dimensions where the series is set. You can hove over to get more information.</p>
-            </div>
-        </div>
-
-        <div class='step' data-step='3'>
-            <div class="container">
-                <h2>The Characters</h2>
-                <p>Check below the origin of most of the characters. You can drag and drop, or click on the circles to find out more.</p>
-            </div>
-        </div>
-    </div>
 
 
 
 
-
-
-
-
-
-
-
-    <div id='grid-diagram'></div>
-
-    <div id='diagram'></div>
-
-    <!-- The filters below -->
-    <!-- 
+        <!-- The filters below -->
+        <!-- 
     <div class="user-filters">
         <div class="input-field">
             <i class="material-icons prefix white-text">search</i>
@@ -105,18 +111,18 @@
 
 
 
-    <div class="modal-bg">
-        <div class="modal" id="modal">
+        <div class="modal-bg">
+            <div class="modal" id="modal">
+            </div>
         </div>
-    </div>
 
 
-    <!-- tool tips library -->
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://unpkg.com/tippy.js@6"></script>
+        <!-- tool tips library -->
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
 
-    <!-- main scripts -->
-    <script src="script.js"></script>
+        <!-- main scripts -->
+        <script src="script.js"></script>
 
 </body>
 
