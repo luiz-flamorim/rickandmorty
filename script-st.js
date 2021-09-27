@@ -1,10 +1,10 @@
-var container = d3.select('#scroll');
-var graphic = container.select('.scroll__graphic');
-var chart = graphic.select('.chart');
-var text = container.select('.scroll__text');
-var step = text.selectAll('.step');
+let container = d3.select('#scroll');
+let graphic = container.select('.scroll__graphic');
+let chart = graphic.select('.chart');
+let text = container.select('.scroll__text');
+let step = text.selectAll('.step');
 
-var scroller = scrollama();
+let scroller = scrollama();
 
 function handleResize() {
 	var stepHeight = Math.floor(window.innerHeight * 0.75);
@@ -29,7 +29,6 @@ function handleResize() {
 
 function handleStepEnter(response) {
     // response = { element, direction, index }
-
 	step.classed('is-active', function (d, i) {
 		return i === response.index;
 	})
@@ -62,8 +61,6 @@ function init() {
 			debug: true,
 		})
 		.onStepEnter(handleStepEnter)
-		.onContainerEnter(handleContainerEnter)
-		.onContainerExit(handleContainerExit);
 
 	// setup resize event
 	window.addEventListener('resize', handleResize);

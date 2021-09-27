@@ -278,6 +278,7 @@ input[type="range"] {
    /* SCROLLAMA */
    #scroll {
     position: relative;
+   
   }
 
   scroll__graphic {
@@ -302,6 +303,7 @@ input[type="range"] {
 
   .scroll__graphic .chart {
     position: absolute;
+
     right: 1rem;
     top: 50%;
     -moz-transform: translateY(-50%);
