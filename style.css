@@ -16,7 +16,7 @@ body {
 /* containers */
 
 
-.container {
+.myContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -281,8 +281,8 @@ input[type="range"] {
    
   }
 
-  scroll__graphic {
-    position: absolute;
+  .scroll__graphic {
+    position: sticky;
     top: 0;
     left: 0;
     bottom: auto;
