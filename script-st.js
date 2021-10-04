@@ -19,17 +19,19 @@ let margin = {
     width = 1000 - margin.left - margin.right,
     height = 1000 - margin.top - margin.bottom;
 
-
-
 d3.json('./processed.json')
+    .then(raw => {
+        return processData(raw)
+    })
     .then(data => {
         gridDiagram(data)
     })
 
 
-
-
 function gridDiagram(data) {
+
+
+
     console.log(data)
 
     // Array of the unique planets
@@ -59,7 +61,7 @@ function gridDiagram(data) {
         .classed('svg-content-responsive', true)
         .append("g")
 
-    let numCols = Math.ceil(Math.sqrt(data.length)) * 2;
+    let numCols = Math.ceil(Math.sqrt(data.length))
 
     let y = d3.scaleBand()
         .range([margin.bottom, height - margin.top])
@@ -89,18 +91,29 @@ function gridDiagram(data) {
         })
         .on('mouseover', function () {
             d3.select(this)
+                .raise()
                 .transition()
                 .duration(100)
                 .attr('r', d => d.radius * 1.2)
         })
         .on('mouseout', function () {
             d3.select(this)
+                .lower()
                 .transition()
                 .duration(200)
                 .attr('r', d => d.radius)
         })
 }
 
+
+function processData(data) {
+    let dNodes = data.nodes
+    dNodes.forEach(node => {
+        node.opacity = 1
+        node.radius = node.category == 'location' ? 40 : 8
+    })
+    return data
+}
 
 
 // Scrollama functions
@@ -120,8 +133,6 @@ function handleResize() {
 
     chart
         .style('width', chartWidth + 'px')
-        .style('height', chartHeight + 'px');
-
     scroller.resize();
 }
 
@@ -143,7 +154,6 @@ function handleContainerExit(response) {
     graphic.classed('is-fixed', false);
     graphic.classed('is-bottom', response.direction === 'down');
 }
-
 
 // kick-off code to run once on load
 function init() {

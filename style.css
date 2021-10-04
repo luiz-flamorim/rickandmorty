@@ -12,10 +12,12 @@ body {
             rgb(0, 21, 80));
 }
 
+p{
+    font-size: 2rem;
+}
+
 
 /* containers */
-
-
 .myContainer {
     display: flex;
     flex-direction: column;
@@ -278,7 +280,6 @@ input[type="range"] {
    /* SCROLLAMA */
    #scroll {
     position: relative;
-   
   }
 
   .scroll__graphic {
@@ -303,8 +304,7 @@ input[type="range"] {
 
   .scroll__graphic .chart {
     position: absolute;
-
-    right: 1rem;
+    right: 5em;
     top: 50%;
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -312,8 +312,8 @@ input[type="range"] {
   }
 
   .scroll__text {
-    padding: 0 1rem;
-    max-width: 30rem;
+    padding: 0 5em;
+    max-width: 50%;
   }
   
   .step {
