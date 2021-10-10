@@ -27,86 +27,74 @@
 </head>
 
 <body>
-    
-    <div class="header">
-        <h1>A brief Rick and Morty DataVis</h1>
-        <h2>Sometimes science is more art than science.</h2>
-    </div>
-    
-    <!-- Diagrams -->
-    <section id='scroll'>
-        <!--  graphic container  -->
-        <div class='scroll__graphic'>
-            <div class="chart"></div>
-            <!-- <svg class="chart"  style="background-color: red"></svg> -->
-            <!-- <div id='grid-diagram'></div> -->
-            <!-- <div id='diagram'></div> -->
-        
-        </div>
+
+    <main id="top">
+
+        <section id='intro'>
+            <div class="header">
+                <h1>A brief Rick and Morty DataVis</h1>
+                <h2>Sometimes science is more art than science.</h2>
+            </div>
+        </section>
+
+        <section id='scrollytelling'>
+            <figure>
+                <div id="chart"></div>
+                <!-- <svg class="chart"  style="background-color: red"></svg> -->
+                <!-- <div id='grid-diagram'></div> -->
+                <!-- <div id='diagram'></div> -->
+            </figure>
 
 
-        <!-- text supporting the chart -->
-        <div class='scroll__text'>
-
-            <div class='step' data-step='1'>
-                <div class="myContainer">
+            <!-- text supporting the chart -->
+            <article>
+                <div class='step'>
                     <p> This webpage is an exploration of some data from "Ricky and Morty" series. The data is available
                         at the XXXX, and my objective is to visualise that in a creative way.</p>
-                    <div class="myContainer">
-                        <span class="figures">
-                            XXX episodes
-                        </span>
-                        <span class="figures">
-                            XXX characters
-                        </span>
-                        <span class="figures">
-                            XXX planets
-                        </span>
-                        <span class="figures">
-                            XXX species
-                        </span>
-                    </div>
+                    <span class="figures">XXX episodes</span>
+                    <span class="figures">XXX characters</span>
+                    <span class="figures">XXX planets</span>
+                    <span class="figures">XXX species</span>
                 </div>
-            </div>
 
-            <div class='step' data-step='2'>
-                <div class="myContainer">
+                <div class='step'>
                     <h2>The planets</h2>
                     <p>Below is a representation of the <span id="number-of-planet">00</span> different planets and
                         dimensions where the series is set. You can hove over to get more information.</p>
                 </div>
-            </div>
 
-            <div class='step' data-step='3'>
-                <div class="myContainer">
+                <div class='step'>
                     <h2>The Characters</h2>
                     <p>Check below the origin of most of the characters. You can drag and drop, or click on the circles
                         to find out more.</p>
                 </div>
-            </div>
-        </div>
+            </article>
 
-    </section>
+        </section>
+
+        <section id='outro'>
+            <h2>- - Footer - -</h2>
+        </section>
 
 
 
         <!-- The filters below -->
         <!-- 
-    <div class="user-filters">
-        <div class="input-field">
-            <i class="material-icons prefix white-text">search</i>
-            <input type="text" id="autocomplete-input" class="autocomplete white-text">
-            <label for="autocomplete-input">Search</label>
-        </div>
-
-        <div class='container'>
-            <div id='legend'></div>
-        </div>
-
-        <div class="container">
-            <input type="range" id="slider" min="0" max="100" />
-        </div>
-    </div> -->
+                        <div class="user-filters">
+                            <div class="input-field">
+                                <i class="material-icons prefix white-text">search</i>
+                                <input type="text" id="autocomplete-input" class="autocomplete white-text">
+                                <label for="autocomplete-input">Search</label>
+                            </div>
+                            
+                            <div class='container'>
+                                <div id='legend'></div>
+                            </div>
+                            
+                            <div class="container">
+                                <input type="range" id="slider" min="0" max="100" />
+                            </div>
+                        </div> -->
 
 
 
@@ -115,14 +103,15 @@
             </div>
         </div>
 
+    </main>
 
-        <!-- tool tips library -->
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script src="https://unpkg.com/tippy.js@6"></script>
+    <!-- tool tips library -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
 
-        <!-- main scripts -->
-        <!-- <script src="script.js"></script> -->
-        <script src="script-st.js"></script>
+    <!-- main scripts -->
+    <!-- <script src="script.js"></script> -->
+    <script src="script-st.js"></script>
 
 </body>
 

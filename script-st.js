@@ -1,13 +1,18 @@
-let container = d3.select('#scroll');
-let graphic = container.select('.scroll__graphic');
-let chart = graphic.select('.chart');
-let text = container.select('.scroll__text');
-let step = text.selectAll('.step');
-let scroller = scrollama();
+let myScrollama = scrollama();
 
+const figureHeight = window.innerHeight * 0.8
+const figureMarginTop = (window.innerHeight - figureHeight) / 2
+const stepH = Math.floor(window.innerHeight * 1.8);
 
-// Initialize Scrollama
-init();
+let figure = d3.select('figure');
+// let imgV1 = d3.select('#imgV1');
+// let imgV2 = d3.select('#imgV2');
+// let imgV3 = d3.select('#imgV3');
+
+let article = d3.select('article');
+let steps = d3.selectAll('.step');
+
+init()
 
 // setup dimensions and margins of the graph
 let margin = {
@@ -29,9 +34,6 @@ d3.json('./processed.json')
 
 
 function gridDiagram(data) {
-
-
-
     console.log(data)
 
     // Array of the unique planets
@@ -54,7 +56,7 @@ function gridDiagram(data) {
 
     data = data.nodes.filter(d => d.category == 'location')
 
-    let svgGrid = d3.select('.chart')
+    let svgGrid = d3.select('#chart')
         .append('svg')
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", `0 0 ${width} ${height}`)
@@ -115,61 +117,34 @@ function processData(data) {
     return data
 }
 
-
-// Scrollama functions
 function handleResize() {
-    let stepHeight = Math.floor(window.innerHeight * 0.75);
-    step.style('height', stepHeight + 'px');
 
-    let bodyWidth = d3.select('body').node().offsetWidth;
+    console.log("handling resize")
 
-    graphic
-        .style('height', window.innerHeight + 'px');
+    // 1. update height of step elements
+    steps.style("height", stepH + 'px')
 
-    let chartMargin = 32;
-    let textWidth = text.node().offsetWidth;
-    let chartWidth = graphic.node().offsetWidth - textWidth - chartMargin;
-    let chartHeight = Math.floor(window.innerHeight / 2);
+    // 2. update height, margin, and layering of the figure
+    figure
+        .style('height', figureHeight + 'px')
+        .style('top', figureMarginTop + 'px')
 
-    chart
-        .style('width', chartWidth + 'px')
-    scroller.resize();
+    // // 3. tell scrollama to update new element dimensions. Not always necessary, but included just to be safe.
+    // myScrollama.resize();
 }
 
-function handleStepEnter(response) {
-    // response = { element, direction, index }
-    step.classed('is-active', function (d, i) {
-        return i === response.index;
-    })
-    var stepData = step.attr('data-step')
+function handleStepChange(response) {
+    console.log(response)
 }
 
-function handleContainerEnter(response) {
-    // response = { direction }
-    graphic.classed('is-fixed', true);
-    graphic.classed('is-bottom', false);
-}
-
-function handleContainerExit(response) {
-    graphic.classed('is-fixed', false);
-    graphic.classed('is-bottom', response.direction === 'down');
-}
-
-// kick-off code to run once on load
 function init() {
-    handleResize();
+    handleResize()
 
-    scroller
-        .setup({
-            container: '#scroll',
-            graphic: '.scroll__graphic',
-            text: '.scroll__text',
-            step: '.scroll__text .step',
-            offset: 0.5,
-            debug: false,
-        })
-        .onStepEnter(handleStepEnter)
+    myScrollama.setup({
+        step: '.step',
+        offset: Math.floor(window.innerHeight) * 1.3 + 'px',
+        debug: false
+    }).onStepEnter(handleStepChange)
 
-    // setup resize event
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize)
 }
