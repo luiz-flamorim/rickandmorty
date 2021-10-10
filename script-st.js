@@ -86,13 +86,16 @@ function gridDiagram(data) {
         .attr('r', d => d.radius)
         .style('stroke', 'white')
         .style('stroke-width', 0)
-
         .style('fill', d => colours(planetNumber(d.name)))
         .attr('data-tippy-content', (d, i) => {
             return `${d.name}`
         })
+        .attr('data-tippy-content', (d, i) => {
+            return `${d.name}`
+          })
         .on('mouseover', function () {
             d3.select(this)
+            .style("cursor", "pointer")
                 .raise()
                 .transition()
                 .duration(100)
@@ -105,6 +108,15 @@ function gridDiagram(data) {
                 .duration(200)
                 .attr('r', d => d.radius)
         })
+
+          // ADD Tooltips
+  let circles = d3.selectAll("circle")
+
+  tippy(circles.nodes(), {
+    inertia: true,
+    animateFill: true,
+    offset: [0, 20]
+  })
 }
 
 
@@ -119,22 +131,17 @@ function processData(data) {
 
 function handleResize() {
 
-    console.log("handling resize")
-
-    // 1. update height of step elements
     steps.style("height", stepH + 'px')
 
-    // 2. update height, margin, and layering of the figure
     figure
         .style('height', figureHeight + 'px')
         .style('top', figureMarginTop + 'px')
 
-    // // 3. tell scrollama to update new element dimensions. Not always necessary, but included just to be safe.
-    // myScrollama.resize();
+    myScrollama.resize();
 }
 
 function handleStepChange(response) {
-    console.log(response)
+    console.log('Step changed: ' + response)
 }
 
 function init() {

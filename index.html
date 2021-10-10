@@ -37,8 +37,33 @@
             </div>
         </section>
 
+        <div>
+            <p> This webpage is an exploration of some data from "Ricky and Morty" series. The data is available
+                at the XXXX, and my objective is to visualise that in a creative way.</p>
+            <div class="figures">
+
+                <p class="figure">XXX episodes</p>
+                <p class="figure">XXX characters</p>
+                <p class="figure">XXX planets</p>
+                <p class="figure">XXX species</p>
+            </div>
+        </div>
+
         <section id='scrollytelling'>
             <figure>
+
+                <!-- Filters -->
+                <div class="filters">
+                    <div class="input-field">
+                        <i class="material-icons prefix white-text">search</i>
+                        <input type="text" id="autocomplete-input" class="autocomplete white-text">
+                        <label for="autocomplete-input">Search</label>
+                    </div>
+                    <div id='legend'></div>
+                    <input  id="myRange" type="range"  min="0" max="100" />
+                </div>
+
+                <!-- Charts -->
                 <div id="chart"></div>
                 <!-- <svg class="chart"  style="background-color: red"></svg> -->
                 <!-- <div id='grid-diagram'></div> -->
@@ -48,14 +73,6 @@
 
             <!-- text supporting the chart -->
             <article>
-                <div class='step'>
-                    <p> This webpage is an exploration of some data from "Ricky and Morty" series. The data is available
-                        at the XXXX, and my objective is to visualise that in a creative way.</p>
-                    <span class="figures">XXX episodes</span>
-                    <span class="figures">XXX characters</span>
-                    <span class="figures">XXX planets</span>
-                    <span class="figures">XXX species</span>
-                </div>
 
                 <div class='step'>
                     <h2>The planets</h2>
@@ -78,23 +95,7 @@
 
 
 
-        <!-- The filters below -->
-        <!-- 
-                        <div class="user-filters">
-                            <div class="input-field">
-                                <i class="material-icons prefix white-text">search</i>
-                                <input type="text" id="autocomplete-input" class="autocomplete white-text">
-                                <label for="autocomplete-input">Search</label>
-                            </div>
-                            
-                            <div class='container'>
-                                <div id='legend'></div>
-                            </div>
-                            
-                            <div class="container">
-                                <input type="range" id="slider" min="0" max="100" />
-                            </div>
-                        </div> -->
+
 
 
 
