@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -85,7 +85,7 @@ article {
   padding: 0 1rem;
   max-width: 35%;
   /* 'OPTIONAL: margin-top' sets how much space there is between the the figure and the first message.*/
-  margin-top: -50rem;
+  margin-top: -80vh;
   /* 'margin-left:auto' and 'margin-right:auto' centers the article on the page.*/
   margin-left: 2rem;
   /* 'transform' is included to ensure z-index works properly on all kinds of devices */

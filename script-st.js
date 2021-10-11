@@ -4,13 +4,23 @@ const figureHeight = window.innerHeight * 0.8
 const figureMarginTop = (window.innerHeight - figureHeight) / 2
 const stepH = Math.floor(window.innerHeight * 1.8);
 
-let figure = d3.select('figure');
-// let imgV1 = d3.select('#imgV1');
-// let imgV2 = d3.select('#imgV2');
-// let imgV3 = d3.select('#imgV3');
+let xGraphPos = {};
+let yGraphPos = {};
 
+let figure = d3.select('figure');
 let article = d3.select('article');
 let steps = d3.selectAll('.step');
+
+let svgContainer,
+    svgGrid,
+    numCols,
+    xGrid,
+    yGrid,
+    colours,
+    filter,
+    simulation,
+    circles,
+    link
 
 init()
 
@@ -29,11 +39,11 @@ d3.json('./processed.json')
         return processData(raw)
     })
     .then(data => {
-        gridDiagram(data)
+        return svgSetup(data)
     })
 
+function svgSetup(data) {
 
-function gridDiagram(data) {
     console.log(data)
 
     // Array of the unique planets
@@ -49,32 +59,124 @@ function gridDiagram(data) {
         .domain(planets)
         .range(d3.range(planets.length))
 
-    // scale for the colours
-    let colours = d3.scaleSequential()
+    colours = d3.scaleSequential()
         .domain([0, planets.length - 1])
         .interpolator(d3.interpolateRainbow)
 
-    data = data.nodes.filter(d => d.category == 'location')
+    filter = data.nodes.filter(d => d.category == 'location')
+    numCols = Math.ceil(Math.sqrt(filter.length))
 
-    let svgGrid = d3.select('#chart')
+
+    svgGrid = d3.select('#chart')
         .append('svg')
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", `0 0 ${width} ${height}`)
         .classed('svg-content-responsive', true)
         .append("g")
 
-    let numCols = Math.ceil(Math.sqrt(data.length))
 
-    let y = d3.scaleBand()
+    yGrid = d3.scaleBand()
         .range([margin.bottom, height - margin.top])
         .domain(d3.range(numCols))
 
-    let x = d3.scaleBand()
+    xGrid = d3.scaleBand()
         .range([margin.left, width - margin.right])
         .domain(d3.range(numCols))
 
-    let svgContainer = svgGrid.append("g")
-        .attr("transform", `translate(${x.bandwidth()/2},${y.bandwidth()/2})`);
+    svgContainer = svgGrid.append("g")
+        .attr("transform", `translate(${xGrid.bandwidth()/2},${yGrid.bandwidth()/2})`);
+
+    simulation = d3.forceSimulation(data.nodes)
+        .force("link", d3.forceLink(data.links)
+            .id(d => d.id)
+            .distance((d, i) => 200 * Math.random())
+        )
+        .force('center', d3.forceCenter()
+            .x(width / 2)
+            .y(height / 2))
+        .force("charge", d3.forceManyBody().strength(-100))
+        .force("x", d3.forceX())
+        .force("y", d3.forceY())
+        .force('collide', d3.forceCollide(d => d.radius))
+        .on("tick", ticked)
+
+    simulation.stop()
+
+    for (let i in d3.range(300)) {
+        ticked();
+    }
+
+
+    function ticked() {
+        console.log('tick')
+        let link = svgContainer.selectAll('line')
+        let circles = svgContainer.selectAll('circle')
+        link
+            .attr("x1", d => d.source.x)
+            .attr("y1", d => d.source.y)
+            .attr("x2", d => d.target.x)
+            .attr("y2", d => d.target.y);
+        circles
+            .attr("cx", d => d.x)
+            .attr("cy", d => d.y)
+    }
+
+    link = svgContainer.selectAll("line")
+        .data(data.links, d => d.index)
+        .join(
+            enter => enter.append("line")
+            .attr("fill", "none")
+            .attr("stroke-width", 1)
+            .attr("opacity", 0)
+            .attr('stroke', d => {
+                return d.source.category == 'location' ? colours(planetNumber(d.source.name)) : colours(planetNumber(d.source.location.name))
+            }),
+            update => update,
+            exit => exit.remove()
+        )
+
+    circles = svgContainer.selectAll("circle")
+        .data(data.nodes, d => d.id)
+        .join(
+            enter => enter.append("circle")
+            .attr("r", d => d.radius)
+            .attr("class", d => d.category == 'location' ? 'locations' : 'characters')
+            .attr("radius", d => d.radius)
+            .attr("opacity", 0)
+            .attr('fill', d => {
+                return d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name))
+            })
+            .attr('x', d => d.x)
+            .attr('y', d => d.y), update => update,
+            exit => exit
+        )
+
+        circles.data()
+                .map((d, i) => {
+                    xGraphPos[d.index] = d.x;
+                    yGraphPos[d.index] = d.y;
+                    return [];
+                })
+            circles.attr('cx', d => {
+                    return d.category == 'location' ? 0 : d.x
+                })
+                .attr('cy', d => {
+                    return d.category == 'location' ? 0 : d.y
+                })
+                .style('opacity', d => {
+                    return d.category == 'location' ? 1 : 0
+                })
+                console.log('ended')
+    return data
+}
+
+
+
+
+function gridDiagram(data) {
+
+    // data = data.nodes.filter(d => d.category == 'location')
+    // numCols = Math.ceil(Math.sqrt(data.length))
 
     svgContainer.selectAll("circle")
         .data(data, d => d.id)
@@ -90,12 +192,9 @@ function gridDiagram(data) {
         .attr('data-tippy-content', (d, i) => {
             return `${d.name}`
         })
-        .attr('data-tippy-content', (d, i) => {
-            return `${d.name}`
-          })
         .on('mouseover', function () {
             d3.select(this)
-            .style("cursor", "pointer")
+                .style("cursor", "pointer")
                 .raise()
                 .transition()
                 .duration(100)
@@ -109,14 +208,14 @@ function gridDiagram(data) {
                 .attr('r', d => d.radius)
         })
 
-          // ADD Tooltips
-  let circles = d3.selectAll("circle")
+    // ADD Tooltips
+    let circles = d3.selectAll("circle")
 
-  tippy(circles.nodes(), {
-    inertia: true,
-    animateFill: true,
-    offset: [0, 20]
-  })
+    tippy(circles.nodes(), {
+        inertia: true,
+        animateFill: true,
+        offset: [0, 20]
+    })
 }
 
 
@@ -141,7 +240,15 @@ function handleResize() {
 }
 
 function handleStepChange(response) {
-    console.log('Step changed: ' + response)
+    console.log('Step changed: ' + response.element, response.direction, response.index)
+
+    if (response.index == 1) {
+        circles.filter(d => d.category == 'location')
+            .transition()
+            .duration(1000)
+            .attr('cx', (d, i) => xGrid(i % numCols))
+            .attr('cy', (d, i) => yGrid(Math.floor(i / numCols)))
+    }
 }
 
 function init() {

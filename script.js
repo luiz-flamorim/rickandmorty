@@ -146,6 +146,9 @@ function drawCharts(data) {
     update(updatedNodes, updatedLinks)
   }
 
+  // let xGraphPos = {};
+  // let yGraphPos = {};
+
   let simulation = d3.forceSimulation(nodes)
     .force("link", d3.forceLink(data.links)
       .id(d => d.id)
@@ -157,225 +160,77 @@ function drawCharts(data) {
     .force("x", d3.forceX())
     .force("y", d3.forceY())
     .force('collide', d3.forceCollide(d => d.radius))
-    .on("tick", ticked);
-
-  // inserting the grid diagram here for now
-  gridDiagram(data)
-
-  slider(data, minEp, maxEp)
-
-  // network graph accessory functions
-  function dragstarted(event, d) {
-    if (!event.active) simulation.alphaTarget(0.3).restart()
-    d.fx = d.x;
-    d.fy = d.y;
-  }
-
-  function dragged(event, d) {
-    d.fx = event.x;
-    d.fy = event.y;
-  }
-
-  function dragended(event, d) {
-    if (!event.active) simulation.alphaTarget(0)
-    d.fx = null;
-    d.fy = null;
-  }
-
-  update(nodes, data.links)
-
-  function update(nodes, links) {
-
-    let link = svgContainer.selectAll("line")
-      .data(links, d => d.index)
-      .join(
-        enter => enter.append("line")
-        .attr("fill", "none")
-        .attr("stroke-width", 1)
-        .attr('stroke', d => {
-          return d.source.category == 'location' ? colours(planetNumber(d.source.name)) : colours(planetNumber(d.source.location.name))
-        }),
-        update => update,
-        exit => exit.remove()
-      )
-
-    let circles = svgContainer.selectAll("circle")
-      .data(nodes, d => d.id)
-      .join(
-        enter => enter.append("circle")
-        .attr("r", d => d.radius)
-        .attr("class", d => d.category == 'location' ? 'locations' : 'characters')
-        .attr("radius", d => d.radius)
-        .attr("opacity", d => d.opacity)
-        .attr('fill', d => {
-          return d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name))
-        })
-        .attr('x', d => d.x)
-        .attr('y', d => d.y)
-        .attr('data-tippy-content', (d, i) => {
-          return `${d.name}`
-        })
-        .on('mouseover', function () {
-          d3.select(this)
-            .raise()
-            .transition()
-            .duration(100)
-            .attr('r', d => d.radius * 1.2)
-        })
-        .on('mouseout', function () {
-          d3.select(this)
-            .transition()
-            .duration(200)
-            .attr('r', d => d.radius)
-        })
-        .call(d3.drag()
-          .on("start", dragstarted)
-          .on("drag", dragged)
-          .on("end", dragended)),
-
-        update => update.attr('opacity', d => d.opacity),
-
-        exit => exit.style("opacity", 1)
-        .transition()
-        .duration(500)
-        .style("opacity", 0)
-        .remove()
-      )
-
-    circles.on('click', function (event, d) {
-      popUp(d, data, maxEp)
-    })
-  }
-
-  // ADD Tooltips
-  let circles = d3.selectAll("circle")
-
-  tippy(circles.nodes(), {
-    inertia: true,
-    animateFill: true,
-    offset: [0, 10]
-  })
+    .on("tick", ticked)
+    // .on("end", function (d) {
+    //   circles.data()
+    //     .map((d, i) => {
+    //       xGraphPos[d.index] = d.x;
+    //       yGraphPos[d.index] = d.y;
+    //       return [];
+    //     })
+    // });
+}
 
 
-  // this function works as a filter
-  function filterSpecies(checkBox, item) {
+// inserting the grid diagram here for now
+gridDiagram(data)
 
-    let selectedSpecies = nodes.filter(d => d.species == item)
-    let selectedLinks = data.links.filter(d => d.source.species == item)
-    if (checkBox.checked) {
-      selectedSpecies.forEach(item => {
-        removedNodes.delete(item)
+slider(data, minEp, maxEp)
+
+// network graph accessory functions
+function dragstarted(event, d) {
+  if (!event.active) simulation.alphaTarget(0.3).restart()
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(event, d) {
+  d.fx = event.x;
+  d.fy = event.y;
+}
+
+function dragended(event, d) {
+  if (!event.active) simulation.alphaTarget(0)
+  d.fx = null;
+  d.fy = null;
+}
+
+update(nodes, data.links)
+
+function update(nodes, links) {
+
+  let link = svgContainer.selectAll("line")
+    .data(links, d => d.index)
+    .join(
+      enter => enter.append("line")
+      .attr("fill", "none")
+      .attr("stroke-width", 1)
+      .attr('stroke', d => {
+        return d.source.category == 'location' ? colours(planetNumber(d.source.name)) : colours(planetNumber(d.source.location.name))
+      }),
+      update => update,
+      exit => exit.remove()
+    )
+
+  let circles = svgContainer.selectAll("circle")
+    .data(nodes, d => d.id)
+    .join(
+      enter => enter.append("circle")
+      .attr("r", d => d.radius)
+      .attr("class", d => d.category == 'location' ? 'locations' : 'characters')
+      .attr("radius", d => d.radius)
+      .attr("opacity", d => d.opacity)
+      .attr('fill', d => {
+        return d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name))
       })
-      selectedLinks.forEach(item => {
-        removedLinks.delete(item)
-      })
-    } else {
-      selectedSpecies.forEach(item => {
-        removedNodes.add(item)
-      })
-      selectedLinks.forEach(item => {
-        removedLinks.add(item)
-      })
-    }
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-
-    // put this in a separate function. 
-    let updatedNodes = nodes.filter(node => !removedNodes.has(node))
-    let updatedLinks = data.links.filter(link => !removedLinks.has(link))
-    update(updatedNodes, updatedLinks)
-    simulation.alpha(.1).restart();
-  }
-
-  function ticked() {
-    let link = svgContainer.selectAll('line')
-    let circles = svgContainer.selectAll('circle')
-    link
-      .attr("x1", d => d.source.x)
-      .attr("y1", d => d.source.y)
-      .attr("x2", d => d.target.x)
-      .attr("y2", d => d.target.y);
-    circles
-      .attr("cx", d => d.x)
-      .attr("cy", d => d.y)
-  }
-
-  // this function gets the array of unique species to build the legend
-  // function buildLegend(species) {
-
-  //   let legendDiv = document.querySelector('#legend')
-
-  //   species.forEach(item => {
-  //     let legendContent = document.createElement('label')
-  //     legendContent.setAttribute('class', 'legend-item')
-  //     legendDiv.appendChild(legendContent)
-
-  //     let checkBox = document.createElement('input')
-  //     checkBox.setAttribute('type', 'checkbox')
-  //     checkBox.setAttribute('class', 'filled-in checkbox-colour')
-  //     checkBox.setAttribute('id', `cb-${item}`)
-  //     checkBox.setAttribute('checked', 'true')
-  //     legendContent.appendChild(checkBox)
-
-  //     checkBox.addEventListener('change', () => {
-  //       filterSpecies(checkBox, item)
-  //     })
-
-  //     let label = document.createElement('span')
-  //     label.htmlFor = `cb-${item}`
-  //     label.appendChild(document.createTextNode(`${item}`))
-  //     label.setAttribute('class', 'legend-text')
-  //     legendContent.appendChild(label)
-  //   })
-  // }
-
-
-  // GRID DIAGRAM - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  function gridDiagram(data) {
-
-    data = data.nodes.filter(d => d.category == 'location')
-
-    let svgGrid = d3.select('#grid-diagram')
-      .append('svg')
-      .attr("preserveAspectRatio", "xMinYMin meet")
-      .attr("viewBox", `0 0 ${width} ${height/2}`)
-      .classed('svg-content-responsive', true)
-      .append("g")
-
-    let numCols = Math.ceil(Math.sqrt(data.length)) * 2;
-
-    let y = d3.scaleBand()
-      .range([margin.bottom, height - margin.top])
-      .domain(d3.range(numCols))
-
-    let x = d3.scaleBand()
-      .range([margin.left, width - margin.right])
-      .domain(d3.range(numCols))
-
-    let svgContainer = svgGrid.append("g")
-      .attr("transform", `translate(${x.bandwidth()/2},${y.bandwidth()/2})`);
-
-      svgContainer.selectAll("circle")
-      .data(data, d => d.id)
-      .enter()
-      .append("circle")
-      .attr("id", d => `planet-${d.id}`)
-      .attr('cx', (d, i) => x(i % numCols))
-      .attr('cy', (d, i) => y(Math.floor(i / numCols)))
-      .attr('r', d => d.radius)
-      .style('stroke', 'white')
-      .style('stroke-width', 0)
-
-      .style('fill', d => colours(planetNumber(d.name)))
+      .attr('x', d => d.x)
+      .attr('y', d => d.y)
       .attr('data-tippy-content', (d, i) => {
         return `${d.name}`
       })
       .on('mouseover', function () {
         d3.select(this)
+          .raise()
           .transition()
           .duration(100)
           .attr('r', d => d.radius * 1.2)
@@ -386,7 +241,165 @@ function drawCharts(data) {
           .duration(200)
           .attr('r', d => d.radius)
       })
+      .call(d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended)),
+
+      update => update.attr('opacity', d => d.opacity),
+
+      exit => exit.style("opacity", 1)
+      .transition()
+      .duration(500)
+      .style("opacity", 0)
+      .remove()
+    )
+
+  circles.on('click', function (event, d) {
+    popUp(d, data, maxEp)
+  })
+}
+
+// ADD Tooltips
+let circles = d3.selectAll("circle")
+
+tippy(circles.nodes(), {
+  inertia: true,
+  animateFill: true,
+  offset: [0, 10]
+})
+
+
+// this function works as a filter
+function filterSpecies(checkBox, item) {
+
+  let selectedSpecies = nodes.filter(d => d.species == item)
+  let selectedLinks = data.links.filter(d => d.source.species == item)
+  if (checkBox.checked) {
+    selectedSpecies.forEach(item => {
+      removedNodes.delete(item)
+    })
+    selectedLinks.forEach(item => {
+      removedLinks.delete(item)
+    })
+  } else {
+    selectedSpecies.forEach(item => {
+      removedNodes.add(item)
+    })
+    selectedLinks.forEach(item => {
+      removedLinks.add(item)
+    })
   }
+  // 
+  // 
+  // 
+  // 
+  // 
+  // 
+
+  // put this in a separate function. 
+  let updatedNodes = nodes.filter(node => !removedNodes.has(node))
+  let updatedLinks = data.links.filter(link => !removedLinks.has(link))
+  update(updatedNodes, updatedLinks)
+  simulation.alpha(.1).restart();
+}
+
+function ticked() {
+  let link = svgContainer.selectAll('line')
+  let circles = svgContainer.selectAll('circle')
+  link
+    .attr("x1", d => d.source.x)
+    .attr("y1", d => d.source.y)
+    .attr("x2", d => d.target.x)
+    .attr("y2", d => d.target.y);
+  circles
+    .attr("cx", d => d.x)
+    .attr("cy", d => d.y)
+}
+
+// this function gets the array of unique species to build the legend
+// function buildLegend(species) {
+
+//   let legendDiv = document.querySelector('#legend')
+
+//   species.forEach(item => {
+//     let legendContent = document.createElement('label')
+//     legendContent.setAttribute('class', 'legend-item')
+//     legendDiv.appendChild(legendContent)
+
+//     let checkBox = document.createElement('input')
+//     checkBox.setAttribute('type', 'checkbox')
+//     checkBox.setAttribute('class', 'filled-in checkbox-colour')
+//     checkBox.setAttribute('id', `cb-${item}`)
+//     checkBox.setAttribute('checked', 'true')
+//     legendContent.appendChild(checkBox)
+
+//     checkBox.addEventListener('change', () => {
+//       filterSpecies(checkBox, item)
+//     })
+
+//     let label = document.createElement('span')
+//     label.htmlFor = `cb-${item}`
+//     label.appendChild(document.createTextNode(`${item}`))
+//     label.setAttribute('class', 'legend-text')
+//     legendContent.appendChild(label)
+//   })
+// }
+
+
+// GRID DIAGRAM - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+function gridDiagram(data) {
+
+  data = data.nodes.filter(d => d.category == 'location')
+
+  let svgGrid = d3.select('#grid-diagram')
+    .append('svg')
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", `0 0 ${width} ${height/2}`)
+    .classed('svg-content-responsive', true)
+    .append("g")
+
+  let numCols = Math.ceil(Math.sqrt(data.length)) * 2;
+
+  let y = d3.scaleBand()
+    .range([margin.bottom, height - margin.top])
+    .domain(d3.range(numCols))
+
+  let x = d3.scaleBand()
+    .range([margin.left, width - margin.right])
+    .domain(d3.range(numCols))
+
+  let svgContainer = svgGrid.append("g")
+    .attr("transform", `translate(${x.bandwidth()/2},${y.bandwidth()/2})`);
+
+  svgContainer.selectAll("circle")
+    .data(data, d => d.id)
+    .enter()
+    .append("circle")
+    .attr("id", d => `planet-${d.id}`)
+    .attr('cx', (d, i) => x(i % numCols))
+    .attr('cy', (d, i) => y(Math.floor(i / numCols)))
+    .attr('r', d => d.radius)
+    .style('stroke', 'white')
+    .style('stroke-width', 0)
+
+    .style('fill', d => colours(planetNumber(d.name)))
+    .attr('data-tippy-content', (d, i) => {
+      return `${d.name}`
+    })
+    .on('mouseover', function () {
+      d3.select(this)
+        .transition()
+        .duration(100)
+        .attr('r', d => d.radius * 1.2)
+    })
+    .on('mouseout', function () {
+      d3.select(this)
+        .transition()
+        .duration(200)
+        .attr('r', d => d.radius)
+    })
+}
 }
 
 
