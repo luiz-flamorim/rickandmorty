@@ -100,7 +100,7 @@ figure {
   /* 'left' is required for 'position:sticky' to function */
   right: 0;
   /* 'width:100%' and 'margin:0' forces the figure to take up the maximum space. This helps with image sizing and centering*/
-  width: 60%;
+  width: 55%;
   margin-left: auto;
   /*OPTIONAL: Setting the min-height prevents the figure from becoming unreadable */
   min-height: 250px;
@@ -110,7 +110,6 @@ figure {
   transform: translate3d(0, 0, 0);
   /* OPTIONAL: you can choose any background color */
 }
-
 
 .step {
   /* 'position relative' allows the steps to positioned in a custom way*/

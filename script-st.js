@@ -158,10 +158,10 @@ function svgSetup(data) {
                     return [];
                 })
             circles.attr('cx', d => {
-                    return d.category == 'location' ? 0 : d.x
+                    return d.category == 'location' ? width/2 : d.x
                 })
                 .attr('cy', d => {
-                    return d.category == 'location' ? 0 : d.y
+                    return d.category == 'location' ? height/2 : d.y
                 })
                 .style('opacity', d => {
                     return d.category == 'location' ? 1 : 0
@@ -242,6 +242,25 @@ function handleResize() {
 function handleStepChange(response) {
     console.log('Step changed: ' + response.element, response.direction, response.index)
 
+    if (response.index == 0) {
+        circles.data()
+                .map((d, i) => {
+                    xGraphPos[d.index] = d.x;
+                    yGraphPos[d.index] = d.y;
+                    return [];
+                })
+            circles.transition()
+            .duration(1000).attr('cx', d => {
+                    return d.category == 'location' ? width/2 : d.x
+                })
+                .attr('cy', d => {
+                    return d.category == 'location' ? height/2 : d.y
+                })
+                .style('opacity', d => {
+                    return d.category == 'location' ? 1 : 0
+                })
+                console.log('ended')
+    }
     if (response.index == 1) {
         circles.filter(d => d.category == 'location')
             .transition()
