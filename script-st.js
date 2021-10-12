@@ -11,6 +11,12 @@ let figure = d3.select('figure');
 let article = d3.select('article');
 let steps = d3.selectAll('.step');
 
+let episodesCount = d3.select('#episodesCount').node()
+let planetsCount = d3.select('#planetsCount').node()
+let speciesCount = d3.select('#speciesCount').node()
+let charactersCount = d3.select('#charactersCount').node()
+
+
 let svgContainer,
     svgGrid,
     numCols,
@@ -21,6 +27,10 @@ let svgContainer,
     simulation,
     circles,
     link
+
+//set of removed elements - use that on filters
+let removedLinks = new Set()
+let removedNodes = new Set()
 
 init()
 
@@ -44,7 +54,44 @@ d3.json('./processed.json')
 
 function svgSetup(data) {
 
-    console.log(data)
+    // update the figures in the HTML
+    episodesCount.innerHTML = data.count.episodesCount
+    planetsCount.innerHTML = data.count.planetsCount
+    speciesCount.innerHTML = data.count.speciesCount
+    charactersCount.innerHTML = data.count.speciesCount
+
+    // set the autoComplete
+    let autocompleteNames = {}
+    let singleName = data.nodes.map(d => {
+        let char = {
+            [d.name]: d.image
+        }
+        Object.assign(autocompleteNames, char)
+    })
+    let mInit = M.AutoInit()
+    let elems = document.querySelectorAll('.autocomplete')
+    M.Autocomplete.init(elems, {
+        data: autocompleteNames,
+        onAutocomplete: filterCharAndPlanets,
+        limit: 5
+    });
+
+    function filterCharAndPlanets(name) {
+        let filteredName = data.nodes.filter(d => d.name == name)
+        data.nodes.forEach(item => {
+            if (item.locationToId == filteredName[0].locationToId) {
+                item.opacity = 1
+            } else {
+                item.opacity = 0.2
+            }
+        })
+        let updatedNodes = data.nodes.filter(node => !removedNodes.has(node))
+        let updatedLinks = data.links.filter(link => !removedLinks.has(link))
+
+        // needs the update function(?)
+        // update(updatedNodes, updatedLinks)
+    }
+
 
     // Array of the unique planets
     let planets = []
@@ -101,11 +148,9 @@ function svgSetup(data) {
         .on("tick", ticked)
 
     simulation.stop()
-
     for (let i in d3.range(300)) {
         ticked();
     }
-
 
     function ticked() {
         console.log('tick')
@@ -147,31 +192,28 @@ function svgSetup(data) {
                 return d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name))
             })
             .attr('x', d => d.x)
-            .attr('y', d => d.y), update => update,
+            .attr('y', d => d.y),
+            update => update,
             exit => exit
         )
 
-        circles.data()
-                .map((d, i) => {
-                    xGraphPos[d.index] = d.x;
-                    yGraphPos[d.index] = d.y;
-                    return [];
-                })
-            circles.attr('cx', d => {
-                    return d.category == 'location' ? width/2 : d.x
-                })
-                .attr('cy', d => {
-                    return d.category == 'location' ? height/2 : d.y
-                })
-                .style('opacity', d => {
-                    return d.category == 'location' ? 1 : 0
-                })
-                console.log('ended')
+    circles.data()
+        .map((d, i) => {
+            xGraphPos[d.index] = d.x;
+            yGraphPos[d.index] = d.y;
+            return [];
+        })
+    circles.attr('cx', d => {
+            return d.category == 'location' ? width / 2 : d.x
+        })
+        .attr('cy', d => {
+            return d.category == 'location' ? height / 2 : d.y
+        })
+        .style('opacity', d => {
+            return d.category == 'location' ? 1 : 0
+        })
     return data
 }
-
-
-
 
 function gridDiagram(data) {
 
@@ -220,6 +262,19 @@ function gridDiagram(data) {
 
 
 function processData(data) {
+
+    let episodesCount = data.episodes.length
+    let charactersCount = data.nodes.filter(d => d.category == 'character').length
+    let planetsCount = data.nodes.filter(d => d.category == 'location').length
+    let speciesCount = d3.group(data.nodes, d => d.species).size
+
+    data.count = {
+        episodesCount,
+        charactersCount,
+        planetsCount,
+        speciesCount
+    }
+
     let dNodes = data.nodes
     dNodes.forEach(node => {
         node.opacity = 1
@@ -244,23 +299,23 @@ function handleStepChange(response) {
 
     if (response.index == 0) {
         circles.data()
-                .map((d, i) => {
-                    xGraphPos[d.index] = d.x;
-                    yGraphPos[d.index] = d.y;
-                    return [];
-                })
-            circles.transition()
+            .map((d, i) => {
+                xGraphPos[d.index] = d.x;
+                yGraphPos[d.index] = d.y;
+                return [];
+            })
+        circles.transition()
             .duration(1000).attr('cx', d => {
-                    return d.category == 'location' ? width/2 : d.x
-                })
-                .attr('cy', d => {
-                    return d.category == 'location' ? height/2 : d.y
-                })
-                .style('opacity', d => {
-                    return d.category == 'location' ? 1 : 0
-                })
-                console.log('ended')
+                return d.category == 'location' ? width / 2 : d.x
+            })
+            .attr('cy', d => {
+                return d.category == 'location' ? height / 2 : d.y
+            })
+            .style('opacity', d => {
+                return d.category == 'location' ? 1 : 0
+            })
     }
+
     if (response.index == 1) {
         circles.filter(d => d.category == 'location')
             .transition()
@@ -275,8 +330,8 @@ function init() {
 
     myScrollama.setup({
         step: '.step',
-        offset: Math.floor(window.innerHeight) * 1.3 + 'px',
-        debug: false
+        offset: Math.floor(window.innerHeight) * 1 + 'px',
+        debug: true
     }).onStepEnter(handleStepChange)
 
     window.addEventListener('resize', handleResize)

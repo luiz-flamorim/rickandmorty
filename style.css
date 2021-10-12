@@ -33,32 +33,13 @@ body {
   font-size: 6rem;
   font-weight: 900;
 }
-.header h2{
+
+h2{
   color: white;
   font-size: 3rem;
   font-weight: 400;
-  margin-bottom: 10rem;
 }
 
-p {
-  text-align: left;
-  padding: 2rem;
-  font-size: 1.5rem;
-  color: white;
-}
-
-.figures {
-  display: flex;
-  justify-content: center;
-}
-
-.figure {
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 2rem;
-  padding: 1rem;
-  text-align: center;
-  border: 1px solid white;
-}
 
 .main {
   /* overflow-scrolling enables momentum-based scrolling on touch devices. This allows the user to use their fingers less on touch devices  */
@@ -85,7 +66,7 @@ article {
   padding: 0 1rem;
   max-width: 35%;
   /* 'OPTIONAL: margin-top' sets how much space there is between the the figure and the first message.*/
-  margin-top: -80vh;
+  margin-top: -50vh;
   /* 'margin-left:auto' and 'margin-right:auto' centers the article on the page.*/
   margin-left: 2rem;
   /* 'transform' is included to ensure z-index works properly on all kinds of devices */
@@ -129,9 +110,11 @@ figure {
   padding: 2rem;
   font-size: 1.5rem;
   color: white;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 2 em;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 2rem;
   border-radius: 0.5rem;
+  min-width: 100%;
+  font-weight: 200;
 }
 
 .step h2{
@@ -140,4 +123,35 @@ figure {
   color: white;
   font-size: 3rem;
   font-weight: 600;
+  margin: 2rem;
+}
+
+.stats-group {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 2rem;
+  gap: 2rem;
+  
+}
+
+.stats {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  /* border: 1px solid white; */
+  border-radius: 0.5rem;
+  color: white;
+  text-align: center;
+  font-size: 1.4 rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.stats-big{
+  font-size: 3rem;
+  font-weight: 900;
 }

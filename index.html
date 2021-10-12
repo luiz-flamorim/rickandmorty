@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script> -->
     <script src="https://unpkg.com/intersection-observer"></script>
     <script src="https://unpkg.com/scrollama"></script>
 
@@ -37,15 +37,8 @@
         </section>
 
         <div>
-            <p> This webpage is an exploration of some data from "Ricky and Morty" series. The data is available
-                at the XXXX, and my objective is to visualise that in a creative way.</p>
-            <div class="figures">
+            <p> This webpage is an exploration of some data from "Ricky and Morty" series. The data is available at the XXXX, and my objective is to visualise that in a creative way.</p>
 
-                <p class="figure">XXX episodes</p>
-                <p class="figure">XXX characters</p>
-                <p class="figure">XXX planets</p>
-                <p class="figure">XXX species</p>
-            </div>
         </div>
 
         <section id='scrollytelling'>
@@ -58,7 +51,7 @@
                         <label for="autocomplete-input">Search</label>
                     </div>
                     <div id='legend'></div>
-                    <input  id="myRange" type="range"  min="0" max="100" />
+                    <input id="myRange" type="range" min="0" max="100" />
                 </div>
 
                 <!-- Charts -->
@@ -72,8 +65,15 @@
             <article>
 
                 <div class='step'>
-                    <h2>First Step</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio rerum ea necessitatibus labore a voluptatibus. Velit a dolor tempora perferendis dolore modi possimus quo reprehenderit doloribus quam quibusdam, delectus voluptatum.</p>
+                    <h2>The Singularity</h2>
+                    <p>Our universe started from a singularity, as well as all of the data on this webpage: it starts from a singular point of view: <b>"who?"</b>. The characters on the show are not only people, but it also includes further planets and species that often become living beings. The figures below gives a bit of a flavour about who the characters are.</p>
+
+                    <div class="stats-group">
+                        <div class="stats"><span class="stats-big" id="episodesCount">XXX</span></br>episodes</div>
+                        <div class="stats"><span class="stats-big" id="charactersCount">XXX</span></br>characters</div>
+                        <div class="stats"><span class="stats-big" id="planetsCount">XXX</span></br>planets</div>
+                        <div class="stats"><span class="stats-big" id="speciesCount">XXX</span></br>species</div>
+                    </div>
                 </div>
 
                 <div class='step'>
