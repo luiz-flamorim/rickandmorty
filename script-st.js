@@ -43,13 +43,13 @@ let margin = {
     width = 1000 - margin.left - margin.right,
     height = 1000 - margin.top - margin.bottom;
 
-    svgGrid = d3.select('#chart')
-        .append('svg')
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("viewBox", `0 0 ${width} ${height}`)
-        .classed('svg-content-responsive', true)
-        .append("g")
-        //.attr('transform', `translate(${width/2},${height/2})`)
+svgGrid = d3.select('#chart')
+    .append('svg')
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .classed('svg-content-responsive', true)
+    .append("g")
+//.attr('transform', `translate(${width/2},${height/2})`)
 
 //set of removed elements - use that on filters
 let removedLinks = new Set()
@@ -68,8 +68,8 @@ d3.json('./processed.json')
     })
 
 
-function getPlanetData(data){
-        // Array of the unique planets
+function getPlanetData(data) {
+    // Array of the unique planets
     let planets = []
     let planetData = data.nodes.filter(d => d.category == 'location')
     let uniquePlanets = d3.groups(planetData, d => d.name)
@@ -90,8 +90,8 @@ function getPlanetData(data){
 }
 
 
-function autoCompleteSetup(data){
-        // set the autoComplete
+function autoCompleteSetup(data) {
+    // set the autoComplete
     let autocompleteNames = {}
     let singleName = data.nodes.map(d => {
         let char = {
@@ -109,7 +109,7 @@ function autoCompleteSetup(data){
 
 }
 
-function runSimulation(data){
+function runSimulation(data) {
 
 
 
@@ -131,20 +131,20 @@ function svgSetup(data) {
 
 
     yGrid = d3.scaleBand()
-    .range([margin.bottom, height - margin.top])
-    .domain(d3.range(numCols))
+        .range([margin.bottom, height - margin.top])
+        .domain(d3.range(numCols))
 
-xGrid = d3.scaleBand()
-    .range([margin.left, width - margin.right])
-    .domain(d3.range(numCols))
+    xGrid = d3.scaleBand()
+        .range([margin.left, width - margin.right])
+        .domain(d3.range(numCols))
 
-svgContainer = svgGrid.append("g")
-    .attr("transform", `translate(${xGrid.bandwidth()/2},${yGrid.bandwidth()/2})`);
+    svgContainer = svgGrid.append("g")
+        .attr("transform", `translate(${xGrid.bandwidth()/2},${yGrid.bandwidth()/2})`);
 
 
     getPlanetData(data);
 
-        simulation = d3.forceSimulation(data.nodes)
+    simulation = d3.forceSimulation(data.nodes)
         .force("link", d3.forceLink(data.links)
             .id(d => d.id)
             .distance((d, i) => 200 * Math.random())
@@ -159,12 +159,13 @@ svgContainer = svgGrid.append("g")
         .on("tick", ticked)
 
     circles = svgContainer.selectAll("circle")
-            .data(data.nodes, d => d.id)
-            .join("circle")
-            .attr('r', d => d.radius)
-            .attr('x', d => d.x)
-            .attr('y', d => d.y)
-            .attr("fill", "white")
+        .data(data.nodes, d => d.id)
+        .join("circle")
+        .attr('r', d => d.radius)
+        .attr('x', d => d.x)
+        .attr('y', d => d.y)
+        .style('opacity',0)
+        // .attr("fill", "white")
 
     circles.data()
         .map((d, i) => {
@@ -174,7 +175,7 @@ svgContainer = svgGrid.append("g")
         })
 
 
-    //update(data.nodes, data.links, 0);
+    // update(data.nodes, data.links, 0);
 
     simulation.stop()
     for (let i in d3.range(300)) {
@@ -195,7 +196,7 @@ svgContainer = svgGrid.append("g")
     }
 
 
-function handleResize() {
+    function handleResize() {
 
         steps.style("height", stepH + 'px')
 
@@ -208,40 +209,40 @@ function handleResize() {
 
 
 
-function init() {
-    handleResize()
+    function init() {
+        handleResize()
 
-    myScrollama.setup({
-        step: '.step',
-        offset: Math.floor(window.innerHeight) * 1 + 'px',
-        debug: true
-    }).onStepEnter(handleStepChange)
+        myScrollama.setup({
+            step: '.step',
+            offset: Math.floor(window.innerHeight) * 1 + 'px',
+            debug: true
+        }).onStepEnter(handleStepChange)
 
-    window.addEventListener('resize', handleResize)
-}
-
-
-
-
-function handleStepChange(response) {
-    //console.log('Step changed: ' + response.element, response.direction, response.index)
-
-    switch(response.index){
-        /*TODO filter out removed nodes/links*/
-        case 0: 
-            update(filter, [], 0);
-            break;
-        case 1:
-            update(filter, [], 1);
-            break;
-
-        case 2:
-            update(data.nodes, data.links, 2);
-            break;
+        window.addEventListener('resize', handleResize)
     }
-}
 
-init();
+
+
+
+    function handleStepChange(response) {
+        //console.log('Step changed: ' + response.element, response.direction, response.index)
+
+        switch (response.index) {
+            /*TODO filter out removed nodes/links*/
+            case 0:
+                update(filter, [], 0);
+                break;
+            case 1:
+                update(filter, [], 1);
+                break;
+
+            case 2:
+                update(data.nodes, data.links, 2);
+                break;
+        }
+    }
+
+    init();
     return data
 }
 
@@ -272,4 +273,3 @@ function processData(data) {
     })
     return data
 }
-
