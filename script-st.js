@@ -32,6 +32,7 @@ let svgContainer,
 
 
 
+
 // setup dimensions and margins of the graph
 let margin = {
         top: 20,
@@ -159,8 +160,20 @@ function svgSetup(data) {
     filter = data.nodes.filter(d => d.category == 'location')
     numCols = Math.ceil(Math.sqrt(filter.length))
 
-    getPlanetData(data);
 
+    yGrid = d3.scaleBand()
+    .range([margin.bottom, height - margin.top])
+    .domain(d3.range(numCols))
+
+xGrid = d3.scaleBand()
+    .range([margin.left, width - margin.right])
+    .domain(d3.range(numCols))
+
+svgContainer = svgGrid.append("g")
+    .attr("transform", `translate(${xGrid.bandwidth()/2},${yGrid.bandwidth()/2})`);
+
+
+    getPlanetData(data);
 
     runSimulation(data);
 
@@ -196,11 +209,12 @@ function handleStepChange(response) {
     //console.log('Step changed: ' + response.element, response.direction, response.index)
 
     switch(response.index){
+        /*TODO filter out removed nodes/links*/
         case 0: 
-            update(data.nodes, [], 0);
+            update(filter, [], 1);
             break;
         case 1:
-            update(data.nodes, [], 1);
+            update(filter, [], 1);
             break;
 
         case 2:

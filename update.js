@@ -39,7 +39,7 @@ function update(nodes,links,slideNumber){
                                 positionX = d.category == 'location' ? 0 : d.x;
                                 break;
                             case 1:
-                                positionX = xGrid(i % numCols);
+                                return xGrid(i % numCols);
                                 break;
                             case 2:
                                 positionX = xGraphPos[d.index]
@@ -57,7 +57,7 @@ function update(nodes,links,slideNumber){
                                 positionY = d.category == 'location' ? 0 : d.y;
                                 break;
                             case 1:
-                                positionY = yGrid(i % numCols);
+                                positionY = yGrid(Math.floor(i / numCols));
                                 break;
                             case 2:
                                 positionY = yGraphPos[d.index]
