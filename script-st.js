@@ -17,6 +17,7 @@ let speciesCount = d3.select('#speciesCount').node()
 let charactersCount = d3.select('#charactersCount').node()
 
 
+
 let svgContainer,
     svgGrid,
     numCols,
@@ -26,13 +27,10 @@ let svgContainer,
     filter,
     simulation,
     circles,
-    link
+    link,
+    planetNumber
 
-//set of removed elements - use that on filters
-let removedLinks = new Set()
-let removedNodes = new Set()
 
-init()
 
 // setup dimensions and margins of the graph
 let margin = {
@@ -44,6 +42,22 @@ let margin = {
     width = 1000 - margin.left - margin.right,
     height = 1000 - margin.top - margin.bottom;
 
+    svgGrid = d3.select('#chart')
+        .append('svg')
+        .attr("preserveAspectRatio", "xMinYMin meet")
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        .classed('svg-content-responsive', true)
+        .append("g")
+        //.attr('transform', `translate(${width/2},${height/2})`)
+
+//set of removed elements - use that on filters
+let removedLinks = new Set()
+let removedNodes = new Set()
+
+
+
+
+
 d3.json('./processed.json')
     .then(raw => {
         return processData(raw)
@@ -52,15 +66,31 @@ d3.json('./processed.json')
         return svgSetup(data)
     })
 
-function svgSetup(data) {
 
-    // update the figures in the HTML
-    episodesCount.innerHTML = data.count.episodesCount
-    planetsCount.innerHTML = data.count.planetsCount
-    speciesCount.innerHTML = data.count.speciesCount
-    charactersCount.innerHTML = data.count.speciesCount
+function getPlanetData(data){
+        // Array of the unique planets
+    let planets = []
+    let planetData = data.nodes.filter(d => d.category == 'location')
+    let uniquePlanets = d3.groups(planetData, d => d.name)
+    uniquePlanets.forEach(d => {
+        planets.push(d[0])
+    })
 
-    // set the autoComplete
+    // scale for the planets
+    planetNumber = d3.scaleOrdinal()
+        .domain(planets)
+        .range(d3.range(planets.length))
+
+    colours = d3.scaleSequential()
+        .domain([0, planets.length - 1])
+        .interpolator(d3.interpolateRainbow)
+
+
+}
+
+
+function autoCompleteSetup(data){
+        // set the autoComplete
     let autocompleteNames = {}
     let singleName = data.nodes.map(d => {
         let char = {
@@ -76,62 +106,10 @@ function svgSetup(data) {
         limit: 5
     });
 
-    function filterCharAndPlanets(name) {
-        let filteredName = data.nodes.filter(d => d.name == name)
-        data.nodes.forEach(item => {
-            if (item.locationToId == filteredName[0].locationToId) {
-                item.opacity = 1
-            } else {
-                item.opacity = 0.2
-            }
-        })
-        let updatedNodes = data.nodes.filter(node => !removedNodes.has(node))
-        let updatedLinks = data.links.filter(link => !removedLinks.has(link))
+}
 
-        // needs the update function(?)
-        // update(updatedNodes, updatedLinks)
-    }
+function runSimulation(data){
 
-
-    // Array of the unique planets
-    let planets = []
-    let planetData = data.nodes.filter(d => d.category == 'location')
-    let uniquePlanets = d3.groups(planetData, d => d.name)
-    uniquePlanets.forEach(d => {
-        planets.push(d[0])
-    })
-
-    // scale for the planets
-    let planetNumber = d3.scaleOrdinal()
-        .domain(planets)
-        .range(d3.range(planets.length))
-
-    colours = d3.scaleSequential()
-        .domain([0, planets.length - 1])
-        .interpolator(d3.interpolateRainbow)
-
-    filter = data.nodes.filter(d => d.category == 'location')
-    numCols = Math.ceil(Math.sqrt(filter.length))
-
-
-    svgGrid = d3.select('#chart')
-        .append('svg')
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("viewBox", `0 0 ${width} ${height}`)
-        .classed('svg-content-responsive', true)
-        .append("g")
-
-
-    yGrid = d3.scaleBand()
-        .range([margin.bottom, height - margin.top])
-        .domain(d3.range(numCols))
-
-    xGrid = d3.scaleBand()
-        .range([margin.left, width - margin.right])
-        .domain(d3.range(numCols))
-
-    svgContainer = svgGrid.append("g")
-        .attr("transform", `translate(${xGrid.bandwidth()/2},${yGrid.bandwidth()/2})`);
 
     simulation = d3.forceSimulation(data.nodes)
         .force("link", d3.forceLink(data.links)
@@ -153,7 +131,6 @@ function svgSetup(data) {
     }
 
     function ticked() {
-        console.log('tick')
         let link = svgContainer.selectAll('line')
         let circles = svgContainer.selectAll('circle')
         link
@@ -166,99 +143,78 @@ function svgSetup(data) {
             .attr("cy", d => d.y)
     }
 
-    link = svgContainer.selectAll("line")
-        .data(data.links, d => d.index)
-        .join(
-            enter => enter.append("line")
-            .attr("fill", "none")
-            .attr("stroke-width", 1)
-            .attr("opacity", 0)
-            .attr('stroke', d => {
-                return d.source.category == 'location' ? colours(planetNumber(d.source.name)) : colours(planetNumber(d.source.location.name))
-            }),
-            update => update,
-            exit => exit.remove()
-        )
+}
 
-    circles = svgContainer.selectAll("circle")
-        .data(data.nodes, d => d.id)
-        .join(
-            enter => enter.append("circle")
-            .attr("r", d => d.radius)
-            .attr("class", d => d.category == 'location' ? 'locations' : 'characters')
-            .attr("radius", d => d.radius)
-            .attr("opacity", 0)
-            .attr('fill', d => {
-                return d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name))
-            })
-            .attr('x', d => d.x)
-            .attr('y', d => d.y),
-            update => update,
-            exit => exit
-        )
+function svgSetup(data) {
 
-    circles.data()
-        .map((d, i) => {
-            xGraphPos[d.index] = d.x;
-            yGraphPos[d.index] = d.y;
-            return [];
-        })
-    circles.attr('cx', d => {
-            return d.category == 'location' ? width / 2 : d.x
-        })
-        .attr('cy', d => {
-            return d.category == 'location' ? height / 2 : d.y
-        })
-        .style('opacity', d => {
-            return d.category == 'location' ? 1 : 0
-        })
+
+    // update the figures in the HTML
+    episodesCount.innerHTML = data.count.episodesCount
+    planetsCount.innerHTML = data.count.planetsCount
+    speciesCount.innerHTML = data.count.speciesCount
+    charactersCount.innerHTML = data.count.speciesCount
+
+
+
+    filter = data.nodes.filter(d => d.category == 'location')
+    numCols = Math.ceil(Math.sqrt(filter.length))
+
+    getPlanetData(data);
+
+
+    runSimulation(data);
+
+function handleResize() {
+
+        steps.style("height", stepH + 'px')
+
+        figure
+            .style('height', figureHeight + 'px')
+            .style('top', figureMarginTop + 'px')
+
+        myScrollama.resize();
+    }
+
+
+
+function init() {
+    handleResize()
+
+    myScrollama.setup({
+        step: '.step',
+        offset: Math.floor(window.innerHeight) * 1 + 'px',
+        debug: true
+    }).onStepEnter(handleStepChange)
+
+    window.addEventListener('resize', handleResize)
+}
+
+
+
+
+function handleStepChange(response) {
+    //console.log('Step changed: ' + response.element, response.direction, response.index)
+
+    switch(response.index){
+        case 0: 
+            update(data.nodes, [], 0);
+            break;
+        case 1:
+            update(data.nodes, [], 1);
+            break;
+
+        case 2:
+            update(data.nodes, data.links, 2);
+            break;
+    }
+}
+
+init();
     return data
 }
 
-function gridDiagram(data) {
 
-    // data = data.nodes.filter(d => d.category == 'location')
-    // numCols = Math.ceil(Math.sqrt(data.length))
 
-    svgContainer.selectAll("circle")
-        .data(data, d => d.id)
-        .enter()
-        .append("circle")
-        .attr("id", d => `planet-${d.id}`)
-        .attr('cx', (d, i) => x(i % numCols))
-        .attr('cy', (d, i) => y(Math.floor(i / numCols)))
-        .attr('r', d => d.radius)
-        .style('stroke', 'white')
-        .style('stroke-width', 0)
-        .style('fill', d => colours(planetNumber(d.name)))
-        .attr('data-tippy-content', (d, i) => {
-            return `${d.name}`
-        })
-        .on('mouseover', function () {
-            d3.select(this)
-                .style("cursor", "pointer")
-                .raise()
-                .transition()
-                .duration(100)
-                .attr('r', d => d.radius * 1.2)
-        })
-        .on('mouseout', function () {
-            d3.select(this)
-                .lower()
-                .transition()
-                .duration(200)
-                .attr('r', d => d.radius)
-        })
-
-    // ADD Tooltips
-    let circles = d3.selectAll("circle")
-
-    tippy(circles.nodes(), {
-        inertia: true,
-        animateFill: true,
-        offset: [0, 20]
-    })
-}
 
 
 function processData(data) {
@@ -279,60 +235,9 @@ function processData(data) {
     dNodes.forEach(node => {
         node.opacity = 1
         node.radius = node.category == 'location' ? 40 : 8
+        node.x = Math.random() * width;
+        node.y = Math.random() * height;
     })
     return data
 }
 
-function handleResize() {
-
-    steps.style("height", stepH + 'px')
-
-    figure
-        .style('height', figureHeight + 'px')
-        .style('top', figureMarginTop + 'px')
-
-    myScrollama.resize();
-}
-
-function handleStepChange(response) {
-    console.log('Step changed: ' + response.element, response.direction, response.index)
-
-    if (response.index == 0) {
-        circles.data()
-            .map((d, i) => {
-                xGraphPos[d.index] = d.x;
-                yGraphPos[d.index] = d.y;
-                return [];
-            })
-        circles.transition()
-            .duration(1000).attr('cx', d => {
-                return d.category == 'location' ? width / 2 : d.x
-            })
-            .attr('cy', d => {
-                return d.category == 'location' ? height / 2 : d.y
-            })
-            .style('opacity', d => {
-                return d.category == 'location' ? 1 : 0
-            })
-    }
-
-    if (response.index == 1) {
-        circles.filter(d => d.category == 'location')
-            .transition()
-            .duration(1000)
-            .attr('cx', (d, i) => xGrid(i % numCols))
-            .attr('cy', (d, i) => yGrid(Math.floor(i / numCols)))
-    }
-}
-
-function init() {
-    handleResize()
-
-    myScrollama.setup({
-        step: '.step',
-        offset: Math.floor(window.innerHeight) * 1 + 'px',
-        debug: true
-    }).onStepEnter(handleStepChange)
-
-    window.addEventListener('resize', handleResize)
-}
