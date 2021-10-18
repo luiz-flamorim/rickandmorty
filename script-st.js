@@ -62,13 +62,13 @@ function svgSetup(data) {
 
     // set the autoComplete
     let autocompleteNames = {}
-    let singleName = data.nodes.map(d => {
+    data.nodes.map(d => {
         let char = {
             [d.name]: d.image
         }
         Object.assign(autocompleteNames, char)
     })
-    let mInit = M.AutoInit()
+    M.AutoInit()
     let elems = document.querySelectorAll('.autocomplete')
     M.Autocomplete.init(elems, {
         data: autocompleteNames,
@@ -192,7 +192,25 @@ function svgSetup(data) {
                 return d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name))
             })
             .attr('x', d => d.x)
-            .attr('y', d => d.y),
+            .attr('y', d => d.y)
+            .attr('data-tippy-content', (d, i) => {
+                return `${d.name}`
+            })
+            .on('mouseover', function () {
+                d3.select(this)
+                    .style("cursor", "pointer")
+                    .raise()
+                    .transition()
+                    .duration(100)
+                    .attr('r', d => d.radius * 1.2)
+            })
+            .on('mouseout', function () {
+                d3.select(this)
+                    .lower()
+                    .transition()
+                    .duration(200)
+                    .attr('r', d => d.radius)
+            }),
             update => update,
             exit => exit
         )
@@ -212,54 +230,18 @@ function svgSetup(data) {
         .style('opacity', d => {
             return d.category == 'location' ? 1 : 0
         })
-    return data
-}
-
-function gridDiagram(data) {
-
-    // data = data.nodes.filter(d => d.category == 'location')
-    // numCols = Math.ceil(Math.sqrt(data.length))
-
-    svgContainer.selectAll("circle")
-        .data(data, d => d.id)
-        .enter()
-        .append("circle")
-        .attr("id", d => `planet-${d.id}`)
-        .attr('cx', (d, i) => x(i % numCols))
-        .attr('cy', (d, i) => y(Math.floor(i / numCols)))
-        .attr('r', d => d.radius)
-        .style('stroke', 'white')
-        .style('stroke-width', 0)
-        .style('fill', d => colours(planetNumber(d.name)))
-        .attr('data-tippy-content', (d, i) => {
-            return `${d.name}`
-        })
-        .on('mouseover', function () {
-            d3.select(this)
-                .style("cursor", "pointer")
-                .raise()
-                .transition()
-                .duration(100)
-                .attr('r', d => d.radius * 1.2)
-        })
-        .on('mouseout', function () {
-            d3.select(this)
-                .lower()
-                .transition()
-                .duration(200)
-                .attr('r', d => d.radius)
-        })
 
     // ADD Tooltips
-    let circles = d3.selectAll("circle")
+    let circlesInDiagram = svgContainer.selectAll("circle")
 
-    tippy(circles.nodes(), {
+    tippy(circlesInDiagram.nodes(), {
         inertia: true,
         animateFill: true,
         offset: [0, 20]
     })
-}
 
+    return data
+}
 
 function processData(data) {
 
@@ -279,6 +261,8 @@ function processData(data) {
     dNodes.forEach(node => {
         node.opacity = 1
         node.radius = node.category == 'location' ? 40 : 8
+        node.x = Math.random() * width;
+        node.y = Math.random() * height;
     })
     return data
 }
