@@ -36,7 +36,7 @@ function update(nodes,links,slideNumber){
                     .attr('cx', (d, i) => {
                         switch(slideNumber){
                             case 0:
-                                positionX = d.category == 'location' ? 0 : d.x;
+                                positionX = d.category == 'location' ? width/2 : d.x;
                                 break;
                             case 1:
                                 return xGrid(i % numCols);
@@ -54,7 +54,7 @@ function update(nodes,links,slideNumber){
 
                         switch(slideNumber){
                             case 0:
-                                positionY = d.category == 'location' ? 0 : d.y;
+                                positionY = d.category == 'location' ? height/2 : d.y;
                                 break;
                             case 1:
                                 positionY = yGrid(Math.floor(i / numCols));
@@ -85,29 +85,11 @@ function update(nodes,links,slideNumber){
                         }
                          return opacity;
 
-                    })
-                    .attr('data-tippy-content', (d, i) => {
-                        return `${d.name}`
-                    })
-                    .on('mouseover', function () {
-                        d3.select(this)
-                            .style("cursor", "pointer")
-                            .raise()
-                            .transition()
-                            .duration(100)
-                            .attr('r', d => d.radius * 1.2)
-                    })
-                    .on('mouseout', function () {
-                        d3.select(this)
-                            .lower()
-                            .transition()
-                            .duration(200)
-                            .attr('r', d => d.radius)
                     }),
                 update => update.attr('cx', (d, i) => {
                         switch(slideNumber){
                             case 0:
-                                positionX = d.category == 'location' ? 0 : d.x;
+                                positionX = d.category == 'location' ? width/2 : d.x;
                                 break;
                             case 1:
                                 positionX = xGrid(i % numCols);
@@ -122,13 +104,14 @@ function update(nodes,links,slideNumber){
 
 
                     .attr('cy', (d, i) => {
+                        console.log("update function");
 
                         switch(slideNumber){
                             case 0:
-                                positionY = d.category == 'location' ? 0 : d.y;
+                                positionY = d.category == 'location' ? height/2 : d.y;
                                 break;
                             case 1:
-                                positionY = yGrid(i % numCols);
+                                positionY = yGrid(Math.floor(i / numCols));
                                 break;
                             case 2:
                                 positionY = yGraphPos[d.index]
@@ -162,6 +145,24 @@ function update(nodes,links,slideNumber){
                 exit => exit.remove()
 
                 )
+                .attr('data-tippy-content', (d, i) => {
+                        return `${d.name}`
+                    })
+                .on('mouseover', function () {
+                        d3.select(this)
+                            .style("cursor", "pointer")
+                            .raise()
+                            .transition()
+                            .duration(100)
+                            .attr('r', d => d.radius * 1.2)
+                    })
+                .on('mouseout', function () {
+                        d3.select(this)
+                            .lower()
+                            .transition()
+                            .duration(200)
+                            .attr('r', d => d.radius)
+                    })
        
            
 

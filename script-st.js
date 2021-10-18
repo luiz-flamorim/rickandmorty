@@ -112,37 +112,6 @@ function autoCompleteSetup(data){
 function runSimulation(data){
 
 
-    simulation = d3.forceSimulation(data.nodes)
-        .force("link", d3.forceLink(data.links)
-            .id(d => d.id)
-            .distance((d, i) => 200 * Math.random())
-        )
-        .force('center', d3.forceCenter()
-            .x(width / 2)
-            .y(height / 2))
-        .force("charge", d3.forceManyBody().strength(-100))
-        .force("x", d3.forceX())
-        .force("y", d3.forceY())
-        .force('collide', d3.forceCollide(d => d.radius))
-        .on("tick", ticked)
-
-    simulation.stop()
-    for (let i in d3.range(300)) {
-        ticked();
-    }
-
-    function ticked() {
-        let link = svgContainer.selectAll('line')
-        let circles = svgContainer.selectAll('circle')
-        link
-            .attr("x1", d => d.source.x)
-            .attr("y1", d => d.source.y)
-            .attr("x2", d => d.target.x)
-            .attr("y2", d => d.target.y);
-        circles
-            .attr("cx", d => d.x)
-            .attr("cy", d => d.y)
-    }
 
 }
 
@@ -175,7 +144,56 @@ svgContainer = svgGrid.append("g")
 
     getPlanetData(data);
 
-    runSimulation(data);
+        simulation = d3.forceSimulation(data.nodes)
+        .force("link", d3.forceLink(data.links)
+            .id(d => d.id)
+            .distance((d, i) => 200 * Math.random())
+        )
+        .force('center', d3.forceCenter()
+            .x(width / 2)
+            .y(height / 2))
+        .force("charge", d3.forceManyBody().strength(-100))
+        .force("x", d3.forceX())
+        .force("y", d3.forceY())
+        .force('collide', d3.forceCollide(d => d.radius))
+        .on("tick", ticked)
+
+    circles = svgContainer.selectAll("circle")
+            .data(data.nodes, d => d.id)
+            .join("circle")
+            .attr('r', d => d.radius)
+            .attr('x', d => d.x)
+            .attr('y', d => d.y)
+            .attr("fill", "white")
+
+    circles.data()
+        .map((d, i) => {
+            xGraphPos[d.index] = d.x;
+            yGraphPos[d.index] = d.y;
+            return [];
+        })
+
+
+    //update(data.nodes, data.links, 0);
+
+    simulation.stop()
+    for (let i in d3.range(300)) {
+        ticked();
+    }
+
+    function ticked() {
+        let link = svgContainer.selectAll('line')
+        let circles = svgContainer.selectAll('circle')
+        link
+            .attr("x1", d => d.source.x)
+            .attr("y1", d => d.source.y)
+            .attr("x2", d => d.target.x)
+            .attr("y2", d => d.target.y);
+        circles
+            .attr("cx", d => d.x)
+            .attr("cy", d => d.y)
+    }
+
 
 function handleResize() {
 
@@ -211,7 +229,7 @@ function handleStepChange(response) {
     switch(response.index){
         /*TODO filter out removed nodes/links*/
         case 0: 
-            update(filter, [], 1);
+            update(filter, [], 0);
             break;
         case 1:
             update(filter, [], 1);
