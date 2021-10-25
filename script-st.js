@@ -89,13 +89,13 @@ function getPlanetData(data) {
 function autoCompleteSetup(data) {
     // sets the autoComplete
     let autocompleteNames = {}
-    let singleName = data.nodes.map(d => {
+    data.nodes.map(d => {
         let char = {
             [d.name]: d.image
         }
         Object.assign(autocompleteNames, char)
     })
-    let mInit = M.AutoInit()
+    M.AutoInit()
     let elems = document.querySelectorAll('.autocomplete')
     M.Autocomplete.init(elems, {
         data: autocompleteNames,
@@ -220,6 +220,7 @@ function svgSetup(data) {
     return data
 }
 
+
 function processData(data) {
 
     let episodesCount = data.episodes.length
@@ -238,6 +239,7 @@ function processData(data) {
     dNodes.forEach(node => {
         node.opacity = 1
         node.radius = node.category == 'location' ? 20 : 5
+
         node.x = Math.random() * width;
         node.y = Math.random() * height;
     })
