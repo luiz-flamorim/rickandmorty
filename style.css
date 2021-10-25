@@ -64,7 +64,7 @@ article {
   /* 'position:relative' allows the article section to be positioned in a custom way */
   position: relative;
   padding: 0 1rem;
-  max-width: 35%;
+  max-width: 30%;
   /* 'OPTIONAL: margin-top' sets how much space there is between the the figure and the first message.*/
   margin-top: -50vh;
   /* 'margin-left:auto' and 'margin-right:auto' centers the article on the page.*/
@@ -81,7 +81,7 @@ figure {
   /* 'left' is required for 'position:sticky' to function */
   right: 0;
   /* 'width:100%' and 'margin:0' forces the figure to take up the maximum space. This helps with image sizing and centering*/
-  width: 55%;
+  width: 45rem;
   margin-left: auto;
   /*OPTIONAL: Setting the min-height prevents the figure from becoming unreadable */
   min-height: 250px;
