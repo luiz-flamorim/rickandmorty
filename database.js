@@ -1,3 +1,5 @@
+// the code below is set to be used on Node.js and scrape all the data from the API
+
 const fs = require('fs')
 const fetch = require("node-fetch");
 const urlChar = "https://rickandmortyapi.com/api/character/";
