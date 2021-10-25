@@ -109,11 +109,6 @@ function autoCompleteSetup(data) {
 
 }
 
-function runSimulation(data) {
-
-
-
-}
 
 function svgSetup(data) {
 
@@ -147,12 +142,12 @@ function svgSetup(data) {
     simulation = d3.forceSimulation(data.nodes)
         .force("link", d3.forceLink(data.links)
             .id(d => d.id)
-            .distance((d, i) => 200 * Math.random())
+            .distance((d, i) => 80 * Math.random())
         )
         .force('center', d3.forceCenter()
-            .x(width / 2)
-            .y(height / 2))
-        .force("charge", d3.forceManyBody().strength(-100))
+            .x(width / 2.2)
+            .y(height / 2.2))
+        .force("charge", d3.forceManyBody().strength(-25))
         .force("x", d3.forceX())
         .force("y", d3.forceY())
         .force('collide', d3.forceCollide(d => d.radius))
@@ -165,7 +160,10 @@ function svgSetup(data) {
         .attr('x', d => d.x)
         .attr('y', d => d.y)
         .style('opacity',0)
-        // .attr("fill", "white")
+
+        svgContainer.selectAll("line")
+        .data(data.links, d => d.index)
+        .join('line')
 
     circles.data()
         .map((d, i) => {
@@ -267,7 +265,7 @@ function processData(data) {
     let dNodes = data.nodes
     dNodes.forEach(node => {
         node.opacity = 1
-        node.radius = node.category == 'location' ? 40 : 8
+        node.radius = node.category == 'location' ? 20 : 5
         node.x = Math.random() * width;
         node.y = Math.random() * height;
     })
