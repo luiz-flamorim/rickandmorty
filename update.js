@@ -9,14 +9,9 @@
      })
      let updatedNodes = data.nodes.filter(node => !removedNodes.has(node))
      let updatedLinks = data.links.filter(link => !removedLinks.has(link))
-
-     // needs the update function(?)
-     // update(updatedNodes, updatedLinks, 2)
  }
 
  function update(nodes, links, slideNumber) {
-
-
 
      if (slideNumber == 0 && xGraphPos.length == 0) {
          /*should test this -- if at the first slide, and there are no current graph positions(meaning page should have just been loaded) then get them from the simulation*/
@@ -26,9 +21,18 @@
                  yGraphPos[d.index] = d.y;
                  return [];
              })
+
+         link.data()
+             .map((d, i) => {
+                 x1GraphPos[d.index] = d.source.x;
+                 x2GraphPos[d.index] = d.target.x;
+                 y1GraphPos[d.index] = d.source.y;
+                 y2GraphPos[d.index] = d.target.y;
+                 return [];
+             })
      }
 
-     svgContainer.selectAll("circle")
+     let allCircles = svgContainer.selectAll("circle")
          .data(nodes, d => d.id)
          .join(
              enter => enter.append("circle")
@@ -46,11 +50,9 @@
                          break;
                  }
                  return positionX;
-
              })
 
              .attr('cy', (d, i) => {
-
                  switch (slideNumber) {
                      case 0:
                          positionY = d.category == 'location' ? height / 2 : d.y;
@@ -68,8 +70,7 @@
              .attr('r', d => d.radius)
              .style('stroke', 'white')
              .style('stroke-width', 0)
-             .style('fill', d => colours(planetNumber(d.name)))
-
+             .style('fill', d => d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name)))
              .style("opacity", d => {
                  switch (slideNumber) {
                      case 0:
@@ -83,8 +84,8 @@
                          break;
                  }
                  return opacity;
-
              }),
+
              update => update
              .transition()
              .duration(1000)
@@ -101,9 +102,7 @@
                          break;
                  }
                  return positionX;
-
              })
-
              .attr('cy', (d, i) => {
                  switch (slideNumber) {
                      case 0:
@@ -118,7 +117,6 @@
                  }
                  return positionY;
              })
-
              .attr('r', d => d.radius)
              .style('fill', d => colours(planetNumber(d.name)))
              .style("opacity", d => {
@@ -134,10 +132,9 @@
                          break;
                  }
                  return opacity;
-
              }),
-             exit => exit.remove()
 
+             exit => exit.remove()
          )
          .attr('data-tippy-content', (d, i) => {
              return `${d.name}`
@@ -156,11 +153,10 @@
                  .transition()
                  .duration(200)
                  .attr('r', d => d.radius)
-         })
-         .call(d3.drag()
-             .on("start", dragstarted)
-             .on("drag", dragged)
-             .on("end", dragended)),
+         }),
+
+
+
 
          link = svgContainer.selectAll("line")
          .data(links, d => d.index)
@@ -187,8 +183,22 @@
              exit => exit.remove()
          )
 
-     if (slideNumber == 2) {
+     let verify = true
+     if (slideNumber == 2 && verify) {
          simulation.restart()
+         verify = false
+         allCircles.call(d3.drag()
+             .on("start", dragstarted)
+             .on("drag", dragged)
+             .on("end", dragended))
+     }
+     if (slideNumber != 2) {
+         simulation.stop()
+         verify = true
+         allCircles.call(d3.drag()
+             .on("start", null)
+             .on("drag", null)
+             .on("end", null))
      }
 
      function dragstarted(event, d) {
@@ -213,15 +223,18 @@
                  yGraphPos[d.index] = d.y;
                  return [];
              })
+
+         link.data()
+             .map((d, i) => {
+                 x1GraphPos[d.index] = d.source.x;
+                 x2GraphPos[d.index] = d.target.x;
+                 y1GraphPos[d.index] = d.source.y;
+                 y2GraphPos[d.index] = d.target.y;
+                 return [];
+             })
      }
 
-
-
-
-
-
-
-
+     //  adding screen tips
      let circles = svgContainer.selectAll("circle")
      tippy(circles.nodes(), {
          inertia: true,

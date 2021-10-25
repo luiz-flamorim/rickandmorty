@@ -7,6 +7,11 @@ const stepH = Math.floor(window.innerHeight * 1.8);
 let xGraphPos = {};
 let yGraphPos = {};
 
+let x1GraphPos = {};
+let x2GraphPos = {};
+let y1GraphPos = {};
+let y2GraphPos = {};
+
 let figure = d3.select('figure');
 let article = d3.select('article');
 let steps = d3.selectAll('.step');
@@ -49,15 +54,10 @@ svgGrid = d3.select('#chart')
     .attr("viewBox", `0 0 ${width} ${height}`)
     .classed('svg-content-responsive', true)
     .append("g")
-//.attr('transform', `translate(${width/2},${height/2})`)
 
 //set of removed elements - use that on filters
 let removedLinks = new Set()
 let removedNodes = new Set()
-
-
-
-
 
 d3.json('./processed.json')
     .then(raw => {
@@ -66,7 +66,6 @@ d3.json('./processed.json')
     .then(data => {
         return svgSetup(data)
     })
-
 
 function getPlanetData(data) {
     // Array of the unique planets
@@ -85,13 +84,10 @@ function getPlanetData(data) {
     colours = d3.scaleSequential()
         .domain([0, planets.length - 1])
         .interpolator(d3.interpolateRainbow)
-
-
 }
 
-
 function autoCompleteSetup(data) {
-    // set the autoComplete
+    // sets the autoComplete
     let autocompleteNames = {}
     let singleName = data.nodes.map(d => {
         let char = {
@@ -106,12 +102,10 @@ function autoCompleteSetup(data) {
         onAutocomplete: filterCharAndPlanets,
         limit: 5
     });
-
 }
 
 
 function svgSetup(data) {
-
 
     // update the figures in the HTML
     episodesCount.innerHTML = data.count.episodesCount
@@ -119,11 +113,8 @@ function svgSetup(data) {
     speciesCount.innerHTML = data.count.speciesCount
     charactersCount.innerHTML = data.count.speciesCount
 
-
-
     filter = data.nodes.filter(d => d.category == 'location')
     numCols = Math.ceil(Math.sqrt(filter.length))
-
 
     yGrid = d3.scaleBand()
         .range([margin.bottom, height - margin.top])
@@ -135,7 +126,6 @@ function svgSetup(data) {
 
     svgContainer = svgGrid.append("g")
         .attr("transform", `translate(${xGrid.bandwidth()/2},${yGrid.bandwidth()/2})`);
-
 
     getPlanetData(data);
 
@@ -172,9 +162,6 @@ function svgSetup(data) {
             return [];
         })
 
-
-    // update(data.nodes, data.links, 0);
-
     simulation.stop()
     for (let i in d3.range(300)) {
         ticked();
@@ -195,35 +182,24 @@ function svgSetup(data) {
 
 
     function handleResize() {
-
         steps.style("height", stepH + 'px')
-
         figure
             .style('height', figureHeight + 'px')
             .style('top', figureMarginTop + 'px')
-
         myScrollama.resize();
     }
 
-
-
     function init() {
         handleResize()
-
         myScrollama.setup({
             step: '.step',
             offset: Math.floor(window.innerHeight) * 1 + 'px',
             debug: true
         }).onStepEnter(handleStepChange)
-
         window.addEventListener('resize', handleResize)
     }
 
-
-
-
     function handleStepChange(response) {
-        //console.log('Step changed: ' + response.element, response.direction, response.index)
 
         switch (response.index) {
             /*TODO filter out removed nodes/links*/
@@ -243,10 +219,6 @@ function svgSetup(data) {
     init();
     return data
 }
-
-
-
-
 
 function processData(data) {
 
