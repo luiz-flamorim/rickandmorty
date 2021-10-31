@@ -104,6 +104,36 @@ function autoCompleteSetup(data) {
     });
 }
 
+function addCheckbox(data){
+
+    let checkboxSelection = document.querySelector('#checkbox')
+    let label = document.createElement('label')
+    checkboxSelection.appendChild(label)
+
+    data.forEach(item =>{
+        console.log(item)
+        let inputElem = document.createElement('input')
+        inputElem.setAttribute('type','checkbox')
+        inputElem.setAttribute('class','filled-in')
+        inputElem.setAttribute('checked','checked')
+        label.appendChild(inputElem)
+
+        let spanElem = document.createElement('span')
+        spanElem.innerHTML = item
+    })
+}
+
+function getUniqueSpecies(data){
+    let uniqueSpecies = []
+    let uniqueSpeciesNodes = d3.groups(data.nodes, d => d.species)
+    uniqueSpeciesNodes.forEach(item =>{
+        if(item[0]){
+            uniqueSpecies.push(item[0])
+        }
+    })
+    return uniqueSpecies
+}
+
 
 function svgSetup(data) {
 
@@ -112,6 +142,8 @@ function svgSetup(data) {
     planetsCount.innerHTML = data.count.planetsCount
     speciesCount.innerHTML = data.count.speciesCount
     charactersCount.innerHTML = data.count.speciesCount
+
+    addCheckbox(getUniqueSpecies(data))
 
     filter = data.nodes.filter(d => d.category == 'location')
     numCols = Math.ceil(Math.sqrt(filter.length))
