@@ -1,0 +1,24 @@
+{
+  "name": "2021-rick-and-morty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "nouislider": "^15.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luiz-flamorim/rickandmorty.git"
+  },
+  "author": "Luiz Amorim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luiz-flamorim/rickandmorty/issues"
+  },
+  "homepage": "https://github.com/luiz-flamorim/rickandmorty#readme"
+}

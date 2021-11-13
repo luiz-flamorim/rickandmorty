@@ -1,3 +1,6 @@
+// import noUiSlider from 'nouislider';
+// import noUiSlider from 'https://cdn.skypack.dev/nouislider';
+
 let myScrollama = scrollama();
 
 const figureHeight = window.innerHeight * 0.8
@@ -22,7 +25,6 @@ let speciesCount = d3.select('#speciesCount').node()
 let charactersCount = d3.select('#charactersCount').node()
 
 
-
 let svgContainer,
     svgGrid,
     numCols,
@@ -34,9 +36,6 @@ let svgContainer,
     circles,
     link,
     planetNumber
-
-
-
 
 // setup dimensions and margins of the graph
 let margin = {
@@ -104,30 +103,30 @@ function autoCompleteSetup(data) {
     });
 }
 
-function addCheckbox(data){
+// function addCheckbox(data){
 
-    let checkboxSelection = document.querySelector('#checkbox')
-    let label = document.createElement('label')
-    checkboxSelection.appendChild(label)
+//     let checkboxSelection = document.querySelector('#checkbox')
+//     let label = document.createElement('label')
+//     checkboxSelection.appendChild(label)
 
-    data.forEach(item =>{
-        console.log(item)
-        let inputElem = document.createElement('input')
-        inputElem.setAttribute('type','checkbox')
-        inputElem.setAttribute('class','filled-in')
-        inputElem.setAttribute('checked','checked')
-        label.appendChild(inputElem)
+//     data.forEach(item =>{
+//         console.log(item)
+//         let inputElem = document.createElement('input')
+//         inputElem.setAttribute('type','checkbox')
+//         inputElem.setAttribute('class','filled-in')
+//         inputElem.setAttribute('checked','checked')
+//         label.appendChild(inputElem)
 
-        let spanElem = document.createElement('span')
-        spanElem.innerHTML = item
-    })
-}
+//         let spanElem = document.createElement('span')
+//         spanElem.innerHTML = item
+//     })
+// }
 
-function getUniqueSpecies(data){
+function getUniqueSpecies(data) {
     let uniqueSpecies = []
     let uniqueSpeciesNodes = d3.groups(data.nodes, d => d.species)
-    uniqueSpeciesNodes.forEach(item =>{
-        if(item[0]){
+    uniqueSpeciesNodes.forEach(item => {
+        if (item[0]) {
             uniqueSpecies.push(item[0])
         }
     })
@@ -143,7 +142,13 @@ function svgSetup(data) {
     speciesCount.innerHTML = data.count.speciesCount
     charactersCount.innerHTML = data.count.speciesCount
 
-    addCheckbox(getUniqueSpecies(data))
+    // autocomplete
+    autoComplete(data.nodes)
+
+    // slider
+    createSlider()
+
+    // addCheckbox(getUniqueSpecies(data))
 
     filter = data.nodes.filter(d => d.category == 'location')
     numCols = Math.ceil(Math.sqrt(filter.length))
@@ -181,9 +186,9 @@ function svgSetup(data) {
         .attr('r', d => d.radius)
         .attr('x', d => d.x)
         .attr('y', d => d.y)
-        .style('opacity',0)
+        .style('opacity', 0)
 
-        svgContainer.selectAll("line")
+    svgContainer.selectAll("line")
         .data(data.links, d => d.index)
         .join('line')
 
@@ -276,4 +281,39 @@ function processData(data) {
         node.y = Math.random() * height;
     })
     return data
+}
+
+function autoComplete(nodes) {
+    let autocompleteNames = {}
+    nodes.map(d => {
+        let char = {
+            [d.name]: d.image
+        }
+        Object.assign(autocompleteNames, char)
+    })
+    M.AutoInit()
+
+    let elems = document.querySelectorAll('.autocomplete')
+    M.Autocomplete.init(elems, {
+        data: autocompleteNames,
+        onAutocomplete: filterCharAndPlanets,
+        limit: 5
+    });
+}
+
+function createSlider() {
+    let slider = document.getElementById('mySlider');
+    noUiSlider.create(slider, {
+        start: [20, 80],
+        connect: true,
+        step: 1,
+        orientation: 'horizontal', // 'horizontal' or 'vertical'
+        range: {
+            'min': 0,
+            'max': 100
+        },
+        format: wNumb({
+            decimals: 0
+        })
+    });
 }
