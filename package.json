@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.html",
   "dependencies": {
+    "materialize": "^1.0.0",
+    "materialize-css": "^1.0.0-rc.2",
     "node-fetch": "^2.6.1",
     "nouislider": "^15.5.0"
   },

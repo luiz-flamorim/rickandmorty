@@ -304,13 +304,14 @@ function autoComplete(nodes) {
 function createSlider() {
     let slider = document.getElementById('mySlider');
     noUiSlider.create(slider, {
-        start: [20, 80],
-        connect: true,
+        start: [20],
+        connect: 'lower',
         step: 1,
-        orientation: 'horizontal', // 'horizontal' or 'vertical'
+        orientation: 'horizontal',
         range: {
             'min': 0,
             'max': 100
-        }
+        },
+        tooltips: true
     });
 }
