@@ -312,6 +312,9 @@ function createSlider() {
             'min': 0,
             'max': 100
         },
-        tooltips: true
+        tooltips: true,
+        format: wNumb({
+          decimals: 0
+        })
     });
 }
