@@ -1,5 +1,5 @@
 // import noUiSlider from 'nouislider';
-// import noUiSlider from 'https://cdn.skypack.dev/nouislider';
+// import noUiSlider from 'https://cdn.skypack.dev/nouislider';s
 
 let myScrollama = scrollama();
 
@@ -146,7 +146,7 @@ function svgSetup(data) {
     autoComplete(data.nodes)
 
     // slider
-    createSlider()
+    // createSlider()
 
     // addCheckbox(getUniqueSpecies(data))
 
@@ -301,19 +301,19 @@ function autoComplete(nodes) {
     });
 }
 
-function createSlider() {
-    let slider = document.getElementById('mySlider');
-    noUiSlider.create(slider, {
-        start: [20, 80],
-        connect: true,
-        step: 1,
-        orientation: 'horizontal', // 'horizontal' or 'vertical'
-        range: {
-            'min': 0,
-            'max': 100
-        },
-        format: wNumb({
-            decimals: 0
-        })
-    });
-}
+// function createSlider() {
+//     let slider = document.getElementById('mySlider');
+//     noUiSlider.create(slider, {
+//         start: [20, 80],
+//         connect: true,
+//         step: 1,
+//         orientation: 'horizontal', // 'horizontal' or 'vertical'
+//         range: {
+//             'min': 0,
+//             'max': 100
+//         },
+//         format: wNumb({
+//             decimals: 0
+//         })
+//     });
+// }

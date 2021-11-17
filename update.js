@@ -156,8 +156,6 @@
          }),
 
 
-
-
          link = svgContainer.selectAll("line")
          .data(links, d => d.index)
          .join(

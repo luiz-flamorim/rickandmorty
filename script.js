@@ -400,7 +400,7 @@ function gridDiagram(data) {
         .attr('r', d => d.radius)
     })
 }
-}
+
 
 
 
