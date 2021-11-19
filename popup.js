@@ -1,10 +1,3 @@
-let allCircles = d3.selectAll("circle")
-    .on('click', function (event, d) {
-        // popUp(d, data, maxEp)
-        console.log('click')
-    })
-
-
 // POP UP - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // it takes the selected circle data (nodeData), the overall data object (allData) and the total episodes count (maxEp)
 function popUp(nodeData, allData, maxEp) {

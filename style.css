@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+
 }
 
 body {
@@ -142,7 +144,6 @@ figure {
   text-align: left;
   background-color: rgba(255, 255, 255, 0.2);
   padding: 2rem;
-  /* border: 1px solid white; */
   border-radius: 0.5rem;
   color: white;
   text-align: center;
@@ -154,4 +155,31 @@ figure {
 .stats-big{
   font-size: 3rem;
   font-weight: 900;
+}
+
+/* SLIDER */
+#mySlider {
+  height: 5px;
+  border: none;
+  border-radius: 30px;
+  margin-top: 1rem;
+}
+
+#mySlider .noUi-connect {
+  background: #4730de;
+}
+
+#mySlider .noUi-handle {
+  height: 18px;
+  width: 18px;
+  top: -5px;
+  right: -9px;
+  border-radius: 9px;
+}
+
+.noUi-tooltip {
+  display: none;
+}
+.noUi-active .noUi-tooltip {
+  display: block;
 }

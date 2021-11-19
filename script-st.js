@@ -1,6 +1,3 @@
-// import noUiSlider from 'nouislider';
-// import noUiSlider from 'https://cdn.skypack.dev/nouislider';s
-
 let myScrollama = scrollama();
 
 const figureHeight = window.innerHeight * 0.8
@@ -133,14 +130,13 @@ function getUniqueSpecies(data) {
     return uniqueSpecies
 }
 
-
 function svgSetup(data) {
 
     // update the figures in the HTML
     episodesCount.innerHTML = data.count.episodesCount
     planetsCount.innerHTML = data.count.planetsCount
     speciesCount.innerHTML = data.count.speciesCount
-    charactersCount.innerHTML = data.count.speciesCount
+    charactersCount.innerHTML = data.count.charactersCount
 
     // autocomplete
     autoComplete(data.nodes)
@@ -180,6 +176,8 @@ function svgSetup(data) {
         .force('collide', d3.forceCollide(d => d.radius))
         .on("tick", ticked)
 
+        console.log(data.nodes)
+
     circles = svgContainer.selectAll("circle")
         .data(data.nodes, d => d.id)
         .join("circle")
@@ -217,7 +215,6 @@ function svgSetup(data) {
             .attr("cy", d => d.y)
     }
 
-
     function handleResize() {
         steps.style("height", stepH + 'px')
         figure
@@ -254,7 +251,7 @@ function svgSetup(data) {
     }
 
     init();
-    return data
+    // return data
 }
 
 

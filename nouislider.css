@@ -138,7 +138,7 @@
 }
 /* Handle stripes;
  */
-.noUi-handle:before,
+/* .noUi-handle:before,
 .noUi-handle:after {
   content: "";
   display: block;
@@ -161,7 +161,7 @@
 }
 .noUi-vertical .noUi-handle:after {
   top: 17px;
-}
+} */
 /* Disabled state;
  */
 [disabled] .noUi-connect {
@@ -268,15 +268,17 @@
   width: 15px;
 }
 .noUi-tooltip {
-  display: block;
+  width: 2rem;
+  height: 2rem;
   position: absolute;
-  border: 1px solid #D9D9D9;
-  border-radius: 3px;
+  border-radius: 2rem;
   background: #fff;
   color: #000;
-  padding: 5px;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
   text-align: center;
   white-space: nowrap;
+  margin-bottom: 1rem;
 }
 .noUi-horizontal .noUi-tooltip {
   -webkit-transform: translate(-50%, 0);

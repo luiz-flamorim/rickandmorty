@@ -153,8 +153,10 @@
                  .transition()
                  .duration(200)
                  .attr('r', d => d.radius)
-         }),
-
+         })
+         .on('click', function (i,d) {
+            console.log(d)
+        })
 
          link = svgContainer.selectAll("line")
          .data(links, d => d.index)
