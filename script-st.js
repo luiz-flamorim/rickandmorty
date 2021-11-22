@@ -21,7 +21,6 @@ let planetsCount = d3.select('#planetsCount').node()
 let speciesCount = d3.select('#speciesCount').node()
 let charactersCount = d3.select('#charactersCount').node()
 
-
 let svgContainer,
     svgGrid,
     numCols,
@@ -82,43 +81,6 @@ function getPlanetData(data) {
         .interpolator(d3.interpolateRainbow)
 }
 
-function autoCompleteSetup(data) {
-    // sets the autoComplete
-    let autocompleteNames = {}
-    data.nodes.map(d => {
-        let char = {
-            [d.name]: d.image
-        }
-        Object.assign(autocompleteNames, char)
-    })
-    M.AutoInit()
-    let elems = document.querySelectorAll('.autocomplete')
-    M.Autocomplete.init(elems, {
-        data: autocompleteNames,
-        onAutocomplete: filterCharAndPlanets,
-        limit: 5
-    });
-}
-
-// function addCheckbox(data){
-
-//     let checkboxSelection = document.querySelector('#checkbox')
-//     let label = document.createElement('label')
-//     checkboxSelection.appendChild(label)
-
-//     data.forEach(item =>{
-//         console.log(item)
-//         let inputElem = document.createElement('input')
-//         inputElem.setAttribute('type','checkbox')
-//         inputElem.setAttribute('class','filled-in')
-//         inputElem.setAttribute('checked','checked')
-//         label.appendChild(inputElem)
-
-//         let spanElem = document.createElement('span')
-//         spanElem.innerHTML = item
-//     })
-// }
-
 function getUniqueSpecies(data) {
     let uniqueSpecies = []
     let uniqueSpeciesNodes = d3.groups(data.nodes, d => d.species)
@@ -142,9 +104,7 @@ function svgSetup(data) {
     autoComplete(data.nodes)
 
     // slider
-    createSlider()
-
-    // addCheckbox(getUniqueSpecies(data))
+    createSlider(data)
 
     filter = data.nodes.filter(d => d.category == 'location')
     numCols = Math.ceil(Math.sqrt(filter.length))
@@ -175,8 +135,6 @@ function svgSetup(data) {
         .force("y", d3.forceY())
         .force('collide', d3.forceCollide(d => d.radius))
         .on("tick", ticked)
-
-        console.log(data.nodes)
 
     circles = svgContainer.selectAll("circle")
         .data(data.nodes, d => d.id)
@@ -236,7 +194,6 @@ function svgSetup(data) {
     function handleStepChange(response) {
 
         switch (response.index) {
-            /*TODO filter out removed nodes/links*/
             case 0:
                 update(filter, [], 0);
                 break;
@@ -251,11 +208,11 @@ function svgSetup(data) {
     }
 
     init();
-    // return data
 }
 
-
 function processData(data) {
+
+    console.log(data)
 
     let episodesCount = data.episodes.length
     let charactersCount = data.nodes.filter(d => d.category == 'character').length
@@ -298,7 +255,8 @@ function autoComplete(nodes) {
     });
 }
 
-function createSlider() {
+function createSlider(data) {
+
     let slider = document.getElementById('mySlider');
     noUiSlider.create(slider, {
         start: [20],
@@ -311,7 +269,48 @@ function createSlider() {
         },
         tooltips: true,
         format: wNumb({
-          decimals: 0
+            decimals: 0
         })
     });
+
+    let planetGroup = d3.rollup(data.nodes, v => v.length, d => {
+        if (d.category == 'character') {
+            return d.id
+        } else {
+            return
+        }
+    })
+
+    console.log(planetGroup)
+
+    slider.noUiSlider.on('change', function filterSlider(values, handle, unencoded, tap, positions, noUiSlider) {
+
+        let filteredPlanets = new Set()
+
+
+        for (const [key, value] of planetGroup) {
+            if (value >= values[0]) {
+                filteredPlanets.add(key)
+            }
+        }
+
+        // this was working... kind of! colours were strange.
+        // let filteredP = data.nodes.filter(d => {
+        //     if (d.category == 'character') {
+        //         return filteredPlanets.has(d.location.name)
+        //     } else {
+        //         return filteredPlanets.has(d.location)
+        //     }
+        // })
+
+        console.log(filteredPlanets)
+
+        // trying the id instead of the name to fix the colours
+        let filteredP = data.nodes.filter(d => filteredPlanets.has(d.id))
+
+        let filteredL = data.links.filter(d => filteredPlanets.has(d.target.id))
+
+        update(filteredP, filteredL, 2)
+
+    })
 }

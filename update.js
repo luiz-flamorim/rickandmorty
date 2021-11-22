@@ -14,7 +14,6 @@
  function update(nodes, links, slideNumber) {
 
      if (slideNumber == 0 && xGraphPos.length == 0) {
-         /*should test this -- if at the first slide, and there are no current graph positions(meaning page should have just been loaded) then get them from the simulation*/
          circles.data()
              .map((d, i) => {
                  xGraphPos[d.index] = d.x;
@@ -88,7 +87,7 @@
 
              update => update
              .transition()
-             .duration(1000)
+            //  .duration(1000)
              .attr('cx', (d, i) => {
                  switch (slideNumber) {
                      case 0:
@@ -173,7 +172,7 @@
              .attr("y2", d => d.target.y),
 
              update => update.transition()
-             .duration(1000)
+            //  .duration(1000)
              .style("stroke-width", 1)
              .style("opacity", slideNumber == 2 ? 1 : 0)
              .style('stroke', d => {
@@ -242,3 +241,18 @@
          offset: [0, 20]
      })
  }
+
+
+ function filterCharAndPlanets(name) {
+    let filteredName = nodes.filter(d => d.name == name)
+    nodes.forEach(item => {
+      if (item.locationToId == filteredName[0].locationToId) {
+        item.opacity = 1
+      } else {
+        item.opacity = 0.2
+      }
+    })
+    let updatedNodes = nodes.filter(node => !removedNodes.has(node))
+    let updatedLinks = data.links.filter(link => !removedLinks.has(link))
+    update(updatedNodes, updatedLinks)
+  }
