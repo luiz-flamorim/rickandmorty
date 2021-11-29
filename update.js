@@ -66,7 +66,7 @@
                  return positionY;
              })
 
-             .attr('r', d => d.radius)
+             .attr('r', 0)
              .style('stroke', 'white')
              .style('stroke-width', 0)
              .style('fill', d => d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name)))
@@ -83,11 +83,13 @@
                          break;
                  }
                  return opacity;
-             }),
-
+             })
+             .transition()
+             .duration(500)
+             .attr('r', d => d.radius),
+             
              update => update
              .transition()
-            //  .duration(1000)
              .attr('cx', (d, i) => {
                  switch (slideNumber) {
                      case 0:
@@ -117,7 +119,7 @@
                  return positionY;
              })
              .attr('r', d => d.radius)
-             .style('fill', d => colours(planetNumber(d.name)))
+             .style('fill', d => d.category == 'location' ? colours(planetNumber(d.name)) : colours(planetNumber(d.location.name)))
              .style("opacity", d => {
                  switch (slideNumber) {
                      case 0:
@@ -133,7 +135,10 @@
                  return opacity;
              }),
 
-             exit => exit.remove()
+             exit => exit.transition()
+             .duration(1000)
+             .attr('r', 0)
+             .remove()
          )
          .attr('data-tippy-content', (d, i) => {
              return `${d.name}`
@@ -166,23 +171,40 @@
              .style('stroke', d => {
                  return d.source.category == 'location' ? colours(planetNumber(d.source.name)) : colours(planetNumber(d.source.location.name))
              })
+             .attr("x1", d => d.target.x)
+             .attr("y1", d => d.target.y)
+             .attr("x2", d => d.target.x)
+             .attr("y2", d => d.target.y)
+             .transition()
+             .duration(1000)
              .attr("x1", d => d.source.x)
              .attr("y1", d => d.source.y)
-             .attr("x2", d => d.target.x)
-             .attr("y2", d => d.target.y),
+             ,
 
-             update => update.transition()
-            //  .duration(1000)
+             update => update
+             .attr("x1", d => d.target.x)
+             .attr("y1", d => d.target.y)
+             .attr("x2", d => d.target.x)
+             .attr("y2", d => d.target.y)
+             .transition()
+             .duration(1000)
              .style("stroke-width", 1)
              .style("opacity", slideNumber == 2 ? 1 : 0)
              .style('stroke', d => {
                  return d.source.category == 'location' ? colours(planetNumber(d.source.name)) : colours(planetNumber(d.source.location.name))
-             }),
+             })
+             .attr("x1", d => d.source.x)
+             .attr("y1", d => d.source.y),
 
-             exit => exit.remove()
+             exit => exit.transition()
+             .duration(1000)
+             .attr("x1", d => d.target.x)
+             .attr("y1", d => d.target.y)
+             .attr("x2", d => d.target.x)
+             .attr("y2", d => d.target.y)
+             .remove()
          )
 
-     let verify = true
      if (slideNumber == 2 && verify) {
          simulation.restart()
          verify = false

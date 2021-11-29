@@ -117,7 +117,6 @@ function popUp(nodeData, allData, maxEp) {
             offset: [0, 10]
         })
 
-
         // CLOSE BUTTON
         let xClose = document.createElement('span')
         xClose.setAttribute('class', 'close material-icons')

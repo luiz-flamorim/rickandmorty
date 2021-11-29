@@ -21,6 +21,9 @@ let planetsCount = d3.select('#planetsCount').node()
 let speciesCount = d3.select('#speciesCount').node()
 let charactersCount = d3.select('#charactersCount').node()
 
+// it works on the update.js, to reheat the simulation on step 2
+let verify = true
+
 let svgContainer,
     svgGrid,
     numCols,
@@ -259,7 +262,7 @@ function createSlider(data) {
 
     let slider = document.getElementById('mySlider');
     noUiSlider.create(slider, {
-        start: [20],
+        start: [0],
         connect: 'lower',
         step: 1,
         orientation: 'horizontal',
@@ -273,44 +276,59 @@ function createSlider(data) {
         })
     });
 
+    let locationNodes = data.nodes.filter(d => d.category == 'location')
+    let locationNameToId = new Map()
+
+    for (const n in locationNodes) {
+        locationNameToId.set(locationNodes[n].id, locationNodes[n].name)
+    }
+
     let planetGroup = d3.rollup(data.nodes, v => v.length, d => {
         if (d.category == 'character') {
-            return d.id
+            return d.location.name
         } else {
             return
         }
     })
 
-    console.log(planetGroup)
 
     slider.noUiSlider.on('change', function filterSlider(values, handle, unencoded, tap, positions, noUiSlider) {
 
         let filteredPlanets = new Set()
 
-
         for (const [key, value] of planetGroup) {
-            if (value >= values[0]) {
+            if (value >= values[0] && key !== undefined) {
                 filteredPlanets.add(key)
             }
         }
 
-        // this was working... kind of! colours were strange.
-        // let filteredP = data.nodes.filter(d => {
-        //     if (d.category == 'character') {
-        //         return filteredPlanets.has(d.location.name)
-        //     } else {
-        //         return filteredPlanets.has(d.location)
-        //     }
-        // })
+        let filteredP = data.nodes.filter(d => {
+            if (d.category == 'character') {
+                return filteredPlanets.has(d.location.name)
+            } else {
+                return filteredPlanets.has(d.location)
+            }
+        })
 
-        console.log(filteredPlanets)
-
-        // trying the id instead of the name to fix the colours
-        let filteredP = data.nodes.filter(d => filteredPlanets.has(d.id))
-
-        let filteredL = data.links.filter(d => filteredPlanets.has(d.target.id))
+        let filteredL = data.links.filter(d => filteredPlanets.has(locationNameToId.get(d.target.id)))
 
         update(filteredP, filteredL, 2)
+        simulation.alphaTarget(0.001).restart()
 
+        circles.data()
+            .map((d, i) => {
+                xGraphPos[d.index] = d.x;
+                yGraphPos[d.index] = d.y;
+                return [];
+            })
+
+        link.data()
+            .map((d, i) => {
+                x1GraphPos[d.index] = d.source.x;
+                x2GraphPos[d.index] = d.target.x;
+                y1GraphPos[d.index] = d.source.y;
+                y2GraphPos[d.index] = d.target.y;
+                return [];
+            })
     })
 }
